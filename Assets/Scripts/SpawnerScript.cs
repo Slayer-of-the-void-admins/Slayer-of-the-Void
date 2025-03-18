@@ -30,4 +30,14 @@ public class SpawnerScript : MonoBehaviour
 
         enemy.GetComponent<EnemyMovement>().player = player; // çağırılan düşmandaki hareket scriptine oyuncu nesnesini aktar
     }
+
+    void SetEnemyPrefab(GameObject newEnemyPrefab)
+    {
+        enemyPrefab = newEnemyPrefab;
+    }
+
+    void SetSpawnRate(float newSpawnRate)
+    {
+        spawnRate = newSpawnRate;
+    }
 }
