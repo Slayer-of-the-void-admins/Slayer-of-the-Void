@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class SpawnerScript : MonoBehaviour
 {
+    public Enemy1 enemy1;
+
+    public Enemy2 enemy2;
+
     public GameObject enemyPrefab;
 
     public Transform player;
@@ -16,7 +20,7 @@ public class SpawnerScript : MonoBehaviour
     void Start()
     {
         // SpawnEnenmy metodu oyun başladıktan 1f sonra bir kere çalışır sonra her spawnRate sürsinde birdaha çalışır
-        InvokeRepeating(nameof(SpawnEnemy), 1f, spawnRate); 
+        InvokeRepeating(nameof(SpawnEnemy), 1f, spawnRate);
     }
 
     // Update is called once per frame
@@ -31,13 +35,29 @@ public class SpawnerScript : MonoBehaviour
         enemy.GetComponent<EnemyMovement>().player = player; // çağırılan düşmandaki hareket scriptine oyuncu nesnesini aktar
     }
 
-    void SetEnemyPrefab(GameObject newEnemyPrefab)
+    public void SetEnemyType(MonoBehaviour enemyScript) // düşman tipini değiştirmek için kullanılan metod
     {
-        enemyPrefab = newEnemyPrefab;
+        switch(enemyScript)
+        {
+            case Enemy1 enemy1:
+                enemyPrefab = enemy1.newEnemyPrefab;
+                spawnRate = enemy1.newSpawnRate;
+                RestartSpawn();
+                break;
+            case Enemy2 enemy2:
+                enemyPrefab = enemy2.newEnemyPrefab;
+                spawnRate = enemy2.newSpawnRate;
+                RestartSpawn();
+                break;
+            default:
+                Debug.LogWarning("düşman tipi yok");
+                break;
+        }
     }
 
-    void SetSpawnRate(float newSpawnRate)
+    private void RestartSpawn()
     {
-        spawnRate = newSpawnRate;
+        CancelInvoke(nameof(SpawnEnemy));
+        InvokeRepeating(nameof(SpawnEnemy), 0f, spawnRate);
     }
 }
