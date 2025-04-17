@@ -16,14 +16,12 @@ public class SpawnerScript : MonoBehaviour
 
     public float spawnDistance = 10f;
 
-    // Start is called before the first frame update
     void Start()
     {
         // SpawnEnenmy metodu oyun başladıktan 1f sonra bir kere çalışır sonra her spawnRate sürsinde birdaha çalışır
         InvokeRepeating(nameof(SpawnEnemy), 1f, spawnRate);
     }
 
-    // Update is called once per frame
     void SpawnEnemy()
     {
         if (player == null) return;
