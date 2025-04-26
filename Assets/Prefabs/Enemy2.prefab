@@ -97,7 +97,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4776187908627978567}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -191,6 +191,8 @@ MonoBehaviour:
   currentHealth: 0
   gameOverScreen: {fileID: 0}
   isPlayer: 0
+  healthBar: {fileID: 0}
+  xpAmount: 16
 --- !u!114 &29780003034258379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,3 +208,6 @@ MonoBehaviour:
   damageAmount: 10
   destroySelf: 0
   targetTag: Player
+  player: {fileID: 0}
+  pushForce: 5
+  pushDuration: 1.5

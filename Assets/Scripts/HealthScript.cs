@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthScript : MonoBehaviour
 {
@@ -8,11 +9,19 @@ public class HealthScript : MonoBehaviour
     public float currentHealth;
     public GameObject gameOverScreen;
     public bool isPlayer = true;
+    public Slider healthBar;
+    public int xpAmount = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+
+        if (healthBar != null)
+        {
+            healthBar.maxValue = maxHealth;
+            healthBar.value = currentHealth;
+        }
     }
 
     void Update()
@@ -29,7 +38,13 @@ public class HealthScript : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            currentHealth = 0;
             Die();
+        }
+        
+        if (healthBar != null)
+        {
+            healthBar.value = currentHealth;
         }
     }
 
@@ -41,9 +56,10 @@ public class HealthScript : MonoBehaviour
             gameOverScreen.SetActive(true);
             Time.timeScale = 0;
         }
-        else
+        else // isEnenmy
         {
             Destroy(gameObject);
+            GameObject.FindWithTag("Player").GetComponent<PlayerExp>().GainXP(xpAmount);
         }
     }
 }
