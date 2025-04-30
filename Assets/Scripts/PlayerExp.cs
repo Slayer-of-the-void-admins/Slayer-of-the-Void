@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,7 @@ public class PlayerExp : MonoBehaviour
     public int level = 1;
     public int currentXP = 0;
     public int xpToNextLevel = 100;
+    public TextMeshProUGUI expLabel;
 
     public Slider ExpBar;
 
@@ -35,6 +37,7 @@ public class PlayerExp : MonoBehaviour
         ExpBar.value = currentXP;
         ExpBar.maxValue = xpToNextLevel;
         
-        Debug.Log("Level Up! New level = "+ level);
+        // Debug.Log("Level Up! New level = "+ level);
+        expLabel.text = level.ToString();
     }
 }
