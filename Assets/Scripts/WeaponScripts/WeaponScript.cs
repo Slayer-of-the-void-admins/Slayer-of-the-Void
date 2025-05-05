@@ -7,13 +7,20 @@ public class WeaponScript : MonoBehaviour
 {
     public GameObject weapon1;
     public float projectileSpeed = 20f;
+    public float fireRate = 1f;
+
+
+    void Start()
+    {
+        InvokeRepeating(nameof(Shoot), 1f, fireRate);
+    }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Shoot();
-        }
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     Shoot();
+        // }
     }
 
     void Shoot()
@@ -29,5 +36,10 @@ public class WeaponScript : MonoBehaviour
         rb.velocity = aimDirection * projectileSpeed;
     }
 
-    // private IEnumerator 
+    // private IEnumerator ShootCoroutine(float fireRate)
+    // {
+        
+
+    //     for ()
+    // }
 }
