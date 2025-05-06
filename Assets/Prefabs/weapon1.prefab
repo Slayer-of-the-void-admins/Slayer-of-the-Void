@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6819909121876608673}
   m_Layer: 0
   m_Name: weapon1
-  m_TagString: Untagged
+  m_TagString: ProjectileWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,12 +99,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ab47060ab8498e4e8c18b810c685e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 100
   destroySelf: 0
   targetTag: Enemy
   player: {fileID: 0}
   pushForce: 100
   pushDuration: 1.5
+  damageAmount: 10
+  enemyData: {fileID: 0}
+  weaponData: {fileID: 11400000, guid: 2d252d801ea784940975b8e3119e7d59, type: 2}
 --- !u!50 &8616405123495623105
 Rigidbody2D:
   serializedVersion: 4

@@ -18,9 +18,9 @@ public class PlayerExp : MonoBehaviour
         
     }
 
-    public void GainXP(int amount)
+    public void GainXP(int xpAmount)
     {
-        currentXP += amount;
+        currentXP += xpAmount;
         ExpBar.value = currentXP;
         if (currentXP >= xpToNextLevel)
         {

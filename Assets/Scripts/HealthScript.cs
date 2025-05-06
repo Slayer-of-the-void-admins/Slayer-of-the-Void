@@ -10,11 +10,16 @@ public class HealthScript : MonoBehaviour
     public GameObject gameOverScreen;
     public bool isPlayer = true;
     public Slider healthBar;
-    public int xpAmount = 0;
+    public EnemyData enemyData;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (enemyData != null)
+        {
+            maxHealth = enemyData.maxHealth;
+        }
+
         currentHealth = maxHealth;
 
         if (healthBar != null)
@@ -26,10 +31,10 @@ public class HealthScript : MonoBehaviour
 
     void Update()
     {
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
+        // if (currentHealth <= 0)
+        // {
+        //     Die();
+        // }
     }
 
     public void TakeDamage(float damage)
@@ -59,7 +64,7 @@ public class HealthScript : MonoBehaviour
         else // isEnenmy
         {
             Destroy(gameObject);
-            GameObject.FindWithTag("Player").GetComponent<PlayerExp>().GainXP(xpAmount);
+            GameObject.FindWithTag("Player").GetComponent<PlayerExp>().GainXP(enemyData.xpAmount);
         }
     }
 }

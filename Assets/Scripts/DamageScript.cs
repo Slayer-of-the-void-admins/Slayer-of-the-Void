@@ -6,16 +6,26 @@ using UnityEngine;
 
 public class DamageScript : MonoBehaviour
 {
-    public float damageAmount = 10f;
     public bool destroySelf = false;
-    public string targetTag = "Player";
     public GameObject player;
-    public float pushForce = 100f;
-    public float pushDuration = 1.5f;
+    public EnemyData enemyData;
+    public WeaponData weaponData;
+    public string targetTag;
+    public float damageAmount;
 
-    void Start()
+    void Start() // targetTag ve damageAmount değişkenleri objenin türüne göre seç
     {
         player = GameObject.FindWithTag("Player");
+        if (weaponData != null)
+        {
+            targetTag = weaponData.targetTag; // "Enemy"
+            damageAmount = weaponData.damageAmount;
+        }
+        else if (enemyData != null)
+        {
+            targetTag = enemyData.targetTag; // "Player"
+            damageAmount = enemyData.damageAmount;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
@@ -58,8 +68,6 @@ public class DamageScript : MonoBehaviour
         for (int i = 1; i <= steps; i++)
         {
             transform.position += direction * stepDistance;
-            // dealerPosition += direction * .25f;
-            // gameObject.transform.position = dealerPosition;
             yield return new WaitForSeconds(stepDelay);
         }
     }
