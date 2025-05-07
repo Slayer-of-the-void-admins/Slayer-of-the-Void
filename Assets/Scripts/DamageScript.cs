@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class DamageScript : MonoBehaviour
 {
-    public bool destroySelf = false;
     public GameObject player;
     public EnemyData enemyData;
     public WeaponData weaponData;
@@ -36,7 +35,7 @@ public class DamageScript : MonoBehaviour
             if (health != null)
             {
                 health.TakeDamage(damageAmount);
-                if (destroySelf == true)
+                if (weaponData.destroySelfOnCollision == true)
                 {
                     Destroy(gameObject);
                 }
@@ -51,7 +50,6 @@ public class DamageScript : MonoBehaviour
 
                 StartCoroutine(pushBack(direction));
             }
-            
         }
         else
         {

@@ -11,4 +11,6 @@ public class WeaponData : ScriptableObject
     public float projectileSpeed = 20f;
     public float damageAmount = 10f;
     public string targetTag = "Enemy";
+    // public bool isProjectile;
+    public bool destroySelfOnCollision = false;
 }
