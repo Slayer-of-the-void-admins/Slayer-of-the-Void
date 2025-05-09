@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -11,6 +12,7 @@ public class PlayerExp : MonoBehaviour
     public int xpToNextLevel = 100;
     public TextMeshProUGUI expLabel;
     public Slider ExpBar;
+    public SpawnerScript spawnerScript;
 
     public void GainXP(int xpAmount)
     {
@@ -32,5 +34,14 @@ public class PlayerExp : MonoBehaviour
         ExpBar.maxValue = xpToNextLevel;
         
         expLabel.text = level.ToString();
+
+        try
+        {
+        spawnerScript.SetSpawnSet(spawnerScript.spawnSetList[level-1]); // oyuncu level atladığı zaman spawnSet değiştir
+        }
+        catch (Exception e)
+        {
+            Debug.Log("spawnSet for the reached level doesn't exist | Exception: " + e.Message);
+        }
     }
 }
