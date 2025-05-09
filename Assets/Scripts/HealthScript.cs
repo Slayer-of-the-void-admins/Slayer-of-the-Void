@@ -12,7 +12,6 @@ public class HealthScript : MonoBehaviour
     public Slider healthBar;
     public EnemyData enemyData;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (enemyData != null)
@@ -27,14 +26,6 @@ public class HealthScript : MonoBehaviour
             healthBar.maxValue = maxHealth;
             healthBar.value = currentHealth;
         }
-    }
-
-    void Update()
-    {
-        // if (currentHealth <= 0)
-        // {
-        //     Die();
-        // }
     }
 
     public void TakeDamage(float damage)

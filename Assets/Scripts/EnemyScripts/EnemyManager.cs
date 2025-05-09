@@ -11,14 +11,14 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) // klavyede 1 e bastığında enemy1 çağırılır
-        {
-            spawnerScript.SetEnemyType(enemy1Data);
-        }
+        // if (Input.GetKeyDown(KeyCode.Alpha1)) // klavyede 1 e bastığında enemy1 çağırılır
+        // {
+        //     spawnerScript.SetSpawnSet(enemy1Data);
+        // }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2)) // klavyede 2 ye bastığında enemy2 çağırılır
-        {
-            spawnerScript.SetEnemyType(enemy2Data);
-        }
+        // if (Input.GetKeyDown(KeyCode.Alpha2)) // klavyede 2 ye bastığında enemy2 çağırılır
+        // {
+        //     spawnerScript.SetSpawnSet(enemy2Data);
+        // }
     }
 }

@@ -35,7 +35,7 @@ public class DamageScript : MonoBehaviour
             if (health != null)
             {
                 health.TakeDamage(damageAmount);
-                if (weaponData.destroySelfOnCollision == true)
+                if (weaponData?.destroySelfOnCollision == true)
                 {
                     Destroy(gameObject);
                 }

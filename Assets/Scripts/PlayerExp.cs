@@ -10,13 +10,7 @@ public class PlayerExp : MonoBehaviour
     public int currentXP = 0;
     public int xpToNextLevel = 100;
     public TextMeshProUGUI expLabel;
-
     public Slider ExpBar;
-
-    void Start()
-    {
-        
-    }
 
     public void GainXP(int xpAmount)
     {
@@ -37,7 +31,6 @@ public class PlayerExp : MonoBehaviour
         ExpBar.value = currentXP;
         ExpBar.maxValue = xpToNextLevel;
         
-        // Debug.Log("Level Up! New level = "+ level);
         expLabel.text = level.ToString();
     }
 }

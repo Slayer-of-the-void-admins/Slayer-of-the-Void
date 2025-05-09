@@ -19,3 +19,4 @@ MonoBehaviour:
   xpAmount: 20
   damageAmount: 25
   targetTag: Player
+  spawnRate: 4

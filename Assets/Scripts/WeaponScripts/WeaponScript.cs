@@ -5,29 +5,25 @@ using UnityEngine;
 
 public class WeaponScript : MonoBehaviour
 {
-    public GameObject weapon1;
-    public float projectileSpeed = 20f;
-    public float fireRate = 1f;
+    public WeaponData weaponData;
 
     void Start()
     {
-        InvokeRepeating(nameof(Shoot), 1f, fireRate);
-    }
-
-    void Update()
-    {
+        InvokeRepeating(nameof(Shoot), 1f, weaponData.fireRate);
     }
 
     void Shoot()
     {
-        GameObject weapon = Instantiate(weapon1, transform.position, Quaternion.identity);
+        // silahı çağır
+        GameObject weapon = Instantiate(weaponData.weaponPrefab, transform.position, Quaternion.identity);
         Rigidbody2D rb = weapon.GetComponent<Rigidbody2D>();
 
+        // imleç pozisyonunu kullanarak atış yönü belirle
         Vector3 playerPos = transform.position;
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
         Vector2 aimDirection = (mousePos - playerPos).normalized;
 
-        rb.velocity = aimDirection * projectileSpeed;
+        rb.velocity = aimDirection * weaponData.projectileSpeed;
     }
 }

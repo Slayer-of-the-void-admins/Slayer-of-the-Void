@@ -1,43 +1,78 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
+
+[CreateAssetMenu(fileName = "NewEnemySpawnSet", menuName = "EnemySpawnSet")]
+public class EnemySpawnSet : ScriptableObject // spawnSet ler çağırılacak düşman bilgilerini ve şanslarını tutuyor
+{
+    [Serializable]
+    public class SpawnEntry
+    {
+        public EnemyData enemyData;
+
+        [Range(0f, 1f)]
+        public float spawnChance;
+    }
+
+    public float globalSpawnRate = 1f;
+    public SpawnEntry[] enemiesToSpawn;
+}
 
 public class SpawnerScript : MonoBehaviour
 {
-    public EnemyData enemyData;
+    public EnemySpawnSet spawnSet;
     public Transform player;
-    public float spawnRate = 2f;
-    public float spawnDistance = 10f;
+    public float spawnDistance = 20f;
 
     void Start()
     {
         // SpawnEnenmy metodu oyun başladıktan 1f sonra bir kere çalışır sonra her spawnRate sürsinde birdaha çalışır
-        InvokeRepeating(nameof(SpawnEnemy), 1f, enemyData.spawnRate);
+        if (spawnSet != null)
+        {
+            InvokeRepeating(nameof(SpawnEnemy), 1f, spawnSet.globalSpawnRate);
+        }
     }
 
     void SpawnEnemy()
     {
-        if (player == null) return;
+        if (player == null || spawnSet == null) return;
 
-        Vector2 spawnPosition = (Vector2)player.position + Random.insideUnitCircle.normalized * spawnDistance; // düşmanın doğacağı pozisyonu rastgele seç
+        EnemyData chosenEnemy = ChooseEnemyType();
+        if (chosenEnemy == null) return;
 
-        GameObject enemy = Instantiate(enemyData.enemyPrefab, spawnPosition, Quaternion.identity); // düşmanı seçilen pozisyonda çağır
-
+        Vector2 spawnPosition = (Vector2)player.position + UnityEngine.Random.insideUnitCircle.normalized * spawnDistance; // düşmanın doğacağı pozisyonu rastgele seç
+        GameObject enemy = Instantiate(chosenEnemy.enemyPrefab, spawnPosition, Quaternion.identity); // düşmanı seçilen pozisyonda çağır
         enemy.GetComponent<EnemyMovement>().player = player; // çağırılan düşmandaki hareket scriptine oyuncu nesnesini aktar
     }
 
-    public void SetEnemyType(EnemyData newEnemyData) // düşman tipini değiştirmek için kullanılan metod
+    private EnemyData ChooseEnemyType()
     {
-        enemyData = newEnemyData;
-        RestartSpawn();
+        float totalChance = 0f;
+        foreach (var enemy in spawnSet.enemiesToSpawn)
+        {
+            totalChance += enemy.spawnChance; // totalChance 100 olacak (her spawnSet toplam spawnChance 100)
+        }
+        
+        float roll = UnityEngine.Random.Range(0f, totalChance); // 0 ile totalChance arasında bir değer döndür
+        float cumulative = 0f;
+        foreach (var enemy in spawnSet.enemiesToSpawn) // döndürülen değer düşan doğma şansından küçük olduğunda çağır
+        {
+            cumulative += enemy.spawnChance;
+            if (roll <= cumulative)
+            {
+                return enemy.enemyData;
+            }
+        }
+        return null;
     }
 
-    private void RestartSpawn()
+    public void SetSpawnSet(EnemySpawnSet newSet) // spawnSet değişiminde prosedür yeniden başlar
     {
         CancelInvoke(nameof(SpawnEnemy));
-        if (enemyData != null)
-        {
-            InvokeRepeating(nameof(SpawnEnemy), 0f, enemyData.spawnRate);
-        }
+        spawnSet = newSet;
+        InvokeRepeating(nameof(SpawnEnemy), 0f, spawnSet.globalSpawnRate);
     }
 }
