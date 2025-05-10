@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class MapScript : MonoBehaviour
 {
@@ -13,25 +14,25 @@ public class MapScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            if (mapPanel.activeSelf == false)
+            if (Time.timeScale == 1f)
             {
                 OpenMap();
             }
-            else
+            else if (mapPanel.activeSelf == true)
             {
                 CloseMap();
             }
         }
     }
     
-    void OpenMap()
+    public void OpenMap()
     {
         mapPanel.SetActive(true);
         playerMarker.SetActive(true);
         Time.timeScale = 0f;
     }
 
-    void CloseMap()
+    public void CloseMap()
     {
         playerMarker.SetActive(false);
         mapPanel.SetActive(false);

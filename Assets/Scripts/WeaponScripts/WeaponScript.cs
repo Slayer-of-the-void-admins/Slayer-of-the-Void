@@ -9,21 +9,24 @@ public class WeaponScript : MonoBehaviour
 
     void Start()
     {
+        Debug.Log($"WeaponScript Start called on {gameObject.name}");
         InvokeRepeating(nameof(Shoot), 1f, weaponData.fireRate);
     }
 
     void Shoot()
     {
-        // silahı çağır
-        GameObject weapon = Instantiate(weaponData.weaponPrefab, transform.position, Quaternion.identity);
-        Rigidbody2D rb = weapon.GetComponent<Rigidbody2D>();
+            // Debug.Log($"Shooting from {weaponData.weaponName}");
 
-        // imleç pozisyonunu kullanarak atış yönü belirle
-        Vector3 playerPos = transform.position;
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0;
-        Vector2 aimDirection = (mousePos - playerPos).normalized;
+            // silahı çağır
+            GameObject weapon = Instantiate(weaponData.weaponPrefab, transform.position, Quaternion.identity);
+            Rigidbody2D rb = weapon.GetComponent<Rigidbody2D>();
 
-        rb.velocity = aimDirection * weaponData.projectileSpeed;
+            // imleç pozisyonunu kullanarak atış yönü belirle
+            Vector3 playerPos = transform.position;
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePos.z = 0;
+            Vector2 aimDirection = (mousePos - playerPos).normalized;
+
+            rb.velocity = aimDirection * weaponData.projectileSpeed;
     }
 }

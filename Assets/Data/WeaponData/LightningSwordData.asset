@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55dd78edffd53314480cfd570dc4f3a0, type: 3}
+  m_Name: LightningSwordData
+  m_EditorClassIdentifier: 
+  weaponName: VenomFlask
+  weaponPrefab: {fileID: 6923670273585607469, guid: a4354f3df83287243967ddefad403307, type: 3}
+  upgradeCardPrefab: {fileID: 5918746556210795602, guid: d381abdc2ebcadf4b9e71a9f2409c22c, type: 3}
+  fireRate: 1
+  projectileSpeed: 20
+  damageAmount: 10
+  targetTag: Enemy
+  isProjectile: 0
+  destroySelfOnCollision: 0

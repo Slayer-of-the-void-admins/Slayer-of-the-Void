@@ -7,11 +7,11 @@ public class UIScript : MonoBehaviour
 {
     public GameObject gameOverScreen;
     public GameObject pauseScreen;
+    public MapScript mapScript;
 
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 1f;
         gameOverScreen.SetActive(false);
     }
 
@@ -20,15 +20,17 @@ public class UIScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (pauseScreen.activeSelf == false)
+            if (Time.timeScale == 1f)
             {
-                pauseScreen.SetActive(true);
-                Time.timeScale = 0f;
+                PauseGame();
             }
-            else
+            else if (pauseScreen.activeSelf == true)
             {
-                pauseScreen.SetActive(false);
-                Time.timeScale = 1f;
+                UnpauseGame();
+            }
+            else if (mapScript.mapPanel.activeSelf == true)
+            {
+                mapScript.CloseMap();
             }
         }
     }
@@ -41,5 +43,17 @@ public class UIScript : MonoBehaviour
     public void ReturnToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    void PauseGame()
+    {
+        pauseScreen.SetActive(true);
+        Time.timeScale = 0f;
+    }
+    
+    void UnpauseGame()
+    {
+        pauseScreen.SetActive(false);
+        Time.timeScale = 1f;
     }
 }

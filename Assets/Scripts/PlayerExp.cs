@@ -13,6 +13,7 @@ public class PlayerExp : MonoBehaviour
     public TextMeshProUGUI expLabel;
     public Slider ExpBar;
     public SpawnerScript spawnerScript;
+    public UpgradePanelScript upgradePanelScript;
 
     public void GainXP(int xpAmount)
     {
@@ -43,5 +44,7 @@ public class PlayerExp : MonoBehaviour
         {
             Debug.Log("spawnSet for the reached level doesn't exist | Exception: " + e.Message);
         }
+
+        upgradePanelScript.ShowUpgradePanel();
     }
 }
