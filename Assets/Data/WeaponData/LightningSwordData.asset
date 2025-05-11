@@ -15,9 +15,15 @@ MonoBehaviour:
   weaponName: LightningSword
   weaponPrefab: {fileID: 6923670273585607469, guid: a4354f3df83287243967ddefad403307, type: 3}
   upgradeCardPrefab: {fileID: 5918746556210795602, guid: dbc1a28f8b379024590a320a33f9dc80, type: 3}
+  targetTag: Enemy
+  damageAmount: 10
+  isProjectile: 0
   fireRate: 1
   projectileSpeed: 20
-  damageAmount: 10
-  targetTag: Enemy
-  isProjectile: 0
   destroySelfOnCollision: 0
+  rotationSpeed: 3
+  orbitDistance: 3.5
+  weaponLevel: 1
+  damageMultiplier: 1.2
+  fireRateMultiplier: 1.2
+  speedMultiplier: 1.2

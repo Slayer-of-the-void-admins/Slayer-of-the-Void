@@ -15,9 +15,15 @@ MonoBehaviour:
   weaponName: VenomFlask
   weaponPrefab: {fileID: 6923670273585607469, guid: 0c193569bc65c774aa6d333ea78503ce, type: 3}
   upgradeCardPrefab: {fileID: 5918746556210795602, guid: de2be879b78501e4a888ab8e27966870, type: 3}
+  targetTag: Enemy
+  damageAmount: 1
+  isProjectile: 1
   fireRate: 1
   projectileSpeed: 20
-  damageAmount: 10
-  targetTag: Enemy
-  isProjectile: 1
-  destroySelfOnCollision: 1
+  destroySelfOnCollision: 0
+  rotationSpeed: 3
+  orbitDistance: 3.5
+  weaponLevel: 1
+  damageMultiplier: 1.2
+  fireRateMultiplier: 1.2
+  speedMultiplier: 1.2

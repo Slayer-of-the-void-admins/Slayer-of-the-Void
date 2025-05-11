@@ -72,8 +72,18 @@ public class UpgradePanelScript : MonoBehaviour
     public void AddWeapon(WeaponData weaponData)
     {
         // oyuncu silaha zaten sahipse yenisini yerleştirmek yerine silahın seviyesini artır
-        WeaponScript existingWeapon = player.GetComponentInChildren<WeaponScript>();
-        if (existingWeapon != null && existingWeapon.weaponData.weaponName == weaponData.weaponName)
+        WeaponScript existingWeapon = null;
+        foreach (Transform child in player.transform) // oyuncunun tüm çocuklarını araştır
+        {
+            WeaponScript weaponScript = child.GetComponent<WeaponScript>();
+            if (weaponScript != null && weaponScript.weaponData.weaponName == weaponData.weaponName)
+            {
+                existingWeapon = weaponScript;
+                break;
+            }
+        }
+
+        if (existingWeapon != null)
         {
             // silah seviyesini artır
             existingWeapon.weaponData.weaponLevel++;

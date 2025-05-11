@@ -15,8 +15,15 @@ MonoBehaviour:
   weaponName: Shuriken
   weaponPrefab: {fileID: 6923670273585607469, guid: db216aca1ac45ea498900ae61432fddd, type: 3}
   upgradeCardPrefab: {fileID: 5918746556210795602, guid: d381abdc2ebcadf4b9e71a9f2409c22c, type: 3}
+  targetTag: Enemy
+  damageAmount: 10
+  isProjectile: 1
   fireRate: 1
   projectileSpeed: 20
-  damageAmount: 10
-  targetTag: Enemy
   destroySelfOnCollision: 1
+  rotationSpeed: 3
+  orbitDistance: 3.5
+  weaponLevel: 3
+  damageMultiplier: 1.2
+  fireRateMultiplier: 1.2
+  speedMultiplier: 1.1

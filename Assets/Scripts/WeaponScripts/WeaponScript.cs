@@ -12,7 +12,7 @@ public class WeaponScript : MonoBehaviour
     {
         if (weaponData.isProjectile == true)
         {
-            InvokeRepeating(nameof(Shoot), 1f, weaponData.fireRate);
+            InvokeRepeating(nameof(Shoot), 1f, 1 / weaponData.GetFireRate());
         }
         else 
         {

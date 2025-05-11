@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: ca68d820d2069b24097b71f85b0958e2, type: 3}
   m_Name: LVL2SpawnSet
-  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnSet
+  m_EditorClassIdentifier: 
   globalSpawnRate: 2
   enemiesToSpawn:
-  - enemyData: {fileID: 11400000, guid: dcdb9b59084f9d848ae35e44d435e6d7, type: 2}
-    spawnChance: 0.2
   - enemyData: {fileID: 11400000, guid: 355d3bd0a2771e2469b2a280accefe76, type: 2}
     spawnChance: 0.8
+  - enemyData: {fileID: 11400000, guid: dcdb9b59084f9d848ae35e44d435e6d7, type: 2}
+    spawnChance: 0.2

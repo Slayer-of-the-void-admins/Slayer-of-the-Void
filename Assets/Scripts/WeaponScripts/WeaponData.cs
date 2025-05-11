@@ -14,7 +14,7 @@ public class WeaponData : ScriptableObject
 
     public bool isProjectile = true;
     [ShowIf("isProjectile")]
-    public float fireRate = 1f;
+    public float fireRate = 1f; // saniyede ... kadar atış sıklığı
     [ShowIf("isProjectile")]
     public float projectileSpeed = 20f;
     [ShowIf("isProjectile")]
@@ -27,13 +27,22 @@ public class WeaponData : ScriptableObject
     
     public int weaponLevel = 1;
 
+    // multiplier ları 1f e koymak seviye atladıkça birşeyin değişmemesini sağlar
     public float damageMultiplier = 1.2f;
     public float GetDamage()
     {   // damageMultiplier ın weaponLevel - 1. kuvveti ile çarp
         return damageAmount * Mathf.Pow(damageMultiplier, weaponLevel - 1);
     }
 
-    public float speedMultiplier = 1.2f; 
+
+    [ShowIf("isProjectile")]
+    public float fireRateMultiplier = 1.2f;
+    public float GetFireRate()
+    {
+        return fireRate * Mathf.Pow(fireRateMultiplier, weaponLevel - 1);
+    }
+
+    public float speedMultiplier = 1.2f;
     public float GetSpeed()
     {
         if (isProjectile == true)
