@@ -6,19 +6,40 @@ using UnityEngine;
 public class WeaponScript : MonoBehaviour
 {
     public WeaponData weaponData;
+    private GameObject weapon;
 
     void Start()
     {
-        Debug.Log($"WeaponScript Start called on {gameObject.name}");
-        InvokeRepeating(nameof(Shoot), 1f, weaponData.fireRate);
+        if (weaponData.isProjectile == true)
+        {
+            InvokeRepeating(nameof(Shoot), 1f, weaponData.fireRate);
+        }
+        else 
+        {
+            Shoot();
+        }
+    }
+
+    void Update()
+    {
+        if (weaponData.isProjectile == false && weapon != null)
+        {
+            // silahı oyuncu etrafında döndür
+            float angle = Time.time * weaponData.GetSpeed();
+            Vector3 offset = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * weaponData.orbitDistance;
+            weapon.transform.position = transform.position + offset;
+
+            // silah sürekli oyuncunun tersi yönüne baksın
+            weapon.transform.rotation = Quaternion.LookRotation(Vector3.back, weapon.transform.position - transform.position);
+        }
     }
 
     void Shoot()
     {
-            // Debug.Log($"Shooting from {weaponData.weaponName}");
-
+        if (weaponData.isProjectile == true)
+        {
             // silahı çağır
-            GameObject weapon = Instantiate(weaponData.weaponPrefab, transform.position, Quaternion.identity);
+            weapon = Instantiate(weaponData.weaponPrefab, transform.position, Quaternion.identity);
             Rigidbody2D rb = weapon.GetComponent<Rigidbody2D>();
 
             // imleç pozisyonunu kullanarak atış yönü belirle
@@ -27,6 +48,22 @@ public class WeaponScript : MonoBehaviour
             mousePos.z = 0;
             Vector2 aimDirection = (mousePos - playerPos).normalized;
 
-            rb.velocity = aimDirection * weaponData.projectileSpeed;
+            rb.velocity = aimDirection * weaponData.GetSpeed();
+        }
+        else // atılabilir olmayan silah
+        {
+            weapon = Instantiate(weaponData.weaponPrefab, transform.position, Quaternion.identity);
+        }
+
+        BuffDamage();
+    }
+
+    void BuffDamage()
+    {
+        DamageScript damageScript = weapon.GetComponent<DamageScript>();
+        if (damageScript != null)
+        {
+            damageScript.damageAmount = weaponData.GetDamage();
+        }
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3611996619528276933}
   - component: {fileID: -2093300831628008151}
   m_Layer: 0
-  m_Name: VenomFlaskData
+  m_Name: VenomFlask
   m_TagString: ProjectileWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

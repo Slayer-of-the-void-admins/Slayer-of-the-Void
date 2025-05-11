@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55dd78edffd53314480cfd570dc4f3a0, type: 3}
   m_Name: LightningSwordData
   m_EditorClassIdentifier: 
-  weaponName: VenomFlask
+  weaponName: LightningSword
   weaponPrefab: {fileID: 6923670273585607469, guid: a4354f3df83287243967ddefad403307, type: 3}
-  upgradeCardPrefab: {fileID: 5918746556210795602, guid: d381abdc2ebcadf4b9e71a9f2409c22c, type: 3}
+  upgradeCardPrefab: {fileID: 5918746556210795602, guid: dbc1a28f8b379024590a320a33f9dc80, type: 3}
   fireRate: 1
   projectileSpeed: 20
   damageAmount: 10
