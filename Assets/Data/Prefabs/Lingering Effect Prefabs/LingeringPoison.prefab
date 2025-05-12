@@ -133,7 +133,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31fa2ec5b4649894488c7452477e5d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 5
-  damageInterval: 1
-  duration: 5
   lingeringEffectData: {fileID: 11400000, guid: 7c32ca8a00f0ef94e95cc72d2d388dd2, type: 2}

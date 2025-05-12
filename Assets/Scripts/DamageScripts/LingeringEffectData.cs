@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [CreateAssetMenu(fileName = "NewLingeringEffectData", menuName = "LingeringEffectData")]
 public class LingeringEffectData : ScriptableObject
@@ -12,12 +13,14 @@ public class LingeringEffectData : ScriptableObject
     public float damageInterval = 1f;
     public float duration = 5f;
     public int effectLevel = 1;
-    public float damageMultiplier = 1.2f;
 
+
+    public float damageMultiplier = 1.2f;
     public float GetDamage()
     {
         return damageAmount * Mathf.Pow(damageMultiplier, effectLevel - 1);
     }
+
 
     private float buffedDuration;
     private float buffAmountForDuration;
@@ -34,5 +37,14 @@ public class LingeringEffectData : ScriptableObject
         }
         buffedDuration += buffAmountForDuration;
         return buffedDuration;
+    }
+
+
+    public float sizeMultiplier = 1.2f;
+    private Vector3 scale;
+    public Vector3 GetSize()
+    {
+        scale = effectPrefab.transform.localScale;
+        return scale * Mathf.Pow(sizeMultiplier, effectLevel - 1);
     }
 }

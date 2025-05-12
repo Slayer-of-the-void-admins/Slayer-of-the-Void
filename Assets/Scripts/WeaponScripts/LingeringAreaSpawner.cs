@@ -5,6 +5,7 @@ using UnityEngine;
 public class LingeringAreaSpawner : MonoBehaviour
 {
     public LingeringEffectData lingeringEffectData;
+    private LingeringEffectData lingeringEffectDataCopy;
     public WeaponData weaponData;
 
     void OnDestroy()
@@ -12,8 +13,10 @@ public class LingeringAreaSpawner : MonoBehaviour
         if (lingeringEffectData != null)
         {
             lingeringEffectData.effectLevel = weaponData.weaponLevel;
-            // Debug.Log("linger area effect level: " + lingeringEffectData.effectLevel);
-            Instantiate(lingeringEffectData.effectPrefab, transform.position, Quaternion.identity);
+            GameObject lingeringArea = Instantiate(lingeringEffectData.effectPrefab, transform.position, Quaternion.identity);
+            lingeringArea.transform.localScale = lingeringEffectData.GetSize();
+            Debug.Log("linger area effect level: " + lingeringEffectData.effectLevel);
+            Debug.Log("created lingering area size: " + lingeringArea.transform.localScale.x.ToString());
         }
     }
 }
