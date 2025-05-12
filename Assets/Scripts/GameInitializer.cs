@@ -12,6 +12,7 @@ using UnityEngine;
 public class GameInitializer : MonoBehaviour
 {
     public List<WeaponData> weaponDataList;
+    public List<LingeringEffectData> lingeringEffectList;
     public List<EnemySpawnSet> spawnSetList;
     public SpawnerScript spawner;
 
@@ -19,6 +20,7 @@ public class GameInitializer : MonoBehaviour
     {
         ResetWeaponLevels();
         InitializeSpawner();
+        ResetLingeringEffectLevels();
     }
 
     void ResetWeaponLevels()
@@ -26,6 +28,14 @@ public class GameInitializer : MonoBehaviour
         foreach (WeaponData weaponData in weaponDataList)
         {
             weaponData.weaponLevel = 1;
+        }
+    }
+
+    void ResetLingeringEffectLevels()
+    {
+        foreach (LingeringEffectData lingeringEffect in lingeringEffectList)
+        {
+            lingeringEffect.effectLevel = 1;
         }
     }
 

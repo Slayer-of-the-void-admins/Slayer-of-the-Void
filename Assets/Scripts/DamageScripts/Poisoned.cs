@@ -13,9 +13,10 @@ public class Poisoned : MonoBehaviour
     public void Initialize(HealthScript health, LingeringEffectData lingeringEffectData)
     {
         this.health = health;
-        this.damageAmount = lingeringEffectData.damageAmount;
+        this.damageAmount = lingeringEffectData.GetDamage();
         this.damageInterval = lingeringEffectData.damageInterval;
-        this.duration = lingeringEffectData.duration;
+        Debug.Log("duration on initialization: " + lingeringEffectData.GetDuration().ToString());
+        this.duration = lingeringEffectData.GetDuration();
         timer = lingeringEffectData.damageInterval;
     }
 
@@ -32,7 +33,7 @@ public class Poisoned : MonoBehaviour
         duration -= Time.deltaTime;
         if (duration <= 0)
         {
-            Debug.Log("duration of poisoned status has ended");
+            // Debug.Log("duration of poisoned status has ended");
             Destroy(this);
         }
     }

@@ -180,3 +180,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lingeringEffectData: {fileID: 11400000, guid: 7c32ca8a00f0ef94e95cc72d2d388dd2, type: 2}
+  weaponData: {fileID: 11400000, guid: b7c4af6d6cd877942b6e21df5c0b40fd, type: 2}

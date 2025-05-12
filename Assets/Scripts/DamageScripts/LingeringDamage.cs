@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class LingeringDamage : MonoBehaviour
 {
-    // public float damageAmount = 5f;
-    // public float damageInterval = 1f;
-    // public float duration = 5f;
     public LingeringEffectData lingeringEffectData;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -19,11 +16,8 @@ public class LingeringDamage : MonoBehaviour
                 Poisoned poisoned = other.GetComponent<Poisoned>();
                 if (poisoned == null)
                 {
-                    Debug.Log("poisoned status added to enemy");
+                    // Debug.Log("poisoned status added to enemy");
                     poisoned = other.gameObject.AddComponent<Poisoned>();
-                    // poisoned.damageAmount = damageAmount;
-                    // poisoned.damageInterval = damageInterval;
-                    // poisoned.duration = duration;
                     poisoned.Initialize(health, lingeringEffectData);
                 }
             }
