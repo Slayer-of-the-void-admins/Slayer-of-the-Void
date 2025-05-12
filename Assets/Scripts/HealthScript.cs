@@ -18,7 +18,6 @@ public class HealthScript : MonoBehaviour
         {
             maxHealth = enemyData.maxHealth;
         }
-
         currentHealth = maxHealth;
 
         if (healthBar != null)

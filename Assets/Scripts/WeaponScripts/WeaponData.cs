@@ -54,4 +54,9 @@ public class WeaponData : ScriptableObject
             return rotationSpeed * Mathf.Pow(speedMultiplier, weaponLevel - 1);
         }
     }
+
+    // public bool hasLingeringEffect = false;
+
+    // [ShowIf("hasLingeringEffect")]
+    // public LingeringEffectData lingeringEffectData;
 }
