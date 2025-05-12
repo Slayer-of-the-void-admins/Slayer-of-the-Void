@@ -15,9 +15,8 @@ public class Poisoned : MonoBehaviour
         this.health = health;
         this.damageAmount = lingeringEffectData.GetDamage();
         this.damageInterval = lingeringEffectData.damageInterval;
-        Debug.Log("duration on initialization: " + lingeringEffectData.GetDuration().ToString());
         this.duration = lingeringEffectData.GetDuration();
-        timer = lingeringEffectData.damageInterval;
+        timer = damageInterval;
     }
 
     void Update()

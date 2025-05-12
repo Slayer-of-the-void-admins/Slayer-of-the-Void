@@ -13,7 +13,6 @@ public class UpgradePanelScript : MonoBehaviour
     public Transform upgradePanelTransform;
     public WeaponData[] weaponDatas;
 
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(ShowUpgradePanelDelayed());
@@ -97,6 +96,15 @@ public class UpgradePanelScript : MonoBehaviour
 
             WeaponScript ws = newWeapon.AddComponent<WeaponScript>();
             ws.weaponData = weaponData;
+
+            if (weaponData.weaponName == "Shuriken" || weaponData.weaponName == "VenomFlask")
+            {
+                newWeapon.AddComponent<StraightProjectile>();
+            }
+            else if (weaponData.weaponName == "LightningSword")
+            {
+                newWeapon.AddComponent<OrbitingWeapon>();
+            }
         }
     }
 }

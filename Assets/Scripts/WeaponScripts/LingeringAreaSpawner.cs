@@ -15,8 +15,8 @@ public class LingeringAreaSpawner : MonoBehaviour
             lingeringEffectData.effectLevel = weaponData.weaponLevel;
             GameObject lingeringArea = Instantiate(lingeringEffectData.effectPrefab, transform.position, Quaternion.identity);
             lingeringArea.transform.localScale = lingeringEffectData.GetSize();
-            Debug.Log("linger area effect level: " + lingeringEffectData.effectLevel);
-            Debug.Log("created lingering area size: " + lingeringArea.transform.localScale.x.ToString());
+            // Debug.Log("linger area effect level: " + lingeringEffectData.effectLevel);
+            // Debug.Log("created lingering area size: " + lingeringArea.transform.localScale.x.ToString());
         }
     }
 }

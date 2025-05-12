@@ -6,6 +6,12 @@ public class LingeringDamage : MonoBehaviour
 {
     public LingeringEffectData lingeringEffectData;
 
+    void Start()
+    {
+        // havuz kendini yok etsin
+        StartCoroutine(DestroySelf(lingeringEffectData.GetDuration()));
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
@@ -22,5 +28,11 @@ public class LingeringDamage : MonoBehaviour
                 }
             }
         }
+    }
+
+    private IEnumerator DestroySelf(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        Destroy(gameObject);
     }
 }

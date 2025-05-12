@@ -18,7 +18,7 @@ public class DamageScript : MonoBehaviour
         if (weaponData != null)
         {
             targetTag = weaponData.targetTag; // "Enemy"
-            damageAmount = weaponData.damageAmount;
+            damageAmount = weaponData.GetDamage();
         }
         else if (enemyData != null)
         {
