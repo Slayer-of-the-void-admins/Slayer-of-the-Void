@@ -11,6 +11,7 @@ public class WeaponData : ScriptableObject
     public GameObject upgradeCardPrefab;
     public string targetTag = "Enemy";
     public float damageAmount = 10f;
+    public float stunDuration = 0.2f;
 
 
     public bool isProjectile = true;

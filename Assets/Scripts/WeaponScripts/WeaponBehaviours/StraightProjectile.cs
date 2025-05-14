@@ -17,7 +17,10 @@ public class StraightProjectile : MonoBehaviour, IWeaponBehaivour
 
     public void UpdateBehaivour()
     {
-
+        if (straightProjectile != null)
+        {
+            straightProjectile.transform.rotation = Quaternion.LookRotation(Vector3.back, straightProjectile.transform.position - playerTransform.position);
+        }
     }
 
     void Shoot()

@@ -17,6 +17,7 @@ MonoBehaviour:
   upgradeCardPrefab: {fileID: 5918746556210795602, guid: de2be879b78501e4a888ab8e27966870, type: 3}
   targetTag: Enemy
   damageAmount: 1
+  stunDuration: 0
   isProjectile: 1
   fireRate: 0.2
   projectileSpeed: 10
@@ -26,7 +27,7 @@ MonoBehaviour:
   maxAimRange: 12
   rotationSpeed: 3
   orbitDistance: 3.5
-  weaponLevel: 2
+  weaponLevel: 1
   damageMultiplier: 1
   fireRateMultiplier: 1.2
   speedMultiplier: 1

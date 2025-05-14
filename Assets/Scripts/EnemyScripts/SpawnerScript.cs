@@ -17,7 +17,7 @@ public class SpawnerScript : MonoBehaviour
         // SpawnEnenmy metodu oyun başladıktan 1f sonra bir kere çalışır sonra her spawnRate sürsinde birdaha çalışır
         if (spawnSet != null)
         {
-            InvokeRepeating(nameof(SpawnEnemy), 1f, spawnSet.globalSpawnRate);
+            InvokeRepeating(nameof(SpawnEnemy), 1f, 1f / spawnSet.globalSpawnRate);
         }
     }
 

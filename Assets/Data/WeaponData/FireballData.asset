@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55dd78edffd53314480cfd570dc4f3a0, type: 3}
-  m_Name: ShurikenData
+  m_Name: FireballData
   m_EditorClassIdentifier: 
-  weaponName: Shuriken
-  weaponPrefab: {fileID: 6923670273585607469, guid: db216aca1ac45ea498900ae61432fddd, type: 3}
+  weaponName: Fireball
+  weaponPrefab: {fileID: 6923670273585607469, guid: 0b79b93023eb514428eae2b0cd1e0f4d, type: 3}
   upgradeCardPrefab: {fileID: 5918746556210795602, guid: d381abdc2ebcadf4b9e71a9f2409c22c, type: 3}
   targetTag: Enemy
-  damageAmount: 10
+  damageAmount: 20
   stunDuration: 0.1
   isProjectile: 1
-  fireRate: 1
-  projectileSpeed: 20
+  fireRate: 0.35
+  projectileSpeed: 10
   destroySelfOnCollision: 1
   isRandomAimingProjectile: 0
   minAimRange: 3

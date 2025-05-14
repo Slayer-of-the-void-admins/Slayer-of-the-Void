@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using Unity.Collections;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 public class DamageScript : MonoBehaviour
 {
@@ -31,6 +33,14 @@ public class DamageScript : MonoBehaviour
     {
         if (other.CompareTag(targetTag) == true) // dokunduğu objenin tagi targetTag ise çalış
         {
+            // düşmanı sersemlet
+            EnemyMovement otherMovement = other.GetComponent<EnemyMovement>();
+            if (otherMovement != null && otherMovement.isStunned == false)
+            {
+                otherMovement.Stun(weaponData.stunDuration);
+            }
+
+            // çarpılan objenin canına hasar ver. çarpan silah yok olmalıysa yok et
             HealthScript health = other.GetComponent<HealthScript>();
             if (health != null)
             {
@@ -41,6 +51,7 @@ public class DamageScript : MonoBehaviour
                 }
             }
 
+            // düşmanlar oyuncuya çarpınca hafif geri zıplasın
             if (targetTag == "Player") // hedef alınan tag player olan sadece düşmanlar için çalışan ittirme sistemi
             {
                 Vector3 dealerPosition = gameObject.transform.position;

@@ -8,17 +8,12 @@ public class EnemyMovement : MonoBehaviour
 {
     public Transform player;
     public EnemyData enemyData;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    public bool isStunned = false;
 
     // Update is called once per frame
     void Update()
     {
-        if (player == null) return;
+        if (player == null || isStunned == true) return;
 
         // oyuncu ve düşman pozisyonlarını değişkene aktar
         Vector3 playerPos = player.position;
@@ -27,5 +22,18 @@ public class EnemyMovement : MonoBehaviour
         Vector3 direction = (playerPos - enemyPos).normalized; // yönü oyuncunun pozisyonundan düşmanın pozisyonunu çıkartarak bul ve genişliği sabit tut
         enemyPos += direction * enemyData.moveSpeed * Time.deltaTime; // bulunan yönde düşmanı hareket ettir
         transform.position = enemyPos;
+    }
+
+    public void Stun(float stunDuration)
+    {
+        if (isStunned == true) return;
+        StartCoroutine(StunCoroutine(stunDuration));
+    }
+
+    private IEnumerator StunCoroutine(float stunDuration)
+    {
+        isStunned = true;
+        yield return new WaitForSeconds(stunDuration);
+        isStunned = false;
     }
 }

@@ -97,8 +97,11 @@ public class UpgradePanelScript : MonoBehaviour
             WeaponScript ws = newWeapon.AddComponent<WeaponScript>();
             ws.weaponData = weaponData;
 
+            // DamageScript ds = weaponData.weaponPrefab.GetComponent<DamageScript>();
+            // ds.stunDuration = weaponData.stunDuration;
+
             // doğru behaivour dosyasını bileşen olarak silaha ekle
-            if (weaponData.weaponName == "Shuriken")
+            if (weaponData.weaponName == "Shuriken" || weaponData.weaponName == "Fireball")
             {
                 newWeapon.AddComponent<StraightProjectile>();
             }

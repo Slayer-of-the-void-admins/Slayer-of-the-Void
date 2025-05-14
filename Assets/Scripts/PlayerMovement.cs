@@ -8,11 +8,13 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
+    private Animator playerAnimator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        playerAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -30,6 +32,9 @@ public class PlayerMovement : MonoBehaviour
         {
             spriteRenderer.flipX = true; // sola döndür
         }
+
+        // player animatörünün parametresini oyuncu hareketi ile doldur
+        playerAnimator.SetFloat("moveSpeed", movement.sqrMagnitude);
     }
 
     void FixedUpdate()
