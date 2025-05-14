@@ -21,6 +21,9 @@ MonoBehaviour:
   fireRate: 1
   projectileSpeed: 20
   destroySelfOnCollision: 1
+  isRandomAimingProjectile: 0
+  minAimRange: 3
+  maxAimRange: 12
   rotationSpeed: 3
   orbitDistance: 3.5
   weaponLevel: 3

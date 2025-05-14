@@ -7,7 +7,6 @@ public class StraightProjectile : MonoBehaviour, IWeaponBehaivour
     private WeaponData weaponData;
     private Transform playerTransform;
     private GameObject straightProjectile;
-    private Rigidbody2D rb;
 
     public void Initialize(WeaponData weaponData, Transform playerTransform)
     {

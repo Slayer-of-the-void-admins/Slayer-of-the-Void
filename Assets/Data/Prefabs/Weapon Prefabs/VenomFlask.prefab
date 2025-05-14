@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3611996619528276933}
   - component: {fileID: -2093300831628008151}
   - component: {fileID: 3188171368077490297}
-  - component: {fileID: -1414820172862135700}
   m_Layer: 0
   m_Name: VenomFlask
   m_TagString: ProjectileWeapon
@@ -33,7 +32,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.88, y: 2.88, z: 0}
   m_LocalScale: {x: 0.175, y: 0.175, z: 0}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -182,15 +181,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lingeringEffectData: {fileID: 11400000, guid: 7c32ca8a00f0ef94e95cc72d2d388dd2, type: 2}
   weaponData: {fileID: 11400000, guid: b7c4af6d6cd877942b6e21df5c0b40fd, type: 2}
---- !u!114 &-1414820172862135700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6923670273585607469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2a1d366bd2c7844b2772ff951f683a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

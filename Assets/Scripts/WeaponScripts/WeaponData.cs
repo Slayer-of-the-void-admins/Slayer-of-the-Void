@@ -12,6 +12,7 @@ public class WeaponData : ScriptableObject
     public string targetTag = "Enemy";
     public float damageAmount = 10f;
 
+
     public bool isProjectile = true;
     [ShowIf("isProjectile")]
     public float fireRate = 1f; // saniyede ... kadar atış sıklığı
@@ -20,11 +21,22 @@ public class WeaponData : ScriptableObject
     [ShowIf("isProjectile")]
     public bool destroySelfOnCollision = false;
 
+
+    [ShowIf("isProjectile")]
+    public bool isRandomAimingProjectile = false;
+
+    [ShowIf("isRandomAimingProjectile")]
+    public float minAimRange = 3f;
+    [ShowIf("isRandomAimingProjectile")]
+    public float maxAimRange = 12f;
+    
+
     [HideIf("isProjectile")]
     public float rotationSpeed = 3f;
     [HideIf("isProjectile")]
     public float orbitDistance = 3.5f;
     
+
     public int weaponLevel = 1;
 
     // multiplier ları 1f e koymak seviye atladıkça birşeyin değişmemesini sağlar

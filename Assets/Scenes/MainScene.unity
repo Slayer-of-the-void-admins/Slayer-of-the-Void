@@ -828,6 +828,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2d252d801ea784940975b8e3119e7d59, type: 2}
   - {fileID: 11400000, guid: 1cf52880f2db49f42b02c7c92444c41d, type: 2}
   - {fileID: 11400000, guid: b7c4af6d6cd877942b6e21df5c0b40fd, type: 2}
+  lingeringEffectList:
+  - {fileID: 11400000, guid: 7c32ca8a00f0ef94e95cc72d2d388dd2, type: 2}
   spawnSetList:
   - {fileID: 11400000, guid: 579f624acb77f8a43a896e7b03fda48c, type: 2}
   - {fileID: 11400000, guid: 28f0532ea57232f479d94d8f412ee753, type: 2}
@@ -1620,7 +1622,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -831185663
-  m_SortingLayer: -1
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 287b69963d5fe4947b214c4d06875366, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

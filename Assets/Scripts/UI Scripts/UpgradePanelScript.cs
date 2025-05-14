@@ -97,13 +97,18 @@ public class UpgradePanelScript : MonoBehaviour
             WeaponScript ws = newWeapon.AddComponent<WeaponScript>();
             ws.weaponData = weaponData;
 
-            if (weaponData.weaponName == "Shuriken" || weaponData.weaponName == "VenomFlask")
+            // doğru behaivour dosyasını bileşen olarak silaha ekle
+            if (weaponData.weaponName == "Shuriken")
             {
                 newWeapon.AddComponent<StraightProjectile>();
             }
             else if (weaponData.weaponName == "LightningSword")
             {
                 newWeapon.AddComponent<OrbitingWeapon>();
+            }
+            else if (weaponData.weaponName == "VenomFlask")
+            {
+                newWeapon.AddComponent<RandomCurvedProjectile>();
             }
         }
     }

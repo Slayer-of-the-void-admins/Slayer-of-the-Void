@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5330237486706908548}
   - component: {fileID: 8616405123495623105}
   - component: {fileID: 6819909121876608673}
-  - component: {fileID: 1296985986112157504}
   m_Layer: 0
   m_Name: Shuriken
   m_TagString: ProjectileWeapon
@@ -167,15 +166,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.029334342}
   serializedVersion: 2
   m_Radius: 4.5734115
---- !u!114 &1296985986112157504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6923670273585607469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2a1d366bd2c7844b2772ff951f683a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

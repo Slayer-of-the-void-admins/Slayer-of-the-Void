@@ -23,7 +23,7 @@ MonoBehaviour:
   destroySelfOnCollision: 0
   rotationSpeed: 3
   orbitDistance: 3.5
-  weaponLevel: 1
+  weaponLevel: 2
   damageMultiplier: 1.2
   fireRateMultiplier: 1.2
   speedMultiplier: 1.2

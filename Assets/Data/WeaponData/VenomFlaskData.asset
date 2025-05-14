@@ -18,12 +18,15 @@ MonoBehaviour:
   targetTag: Enemy
   damageAmount: 1
   isProjectile: 1
-  fireRate: 1
-  projectileSpeed: 20
+  fireRate: 0.2
+  projectileSpeed: 10
   destroySelfOnCollision: 0
+  isRandomAimingProjectile: 1
+  minAimRange: 3
+  maxAimRange: 12
   rotationSpeed: 3
   orbitDistance: 3.5
-  weaponLevel: 1
-  damageMultiplier: 1.2
+  weaponLevel: 2
+  damageMultiplier: 1
   fireRateMultiplier: 1.2
-  speedMultiplier: 1.2
+  speedMultiplier: 1

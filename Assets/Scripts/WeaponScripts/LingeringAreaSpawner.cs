@@ -1,15 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class LingeringAreaSpawner : MonoBehaviour
 {
     public LingeringEffectData lingeringEffectData;
-    private LingeringEffectData lingeringEffectDataCopy;
     public WeaponData weaponData;
+    // private SceneSearch
+
+    private bool isQuitting = false;
+    private void OnApplicationQuit()
+    {
+        isQuitting = true;
+    }
 
     void OnDestroy()
     {
+        if (isQuitting || !gameObject.scene.isLoaded) return;
+
         if (lingeringEffectData != null)
         {
             lingeringEffectData.effectLevel = weaponData.weaponLevel;

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5330237486706908548}
   - component: {fileID: 3611996619528276933}
   - component: {fileID: 2985375357791013237}
-  - component: {fileID: 2665767891399839628}
   m_Layer: 0
   m_Name: LightningSword
   m_TagString: ProjectileWeapon
@@ -177,15 +176,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.0436344, y: 12.080786}
   m_EdgeRadius: 0
---- !u!114 &2665767891399839628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6923670273585607469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c473640ed1de14292a1b6c2ef017a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
