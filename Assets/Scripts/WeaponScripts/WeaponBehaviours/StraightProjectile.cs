@@ -15,26 +15,24 @@ public class StraightProjectile : MonoBehaviour, IWeaponBehaivour
         InvokeRepeating(nameof(Shoot), 1f, 1f / weaponData.GetFireRate());
     }
 
-    public void UpdateBehaivour()
-    {
-        if (straightProjectile != null)
-        {
-            straightProjectile.transform.rotation = Quaternion.LookRotation(Vector3.back, straightProjectile.transform.position - playerTransform.position);
-        }
-    }
+    public void UpdateBehaivour() {}
 
     void Shoot()
     {
-        // silahı çağır
-        straightProjectile = Instantiate(weaponData.weaponPrefab, playerTransform.position, Quaternion.identity);
-        Rigidbody2D rb = straightProjectile.GetComponent<Rigidbody2D>();
-
         // imleç pozisyonunu kullanarak yön belirle
-        Vector3 playerPos = transform.position;
+        Vector3 playerPos = playerTransform.position;
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
-        Vector2 aimDirection = (mousePos - playerPos).normalized;
+        Vector3 aimDirection = (mousePos - playerPos).normalized;
 
+        // silahı çağır
+        straightProjectile = Instantiate(weaponData.weaponPrefab, playerPos + aimDirection, Quaternion.identity);
+
+        // silah oyuncunun tersi yönüne baksın
+        straightProjectile.transform.rotation = Quaternion.LookRotation(Vector3.back, straightProjectile.transform.position - playerPos);
+
+        // silah ilerlesin
+        Rigidbody2D rb = straightProjectile.GetComponent<Rigidbody2D>();
         rb.velocity = aimDirection * weaponData.GetSpeed();
     }
 }

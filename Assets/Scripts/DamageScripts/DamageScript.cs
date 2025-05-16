@@ -40,6 +40,13 @@ public class DamageScript : MonoBehaviour
                 otherMovement.Stun(weaponData.stunDuration);
             }
 
+            // renk flaş efekt
+            // DamageFlash damageFlash = other.GetComponent<DamageFlash>();
+            // if (damageFlash != null)
+            // {
+            //     damageFlash.Flash();
+            // }
+
             // çarpılan objenin canına hasar ver. çarpan silah yok olmalıysa yok et
             HealthScript health = other.GetComponent<HealthScript>();
             if (health != null)

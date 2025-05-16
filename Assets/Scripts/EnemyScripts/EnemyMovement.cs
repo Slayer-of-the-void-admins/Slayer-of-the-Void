@@ -10,7 +10,6 @@ public class EnemyMovement : MonoBehaviour
     public EnemyData enemyData;
     public bool isStunned = false;
 
-    // Update is called once per frame
     void Update()
     {
         if (player == null || isStunned == true) return;

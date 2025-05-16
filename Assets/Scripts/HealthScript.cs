@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,6 +30,19 @@ public class HealthScript : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        // EnemyMovement enemyMovement = GetComponent<EnemyMovement>();
+        // if (enemyMovement != null)
+        // {
+        //     enemyMovement.Stun(weaponData.stunDuration)
+        // }
+
+        // düşmana flaş uygular
+        DamageFlash damageFlash = GetComponent<DamageFlash>();
+        if (damageFlash != null)
+        {
+            damageFlash.Flash();
+        }
+
         currentHealth -= damage;
 
         if (currentHealth <= 0)
@@ -36,7 +50,7 @@ public class HealthScript : MonoBehaviour
             currentHealth = 0;
             Die();
         }
-        
+
         if (healthBar != null)
         {
             healthBar.value = currentHealth;
