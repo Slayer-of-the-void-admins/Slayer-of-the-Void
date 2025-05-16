@@ -22,13 +22,20 @@ public class RandomCurvedProjectile : MonoBehaviour, IWeaponBehaivour
 
     void Shoot()
     {
-        // silahı çağır
-        randomCurvedProjectile = Instantiate(weaponData.weaponPrefab, playerTransform.position, Quaternion.identity);
-        Rigidbody2D rb = randomCurvedProjectile.GetComponent<Rigidbody2D>();
-
         // oyuncu etrafında rastgele pozisyon seç
-        Vector2 randomPos = (Vector2)playerTransform.position + Random.insideUnitCircle.normalized * Random.Range(weaponData.minAimRange, weaponData.maxAimRange);
+        Vector3 randomPos = (Vector2)playerTransform.position + Random.insideUnitCircle.normalized * Random.Range(weaponData.minAimRange, weaponData.maxAimRange);
+        randomPos.z = 0;
 
+        // yönü bul
+        Vector3 direction = (randomPos - playerTransform.position).normalized;
+
+        // silahı çağır
+        randomCurvedProjectile = Instantiate(weaponData.weaponPrefab, playerTransform.position + direction, Quaternion.identity);
+
+        // silah gidecek yöne baksın
+        randomCurvedProjectile.transform.rotation = Quaternion.LookRotation(Vector3.back, randomCurvedProjectile.transform.position - playerTransform.position);
+
+        Rigidbody2D rb = randomCurvedProjectile.GetComponent<Rigidbody2D>();
         StartCoroutine(MoveAndDestroy(rb, randomPos));
     }
 

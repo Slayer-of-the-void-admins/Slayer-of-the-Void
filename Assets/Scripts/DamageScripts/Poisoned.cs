@@ -24,7 +24,7 @@ public class Poisoned : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
-            Debug.Log("enemy takes damage from poisoned status: " + damageAmount);
+            // Debug.Log("enemy takes damage from poisoned status: " + damageAmount);
             health.TakeDamage(damageAmount);
             timer = damageInterval;
         }

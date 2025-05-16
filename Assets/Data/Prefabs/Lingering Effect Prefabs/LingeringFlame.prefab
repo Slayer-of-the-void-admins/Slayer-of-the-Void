@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6923670273585607469
+--- !u!1 &915354313839130314
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1852066689191624606}
-  - component: {fileID: 2002284215419018157}
-  - component: {fileID: 5330237486706908548}
-  - component: {fileID: 3611996619528276933}
-  - component: {fileID: -2093300831628008151}
-  - component: {fileID: 3188171368077490297}
+  - component: {fileID: 4661589470576566373}
+  - component: {fileID: 8189071358773572379}
+  - component: {fileID: 3362767655151228709}
+  - component: {fileID: 4747352823634235889}
+  - component: {fileID: 7882328708827383236}
   m_Layer: 0
-  m_Name: VenomFlask
-  m_TagString: ProjectileWeapon
+  m_Name: LingeringFlame
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1852066689191624606
+--- !u!4 &4661589470576566373
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6923670273585607469}
+  m_GameObject: {fileID: 915354313839130314}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.88, y: 2.88, z: 0}
-  m_LocalScale: {x: 0.175, y: 0.175, z: 0}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: -14.01, y: 0, z: 0}
+  m_LocalScale: {x: 1.26, y: 1.99, z: 2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2002284215419018157
+--- !u!212 &8189071358773572379
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6923670273585607469}
+  m_GameObject: {fileID: 915354313839130314}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -74,72 +73,28 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b1ff7efa86c71b64eab67d83c8b07001, type: 3}
+  m_SortingLayerID: 772407969
+  m_SortingLayer: -2
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 1930253422, guid: 5a182cda7e6506744a7bf7ca74c5ac24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.24, y: 10.24}
+  m_Size: {x: 3.61, y: 2.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5330237486706908548
-MonoBehaviour:
+--- !u!70 &3362767655151228709
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6923670273585607469}
+  m_GameObject: {fileID: 915354313839130314}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ab47060ab8498e4e8c18b810c685e94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  enemyData: {fileID: 0}
-  weaponData: {fileID: 11400000, guid: b7c4af6d6cd877942b6e21df5c0b40fd, type: 2}
-  targetTag: Enemy
-  damageAmount: 10
---- !u!50 &3611996619528276933
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6923670273585607469}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!58 &-2093300831628008151
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6923670273585607469}
-  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -161,23 +116,43 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.12, y: -0.52}
-  serializedVersion: 2
-  m_Radius: 3.71
---- !u!114 &3188171368077490297
+  m_Offset: {x: 0.006203425, y: -0.0001813903}
+  m_Size: {x: 3.857099, y: 1.3329637}
+  m_Direction: 1
+--- !u!114 &4747352823634235889
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6923670273585607469}
+  m_GameObject: {fileID: 915354313839130314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98a7cb27e2bc72248a739168defdd7b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 31fa2ec5b4649894488c7452477e5d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lingeringEffectData: {fileID: 11400000, guid: 7c32ca8a00f0ef94e95cc72d2d388dd2, type: 2}
-  weaponData: {fileID: 11400000, guid: b7c4af6d6cd877942b6e21df5c0b40fd, type: 2}
+  lingeringEffectData: {fileID: 11400000, guid: baf64a1ac9ebbf540b6e543b106486d3, type: 2}
+--- !u!95 &7882328708827383236
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915354313839130314}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5187697484be6c34a8d595e96710cd5c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8616405123495623105}
   - component: {fileID: 4270438503108456622}
   - component: {fileID: 7373748126167280708}
+  - component: {fileID: 8186278998180195304}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: ProjectileWeapon
@@ -188,3 +189,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8186278998180195304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6923670273585607469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a7cb27e2bc72248a739168defdd7b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lingeringEffectData: {fileID: 11400000, guid: baf64a1ac9ebbf540b6e543b106486d3, type: 2}
+  weaponData: {fileID: 11400000, guid: e3b557b03fb32e347afc0c5801c87626, type: 2}

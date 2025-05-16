@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &697418636217789213
+--- !u!1 &3363148064426591028
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6684827222359907662}
-  - component: {fileID: 72667419452067548}
-  - component: {fileID: 1452435349005493878}
-  - component: {fileID: 8394865393783043195}
+  - component: {fileID: 8126799471340468394}
+  - component: {fileID: 1017509213078348009}
+  - component: {fileID: 3515597758079682259}
+  - component: {fileID: 3369141134503185051}
+  - component: {fileID: 1675967695312531160}
   m_Layer: 0
   m_Name: LingeringPoison
   m_TagString: Untagged
@@ -19,28 +20,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6684827222359907662
+--- !u!4 &8126799471340468394
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697418636217789213}
+  m_GameObject: {fileID: 3363148064426591028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -14.01, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &72667419452067548
+--- !u!212 &1017509213078348009
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697418636217789213}
+  m_GameObject: {fileID: 3363148064426591028}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,24 +76,24 @@ SpriteRenderer:
   m_SortingLayerID: 772407969
   m_SortingLayer: -1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d7f18d31016e0454294d55479b54a9e6, type: 3}
+  m_Sprite: {fileID: -582559243, guid: acab6fdc923e178468d333411ed7cef4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.28, y: 3.76}
+  m_Size: {x: 3.61, y: 2.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &1452435349005493878
+--- !u!70 &3515597758079682259
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697418636217789213}
+  m_GameObject: {fileID: 3363148064426591028}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -118,19 +119,40 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.049518593, y: -0.0012073577}
-  m_Size: {x: 8.106536, y: 3.5251744}
+  m_Offset: {x: -0.0046682353, y: 0.009690287}
+  m_Size: {x: 3.653088, y: 2.5798607}
   m_Direction: 1
---- !u!114 &8394865393783043195
+--- !u!114 &3369141134503185051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697418636217789213}
+  m_GameObject: {fileID: 3363148064426591028}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31fa2ec5b4649894488c7452477e5d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lingeringEffectData: {fileID: 11400000, guid: 7c32ca8a00f0ef94e95cc72d2d388dd2, type: 2}
+--- !u!95 &1675967695312531160
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3363148064426591028}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5187697484be6c34a8d595e96710cd5c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

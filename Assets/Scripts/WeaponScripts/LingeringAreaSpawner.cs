@@ -9,7 +9,6 @@ public class LingeringAreaSpawner : MonoBehaviour
 {
     public LingeringEffectData lingeringEffectData;
     public WeaponData weaponData;
-    // private SceneSearch
 
     private bool isQuitting = false;
     private void OnApplicationQuit()

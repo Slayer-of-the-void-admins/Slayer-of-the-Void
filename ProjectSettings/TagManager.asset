@@ -46,6 +46,9 @@ TagManager:
   - name: lingeringEffects
     uniqueID: 772407969
     locked: 0
+  - name: shadows
+    uniqueID: 2235859813
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
