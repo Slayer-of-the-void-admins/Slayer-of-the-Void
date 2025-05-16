@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using Unity.Collections;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
 
 public class DamageScript : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     public EnemyData enemyData;
     public WeaponData weaponData;
     public string targetTag;
@@ -21,6 +20,7 @@ public class DamageScript : MonoBehaviour
         {
             targetTag = weaponData.targetTag; // "Enemy"
             damageAmount = weaponData.GetDamage();
+            // oyuncu hasar multiplierını çarp
         }
         else if (enemyData != null)
         {
@@ -33,25 +33,19 @@ public class DamageScript : MonoBehaviour
     {
         if (other.CompareTag(targetTag) == true) // dokunduğu objenin tagi targetTag ise çalış
         {
-            // düşmanı sersemlet
-            EnemyMovement otherMovement = other.GetComponent<EnemyMovement>();
-            if (otherMovement != null && otherMovement.isStunned == false)
-            {
-                otherMovement.Stun(weaponData.stunDuration);
-            }
-
-            // renk flaş efekt
-            // DamageFlash damageFlash = other.GetComponent<DamageFlash>();
-            // if (damageFlash != null)
-            // {
-            //     damageFlash.Flash();
-            // }
-
             // çarpılan objenin canına hasar ver. çarpan silah yok olmalıysa yok et
             HealthScript health = other.GetComponent<HealthScript>();
             if (health != null)
             {
-                health.TakeDamage(damageAmount);
+                if (targetTag == "Enemy")
+                {
+                    health.TakeDamage(damageAmount, weaponData);
+                }
+                else if (targetTag == "Player")
+                {
+                    health.TakeDamage(damageAmount);
+                }
+                
                 if (weaponData?.destroySelfOnCollision == true)
                 {
                     Destroy(gameObject);

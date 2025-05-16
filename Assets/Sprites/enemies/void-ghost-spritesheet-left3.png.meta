@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: baef30c4188d15342be8ce948f91a9fe
+guid: 10f8457e299e63f49a1851afa7b13064
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: void-ghost-spritesheet-left3_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 983
+        width: 469
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05bbc72072b63b14fae596ad9980ff01
+      internalID: 2084579341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: void-ghost-spritesheet-left3_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 477
+        width: 481
+        height: 478
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4452b4e3dae804ca44e3d11bba7063
+      internalID: 661637186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: void-ghost-spritesheet-left3_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 496
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420930a096936c646a3caacdeaf2376a
+      internalID: -528105571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +182,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      void-ghost-spritesheet-left3_0: 2084579341
+      void-ghost-spritesheet-left3_1: 661637186
+      void-ghost-spritesheet-left3_2: -528105571
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

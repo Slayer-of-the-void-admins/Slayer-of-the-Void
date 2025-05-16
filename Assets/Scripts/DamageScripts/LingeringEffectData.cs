@@ -7,11 +7,13 @@ using UnityEngine.UIElements;
 public class LingeringEffectData : ScriptableObject
 {
     public string effectName;
+    public Color flashColor = Color.white;
     public WeaponData weaponData;
     public GameObject effectPrefab;
     public float damageAmount = 5f;
     public float damageInterval = 1f;
     public float duration = 5f;
+    public float stunDuration = 0.125f;
     public int effectLevel = 1;
 
 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: baef30c4188d15342be8ce948f91a9fe
+guid: c3611d43c8faf5f44b2be1627e20449d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: void-ghost-spriteshee-right3_0
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 983
+        width: 467
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292993a1380a5694eb37da452f13e10b
+      internalID: 1210760093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: void-ghost-spriteshee-right3_1
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 476
+        width: 480
+        height: 478
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b558f30b22bf0d4a98167f1910ee5b3
+      internalID: -1317006888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: void-ghost-spriteshee-right3_2
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 21
+        width: 494
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da969d124af4f54468cc202f6bba1afb
+      internalID: 1311582197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +182,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      void-ghost-spriteshee-right3_0: 1210760093
+      void-ghost-spriteshee-right3_1: -1317006888
+      void-ghost-spriteshee-right3_2: 1311582197
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

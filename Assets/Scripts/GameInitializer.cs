@@ -1,12 +1,7 @@
-// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class GameInitializer : MonoBehaviour

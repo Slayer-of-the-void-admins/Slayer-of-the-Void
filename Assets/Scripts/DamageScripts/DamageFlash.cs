@@ -15,21 +15,26 @@ public class DamageFlash : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalMaterial = spriteRenderer.material;
+
+        // flaş metaryelini kopyası ile değiştir
+        flashMaterial = new Material(flashMaterial);
     }
 
-    public void Flash()
+    public void Flash(Color color)
     {
         if (flashCoroutine != null)
         {
             StopCoroutine(flashCoroutine);
         }
 
-        flashCoroutine = StartCoroutine(FlashCoroutine());
+        flashCoroutine = StartCoroutine(FlashCoroutine(color));
     }
 
-    private IEnumerator FlashCoroutine()
+    private IEnumerator FlashCoroutine(Color color)
     {
         spriteRenderer.material = flashMaterial; // flaş materyaline geç
+
+        flashMaterial.color = color;
 
         yield return new WaitForSeconds(flashDuration); // flaş süresi kadar bekle
 

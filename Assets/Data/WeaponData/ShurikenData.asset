@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: ShurikenData
   m_EditorClassIdentifier: 
   weaponName: Shuriken
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
   weaponPrefab: {fileID: 6765666572512849739, guid: 9f1e21ed0a454c944a3bb099d671a452, type: 3}
   upgradeCardPrefab: {fileID: 5918746556210795602, guid: d381abdc2ebcadf4b9e71a9f2409c22c, type: 3}
   targetTag: Enemy
   damageAmount: 10
-  stunDuration: 0.1
+  stunDuration: 0.125
   isProjectile: 1
   fireRate: 1
   projectileSpeed: 20
@@ -27,7 +28,7 @@ MonoBehaviour:
   maxAimRange: 12
   rotationSpeed: 3
   orbitDistance: 3.5
-  weaponLevel: 1
+  weaponLevel: 3
   damageMultiplier: 1.2
   fireRateMultiplier: 1.2
   speedMultiplier: 1.1

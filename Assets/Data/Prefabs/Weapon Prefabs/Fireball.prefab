@@ -101,9 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ab47060ab8498e4e8c18b810c685e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  enemyData: {fileID: 0}
-  weaponData: {fileID: 11400000, guid: 2d252d801ea784940975b8e3119e7d59, type: 2}
+  weaponData: {fileID: 11400000, guid: e3b557b03fb32e347afc0c5801c87626, type: 2}
   targetTag: Enemy
   damageAmount: 10
 --- !u!50 &8616405123495623105

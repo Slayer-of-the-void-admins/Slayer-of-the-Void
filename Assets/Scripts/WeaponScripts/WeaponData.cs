@@ -7,6 +7,7 @@ using UnityEngine;
 public class WeaponData : ScriptableObject
 {
     public string weaponName;
+    public Color flashColor = Color.white;
     public GameObject weaponPrefab;
     public GameObject upgradeCardPrefab;
     public string targetTag = "Enemy";

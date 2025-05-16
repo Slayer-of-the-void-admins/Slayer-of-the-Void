@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8189071358773572379}
   - component: {fileID: 3362767655151228709}
   - component: {fileID: 4747352823634235889}
-  - component: {fileID: 7882328708827383236}
+  - component: {fileID: 5622718286166588690}
   m_Layer: 0
   m_Name: LingeringFlame
   m_TagString: Untagged
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lingeringEffectData: {fileID: 11400000, guid: baf64a1ac9ebbf540b6e543b106486d3, type: 2}
---- !u!95 &7882328708827383236
+--- !u!95 &5622718286166588690
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -145,7 +145,7 @@ Animator:
   m_GameObject: {fileID: 915354313839130314}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5187697484be6c34a8d595e96710cd5c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3b4bf1364e674f94cbf5bc764dfc9e8e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

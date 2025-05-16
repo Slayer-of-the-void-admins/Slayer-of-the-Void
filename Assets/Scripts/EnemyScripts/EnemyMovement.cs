@@ -9,6 +9,14 @@ public class EnemyMovement : MonoBehaviour
     public Transform player;
     public EnemyData enemyData;
     public bool isStunned = false;
+    private SpriteRenderer spriteRenderer;
+    bool lookingRight;
+
+    void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        lookingRight = spriteRenderer.flipX;
+    }
 
     void Update()
     {
@@ -21,6 +29,16 @@ public class EnemyMovement : MonoBehaviour
         Vector3 direction = (playerPos - enemyPos).normalized; // yönü oyuncunun pozisyonundan düşmanın pozisyonunu çıkartarak bul ve genişliği sabit tut
         enemyPos += direction * enemyData.moveSpeed * Time.deltaTime; // bulunan yönde düşmanı hareket ettir
         transform.position = enemyPos;
+
+        // sağa sola bakma
+        if (direction.x > 0) 
+        {
+            spriteRenderer.flipX = lookingRight; // sağa döndür
+        }
+        else if (direction.x < 0)
+        {
+            spriteRenderer.flipX = !lookingRight; // sola döndür
+        }
     }
 
     public void Stun(float stunDuration)

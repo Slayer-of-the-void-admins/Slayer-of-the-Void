@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: FireballData
   m_EditorClassIdentifier: 
   weaponName: Fireball
+  flashColor: {r: 1, g: 0.34117648, b: 0, a: 1}
   weaponPrefab: {fileID: 6923670273585607469, guid: 0b79b93023eb514428eae2b0cd1e0f4d, type: 3}
   upgradeCardPrefab: {fileID: 5918746556210795602, guid: 3f190b2bf14e9a2499b2ea1eb66ff726, type: 3}
   targetTag: Enemy
   damageAmount: 20
-  stunDuration: 0.1
+  stunDuration: 0.125
   isProjectile: 1
   fireRate: 0.35
   projectileSpeed: 10

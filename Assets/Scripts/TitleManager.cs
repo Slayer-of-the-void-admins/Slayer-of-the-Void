@@ -7,33 +7,34 @@ using UnityEngine.SceneManagement;
 public class TitleManager : MonoBehaviour
 {
     public GameObject titleScreen;
-
+    public GameObject buffsScreen;
     public GameObject settingsScreen;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    
-    }
-
-    public void StartGame() // oyunu başlat
+    public void StartGame()
     {
         SceneManager.LoadScene("MainScene");
     }
 
-    public void OpenSettings() // ana menüden ayarlar ekranına geç
+    public void OpenBuffsScreen()
+    {
+        titleScreen.SetActive(false);
+        buffsScreen.SetActive(true);
+    }
+
+    public void OpenSettings()
     {
         titleScreen.SetActive(false);
         settingsScreen.SetActive(true);
     }
     
-    public void CloseSettings() // ayarlar ekranından ana menüye dönme
+    public void OpenMainMenu()
     {
         titleScreen.SetActive(true);
+        buffsScreen.SetActive(false);
         settingsScreen.SetActive(false);
     }
 
-    public void QuitGame() // oyunu kapat
+    public void QuitGame()
     {
         Application.Quit();
     }

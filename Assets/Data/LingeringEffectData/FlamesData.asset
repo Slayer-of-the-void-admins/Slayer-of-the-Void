@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: FlamesData
   m_EditorClassIdentifier: 
   effectName: FlamesData
+  flashColor: {r: 1, g: 0.34901962, b: 0, a: 1}
   weaponData: {fileID: 11400000, guid: e3b557b03fb32e347afc0c5801c87626, type: 2}
-  effectPrefab: {fileID: 3363148064426591028, guid: a7bcb072a4bd82b41b91bd9c05880dbc, type: 3}
+  effectPrefab: {fileID: 915354313839130314, guid: 5be017f84a39603408def8a7394037cb, type: 3}
   damageAmount: 5
   damageInterval: 0.5
   duration: 1
+  stunDuration: 0.125
   effectLevel: 1
   damageMultiplier: 1.1
   sizeMultiplier: 1

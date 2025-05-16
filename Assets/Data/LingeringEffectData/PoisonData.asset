@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: PoisonData
   m_EditorClassIdentifier: 
   effectName: VenomFlaskData
+  flashColor: {r: 0.09655574, g: 0.6509434, b: 0, a: 1}
   weaponData: {fileID: 11400000, guid: b7c4af6d6cd877942b6e21df5c0b40fd, type: 2}
   effectPrefab: {fileID: 3363148064426591028, guid: a7bcb072a4bd82b41b91bd9c05880dbc, type: 3}
   damageAmount: 5
   damageInterval: 1
   duration: 5
+  stunDuration: 0.125
   effectLevel: 1
   damageMultiplier: 1.2
   sizeMultiplier: 1.2

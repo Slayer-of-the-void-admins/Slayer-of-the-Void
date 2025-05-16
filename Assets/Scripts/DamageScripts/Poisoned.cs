@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Poisoned : MonoBehaviour
@@ -9,13 +10,18 @@ public class Poisoned : MonoBehaviour
     private float duration;
     private float timer = 0f;
     private HealthScript health;
+    private Color flashColour;
+    private LingeringEffectData lingeringEffectData;
 
     public void Initialize(HealthScript health, LingeringEffectData lingeringEffectData)
     {
         this.health = health;
+        this.lingeringEffectData = lingeringEffectData;
         this.damageAmount = lingeringEffectData.GetDamage();
+        // oyuncu hasar multipler ını çarp
         this.damageInterval = lingeringEffectData.damageInterval;
         this.duration = lingeringEffectData.GetDuration();
+        this.flashColour = lingeringEffectData.flashColor;
         timer = damageInterval;
     }
 
@@ -24,15 +30,14 @@ public class Poisoned : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
-            // Debug.Log("enemy takes damage from poisoned status: " + damageAmount);
-            health.TakeDamage(damageAmount);
+            health.TakeDamage(damageAmount, lingeringEffectData);
+
             timer = damageInterval;
         }
 
         duration -= Time.deltaTime;
         if (duration <= 0)
         {
-            // Debug.Log("duration of poisoned status has ended");
             Destroy(this);
         }
     }
