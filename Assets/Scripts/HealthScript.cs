@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class HealthScript : MonoBehaviour
 {
-    // private float maxHealth;
     public float currentHealth;
     public GameObject gameOverScreen;
     public bool isPlayer = true;
@@ -25,9 +24,10 @@ public class HealthScript : MonoBehaviour
         }
         else if (playerData != null && healthBar != null)
         {
-            currentHealth = playerData.GetPlayerHealth();
-            healthBar.maxValue = playerData.GetPlayerHealth();
+            currentHealth = playerData.playerHealth;
+            healthBar.maxValue = playerData.playerHealth;
             healthBar.value = currentHealth;
+            healthLabel.text = currentHealth.ToString("f0");
         }
     }
 
@@ -35,7 +35,7 @@ public class HealthScript : MonoBehaviour
     {
         if (gameObject.tag == "Player")
         {
-            currentHealth -= damage - ( damage * playerData.resistance / 100 );
+            currentHealth -= damage - ( damage * playerData.resistancePercentage / 100 );
         }
         else if (gameObject.tag == "Enemy")
         {

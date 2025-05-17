@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5622718286166588690}
   m_Layer: 0
   m_Name: LingeringFlame
-  m_TagString: Untagged
+  m_TagString: LingerArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

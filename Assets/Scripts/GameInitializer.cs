@@ -10,12 +10,14 @@ public class GameInitializer : MonoBehaviour
     public List<LingeringEffectData> lingeringEffectList;
     public List<EnemySpawnSet> spawnSetList;
     public SpawnerScript spawner;
+    public PlayerStats playerStats;
 
     void Start()
     {
         ResetWeaponLevels();
         InitializeSpawner();
         ResetLingeringEffectLevels();
+        playerStats.LoadStats();
     }
 
     void ResetWeaponLevels()

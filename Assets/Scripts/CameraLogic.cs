@@ -16,7 +16,6 @@ public class CameraLogic : MonoBehaviour
 
     public float camHalfWidth;
 
-    // Start is called before the first frame update
     void Start()
     {
         Camera cam = Camera.main; // main camerayı değişkene aktar
@@ -24,7 +23,6 @@ public class CameraLogic : MonoBehaviour
         camHalfWidth = camHalfHeight * cam.aspect; // kamera genişliği çözünürlük oranıyla çarpılır
     }
 
-    // Update is called once per frame
     void LateUpdate()
     {
         Vector3 camPosition = player.position + offset;
