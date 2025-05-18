@@ -56,6 +56,7 @@ public class UpgradePanelScript : MonoBehaviour
             if (usedRolls.Contains(roll))
             {
                 continue;
+                
             }
             usedRolls.Add(roll);
             i++;

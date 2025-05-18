@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: VenomFlaskData
   m_EditorClassIdentifier: 
   weaponName: VenomFlask
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
   weaponPrefab: {fileID: 6923670273585607469, guid: 0c193569bc65c774aa6d333ea78503ce, type: 3}
   upgradeCardPrefab: {fileID: 5918746556210795602, guid: de2be879b78501e4a888ab8e27966870, type: 3}
+  weaponIconPrefab: {fileID: 6531676357194214497, guid: 386c01e897e9dca43a8d55d9a5637141, type: 3}
   targetTag: Enemy
   damageAmount: 0
   stunDuration: 0
@@ -27,7 +29,10 @@ MonoBehaviour:
   maxAimRange: 12
   rotationSpeed: 3
   orbitDistance: 3.5
+  weaponMaxLevel: 5
   weaponLevel: 1
   damageMultiplier: 1
   fireRateMultiplier: 1.2
+  fireRateModifier: 1
   speedMultiplier: 1
+  weaponSpeedModifier: 1

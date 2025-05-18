@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55dd78edffd53314480cfd570dc4f3a0, type: 3}
-  m_Name: FireballData
+  m_Name: VoidStaffData
   m_EditorClassIdentifier: 
-  weaponName: Fireball
-  flashColor: {r: 1, g: 0.34117648, b: 0, a: 1}
-  weaponPrefab: {fileID: 6923670273585607469, guid: 0b79b93023eb514428eae2b0cd1e0f4d, type: 3}
-  upgradeCardPrefab: {fileID: 5918746556210795602, guid: 3f190b2bf14e9a2499b2ea1eb66ff726, type: 3}
-  weaponIconPrefab: {fileID: 7150981120757650678, guid: 5631c9716579ccf48ab0ca07766d682c, type: 3}
+  weaponName: VoidStaff
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
+  weaponPrefab: {fileID: 0}
+  upgradeCardPrefab: {fileID: 0}
+  weaponIconPrefab: {fileID: 0}
   targetTag: Enemy
-  damageAmount: 20
-  stunDuration: 0.125
-  isProjectile: 1
-  fireRate: 0.35
-  projectileSpeed: 10
-  destroySelfOnCollision: 1
+  damageAmount: 10
+  stunDuration: 0.2
+  isProjectile: 0
+  fireRate: 1
+  projectileSpeed: 20
+  destroySelfOnCollision: 0
   isRandomAimingProjectile: 0
   minAimRange: 3
   maxAimRange: 12
@@ -34,5 +34,5 @@ MonoBehaviour:
   damageMultiplier: 1.2
   fireRateMultiplier: 1.2
   fireRateModifier: 1
-  speedMultiplier: 1.1
+  speedMultiplier: 1.2
   weaponSpeedModifier: 1

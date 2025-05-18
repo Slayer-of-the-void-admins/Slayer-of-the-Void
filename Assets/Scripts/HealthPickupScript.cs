@@ -16,7 +16,6 @@ public class HealthPickupScript : MonoBehaviour
 
     void Start()
     {
-        spawnInterval = Random.Range(10, 30);
         InvokeRepeating(nameof(SpawnHealthPickups), 10f, spawnInterval);
     }
 
@@ -34,8 +33,10 @@ public class HealthPickupScript : MonoBehaviour
         );
 
         Instantiate(healthPickupPrefab, randomPosition, Quaternion.identity);
+        spawnInterval = Random.Range(10, 30);
     }
 
+    // loot prefablarine koy. burda ihtiyaç yok
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
