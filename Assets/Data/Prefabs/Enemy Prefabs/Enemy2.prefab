@@ -189,12 +189,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a2c33f36776e64d95edde138c2179d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 40
   currentHealth: 0
   gameOverScreen: {fileID: 0}
   isPlayer: 0
   healthBar: {fileID: 0}
   enemyData: {fileID: 11400000, guid: dcdb9b59084f9d848ae35e44d435e6d7, type: 2}
+  playerData: {fileID: 11400000, guid: 6738e8d0ca38f8b4f895c08943a5cd6c, type: 2}
+  healthLabel: {fileID: 0}
 --- !u!114 &29780003034258379
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -18,11 +18,11 @@ public class HealthScript : MonoBehaviour
 
     void Start()
     {
-        if (enemyData != null)
+        if (enemyData != null && isPlayer == false)
         {
             currentHealth = enemyData.maxHealth;
         }
-        else if (playerData != null && healthBar != null)
+        else if (playerData != null && healthBar != null && isPlayer == true)
         {
             currentHealth = playerData.playerHealth;
             healthBar.maxValue = playerData.playerHealth;

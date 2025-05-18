@@ -923,6 +923,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c0b53a4af7b32a740bd1e90ac05aa946, type: 2}
   spawner: {fileID: 221904549}
   playerStats: {fileID: 11400000, guid: 6738e8d0ca38f8b4f895c08943a5cd6c, type: 2}
+  currencyManager: {fileID: 0}
+  playerMovement: {fileID: 2131994287}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4791,6 +4793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  moveSpeedUpgradeModifier: 1
 --- !u!114 &2131994288
 MonoBehaviour:
   m_ObjectHideFlags: 0
