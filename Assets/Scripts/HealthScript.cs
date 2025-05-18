@@ -35,13 +35,13 @@ public class HealthScript : MonoBehaviour
     {
         if (gameObject.tag == "Player")
         {
-            currentHealth -= damage - ( damage * playerData.resistancePercentage / 100 );
+            currentHealth -= damage - (damage * playerData.resistancePercentage / 100);
         }
         else if (gameObject.tag == "Enemy")
         {
-            currentHealth -= damage + ( damage * playerData.damagePercentage / 100 );
+            currentHealth -= damage + (damage * playerData.damagePercentage / 100);
         }
-        
+
         // can barı ayarlamaları
         if (healthLabel != null)
         {
@@ -120,5 +120,20 @@ public class HealthScript : MonoBehaviour
     public void GainHealth(float health)
     {
         currentHealth += health;
+    }
+    
+    public void Heal(int amount)
+    {
+        currentHealth = Mathf.Min(currentHealth + amount, playerData.playerHealth);  
+        
+        if (healthLabel != null)
+        {
+            healthLabel.text = currentHealth.ToString("f0");
+        }
+        
+        if (healthBar != null)
+        {
+            healthBar.value = currentHealth;
+        }
     }
 }
