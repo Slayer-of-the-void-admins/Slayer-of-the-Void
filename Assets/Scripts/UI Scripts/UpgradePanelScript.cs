@@ -12,6 +12,7 @@ public class UpgradePanelScript : MonoBehaviour
     public GameObject upgradePanel;
     public Transform upgradePanelTransform;
     public WeaponData[] weaponDatas;
+    public ItemBagScript itemBagScript;
 
     void Start()
     {
@@ -89,6 +90,9 @@ public class UpgradePanelScript : MonoBehaviour
         }
         else
         {
+            // item çantası ikon ve yazıları güncelle
+            itemBagScript.UpdateItemBagIcons(weaponData);
+
             // yeni silah yarat
             GameObject newWeapon = new GameObject(weaponData.weaponName);
             newWeapon.transform.parent = player.transform;
@@ -96,9 +100,6 @@ public class UpgradePanelScript : MonoBehaviour
 
             WeaponScript ws = newWeapon.AddComponent<WeaponScript>();
             ws.weaponData = weaponData;
-
-            // DamageScript ds = weaponData.weaponPrefab.GetComponent<DamageScript>();
-            // ds.stunDuration = weaponData.stunDuration;
 
             // doğru behaivour dosyasını bileşen olarak silaha ekle
             if (weaponData.weaponName == "Shuriken" || weaponData.weaponName == "Fireball")

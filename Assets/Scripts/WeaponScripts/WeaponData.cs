@@ -10,6 +10,7 @@ public class WeaponData : ScriptableObject
     public Color flashColor = Color.white;
     public GameObject weaponPrefab;
     public GameObject upgradeCardPrefab;
+    public GameObject weaponIconPrefab;
     public string targetTag = "Enemy";
     public float damageAmount = 10f;
     public float stunDuration = 0.2f;
@@ -37,9 +38,11 @@ public class WeaponData : ScriptableObject
     public float rotationSpeed = 3f;
     [HideIf("isProjectile")]
     public float orbitDistance = 3.5f;
-    
 
+
+    public int weaponMaxLevel = 5;
     public int weaponLevel = 1;
+    public bool isMaxLevel => weaponLevel >= weaponMaxLevel;
 
     // multiplier ları 1f e koymak seviye atladıkça birşeyin değişmemesini sağlar
     public float damageMultiplier = 1.2f;
