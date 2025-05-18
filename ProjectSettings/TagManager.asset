@@ -8,6 +8,7 @@ TagManager:
   - ProjectileWeapon
   - RotatingWeapon
   - LingerArea
+  - HealthPickup
   layers:
   - Default
   - TransparentFX

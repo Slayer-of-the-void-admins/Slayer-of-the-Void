@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 920566874704551857}
   m_Layer: 0
   m_Name: HealthPickup
-  m_TagString: Untagged
+  m_TagString: HealthPickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3735dfeae3d1a1c43a2611bd35abf288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healtPickupPrefab: {fileID: 8096862568277405158}
+  healthPickupPrefab: {fileID: 8096862568277405158}
   spawnAreaMin: {x: -100, y: -100}
   spawnAreaMax: {x: 100, y: 100}
   spawnInterval: 10

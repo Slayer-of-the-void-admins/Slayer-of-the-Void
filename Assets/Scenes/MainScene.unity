@@ -229,8 +229,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133646298}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.35, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.3499756, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -925,6 +925,55 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: 6738e8d0ca38f8b4f895c08943a5cd6c, type: 2}
   currencyManager: {fileID: 0}
   playerMovement: {fileID: 2131994287}
+--- !u!1 &403307567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 403307570}
+  - component: {fileID: 403307568}
+  m_Layer: 0
+  m_Name: Health Pickup Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &403307568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403307567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3735dfeae3d1a1c43a2611bd35abf288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPickupPrefab: {fileID: 8096862568277405158, guid: f6649c85edf606346af449e20e311a9a, type: 3}
+  spawnAreaMin: {x: -100, y: -100}
+  spawnAreaMax: {x: 100, y: 100}
+  spawnInterval: 100
+  healAmount: 20
+--- !u!4 &403307570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403307567}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.088890284}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,7 +1081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2131994285}
   offset: {x: 0, y: 0, z: -100}
-  minBounds: {x: -100, y: -100}
+  minBounds: {x: -105, y: -105}
   maxBounds: {x: 105, y: 105}
   camHalfHeight: 0
   camHalfWidth: 0
@@ -3852,12 +3901,12 @@ SpriteRenderer:
   m_SortingLayerID: -831185663
   m_SortingLayer: -3
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 287b69963d5fe4947b214c4d06875366, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 3f1c97d261de83d46a0c827ced38cb78, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 250, y: 250}
+  m_Size: {x: 221.9288, y: 219.65668}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4868,3 +4917,4 @@ SceneRoots:
   - {fileID: 1223744442}
   - {fileID: 209078219}
   - {fileID: 398422293}
+  - {fileID: 403307570}
