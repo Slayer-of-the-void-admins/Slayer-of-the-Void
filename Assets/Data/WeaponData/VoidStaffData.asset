@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: VoidStaff
   flashColor: {r: 1, g: 1, b: 1, a: 1}
-  weaponPrefab: {fileID: 0}
-  upgradeCardPrefab: {fileID: 0}
-  weaponIconPrefab: {fileID: 0}
+  weaponPrefab: {fileID: 6923670273585607469, guid: 5b7cb55b4b571c24c9638083c6662c0e, type: 3}
+  upgradeCardPrefab: {fileID: 5918746556210795602, guid: dbc1a28f8b379024590a320a33f9dc80, type: 3}
+  weaponIconPrefab: {fileID: 1077830196882540247, guid: 064026b08b50ad74b954d4a1f3789c30, type: 3}
   targetTag: Enemy
   damageAmount: 10
-  stunDuration: 0.2
+  stunDuration: 0.125
   isProjectile: 0
   fireRate: 1
   projectileSpeed: 20
@@ -27,8 +27,8 @@ MonoBehaviour:
   isRandomAimingProjectile: 0
   minAimRange: 3
   maxAimRange: 12
-  rotationSpeed: 3
-  orbitDistance: 3.5
+  rotationSpeed: 2
+  orbitDistance: 5
   weaponMaxLevel: 5
   weaponLevel: 1
   damageMultiplier: 1.2

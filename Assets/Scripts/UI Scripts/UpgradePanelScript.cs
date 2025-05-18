@@ -56,7 +56,7 @@ public class UpgradePanelScript : MonoBehaviour
             if (usedRolls.Contains(roll))
             {
                 continue;
-                
+
             }
             usedRolls.Add(roll);
             i++;
@@ -109,7 +109,7 @@ public class UpgradePanelScript : MonoBehaviour
             {
                 newWeapon.AddComponent<StraightProjectile>();
             }
-            else if (weaponData.weaponName == "LightningSword")
+            else if (weaponData.weaponName == "LightningSword" || weaponData.weaponName == "VoidStaff")
             {
                 newWeapon.AddComponent<OrbitingWeapon>();
             }
