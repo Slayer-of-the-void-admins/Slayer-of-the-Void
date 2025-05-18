@@ -87,6 +87,8 @@ public class UpgradePanelScript : MonoBehaviour
         {
             // silah seviyesini artır
             existingWeapon.weaponData.weaponLevel++;
+
+            itemBagScript.UpdateItemBagIcons(weaponData);
         }
         else
         {

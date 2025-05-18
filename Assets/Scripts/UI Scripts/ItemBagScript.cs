@@ -5,29 +5,32 @@ using TMPro;
 
 public class ItemBagScript : MonoBehaviour
 {
+    
     public void UpdateItemBagIcons(WeaponData weaponData)
     {
-        // add the picked weapons icon
-        GameObject weaponFrame = Instantiate(weaponData.weaponIconPrefab, gameObject.transform);
-
-        // update the level text
-        TextMeshProUGUI weaponLevelText = weaponFrame.GetComponentInChildren<TextMeshProUGUI>();
-        if (!weaponData.isMaxLevel)
-        {
-            weaponLevelText.text = "Lv: " + weaponData.weaponLevel.ToString();
-        }
-        else
-        {
-            weaponLevelText.text = "MAX";
-        }
-    }
-
-    public void UpdateItemBagLevelTexts()
-    {
-        // iterate between all children of image bag
+        bool frameExists = false;
         foreach (Transform child in transform)
         {
-            
+            if (weaponData.weaponName + " Frame(Clone)" == child.name)
+            {
+                TextMeshProUGUI weaponLevelText = child.GetComponentInChildren<TextMeshProUGUI>();
+                if (!weaponData.isMaxLevel)
+                {
+                    weaponLevelText.text = "Lv: " + weaponData.weaponLevel.ToString();
+                }
+                else
+                {
+                    weaponLevelText.text = "MAX";
+                }
+
+                frameExists = true;
+                break;
+            }
         }
+
+        // weaponFrame i yerleştir, yerleştiremiyorsan nulla
+        GameObject weaponFrame;
+        if (frameExists == false)
+            weaponFrame = Instantiate(weaponData.weaponIconPrefab, gameObject.transform);
     }
 }

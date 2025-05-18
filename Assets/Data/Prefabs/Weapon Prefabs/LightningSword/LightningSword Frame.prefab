@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1690092074706943182}
   - component: {fileID: 7578907138984995133}
   m_Layer: 5
-  m_Name: Lightning Sword Frame
+  m_Name: LightningSword Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
