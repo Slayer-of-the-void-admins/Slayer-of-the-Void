@@ -51,21 +51,23 @@ public class WeaponData : ScriptableObject
 
     [ShowIf("isProjectile")]
     public float fireRateMultiplier = 1.2f;
+    [HideInInspector] public float fireRateModifier = 1f;
     public float GetFireRate()
     {
-        return fireRate * Mathf.Pow(fireRateMultiplier, weaponLevel - 1);
+        return fireRate * Mathf.Pow(fireRateMultiplier, weaponLevel - 1) * fireRateModifier;
     }
 
     public float speedMultiplier = 1.2f;
+    [HideInInspector] public float weaponSpeedModifier = 1f;
     public float GetSpeed()
     {
         if (isProjectile == true)
         {
-            return projectileSpeed * Mathf.Pow(speedMultiplier, weaponLevel - 1);
+            return projectileSpeed * Mathf.Pow(speedMultiplier, weaponLevel - 1) * weaponSpeedModifier;
         }
         else // yakın silah
         {
-            return rotationSpeed * Mathf.Pow(speedMultiplier, weaponLevel - 1);
+            return rotationSpeed * Mathf.Pow(speedMultiplier, weaponLevel - 1) * weaponSpeedModifier;
         }
     }
 }

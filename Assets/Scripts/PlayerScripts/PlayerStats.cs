@@ -5,12 +5,78 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewPlayerData", menuName = "PlayerData")]
 public class PlayerStats : ScriptableObject
 {
+    public int voidEssenceAmount;
+    public void SaveVoidEssenceAmount()
+    {
+        PlayerPrefs.SetInt("VoidEssence", voidEssenceAmount);
+        PlayerPrefs.Save();
+    }
+
+    public void LoadVoidEssenceAmount()
+    {
+        voidEssenceAmount = PlayerPrefs.GetInt("VoidEssence", 0);
+    }
+
+    public bool TrySpendVoidEssence(int price)
+    {
+        LoadVoidEssenceAmount();
+        if (voidEssenceAmount >= price)
+        {
+            voidEssenceAmount -= price;
+            SaveVoidEssenceAmount();
+            return true;
+        }
+        return false;
+    }
+
+
     public float playerHealth = 100f;
+    public void UpgradeHealth(float amount)
+    {
+        playerHealth += amount;
+        SaveStats();
+    }
+
+
     public float resistancePercentage = 0f;
+    public void UpgradeResistance(float amount)
+    {
+        resistancePercentage += amount;
+        SaveStats();
+    }
+
+
     public float damagePercentage = 0f;
+    public void UpgradeDamage(float amount)
+    {
+        damagePercentage += amount;
+        SaveStats();
+    }
+
+
     public float moveSpeedPercentage = 0f;
+    public void UpgradeMoveSpeed(float amount)
+    {
+        moveSpeedPercentage += amount;
+        SaveStats();
+    }
+
+
     public float weaponSpeedPercentage = 0f;
+    public void UpgradeWeaponSpeed(float amount)
+    {
+        weaponSpeedPercentage += amount;
+        SaveStats();
+    }
+
+
     public float fireRatePercentage = 0f;
+    public void UpgradeFireRate(float amount)
+    {
+        fireRatePercentage += amount;
+        SaveStats();
+    }
+
 
     public void SaveStats()
     {
@@ -33,8 +99,10 @@ public class PlayerStats : ScriptableObject
         fireRatePercentage = PlayerPrefs.GetFloat("FireRatePercentage", 0f);
     }
 
-    public void ResetAllStats()
+    public void ResetAllStatsAndVoidEssence()
     {
+        PlayerPrefs.SetInt("VoidEssence", 0);
+
         PlayerPrefs.SetFloat("PlayerHealth", 100f);
         PlayerPrefs.SetFloat("ResistancePercentage", 0f);
         PlayerPrefs.SetFloat("DamageMultiplierPercentage", 0f);
@@ -44,15 +112,9 @@ public class PlayerStats : ScriptableObject
         PlayerPrefs.Save();
     }
 
-    public void UpgradeHealthBy5()
+    public void GetEssence(int essenceAmount)
     {
-        playerHealth += 5f;
-        SaveStats();
-    }
-
-    public void UpgradeResistanceBy1()
-    {
-        resistancePercentage += 1f;
-        SaveStats();
+        voidEssenceAmount += essenceAmount;
+        SaveVoidEssenceAmount();
     }
 }

@@ -39,7 +39,7 @@ public class HealthScript : MonoBehaviour
         }
         else if (gameObject.tag == "Enemy")
         {
-            currentHealth -= damage;
+            currentHealth -= damage + ( damage * playerData.damagePercentage / 100 );
         }
         
         // can barı ayarlamaları
@@ -53,14 +53,14 @@ public class HealthScript : MonoBehaviour
         }
 
         if (currentHealth <= 0)
-            {
-                currentHealth = 0;
+        {
+            currentHealth = 0;
 
-                if (healthLabel != null)
-                { healthLabel.text = "0"; }
+            if (healthLabel != null)
+            { healthLabel.text = "0"; }
 
-                Die();
-            }
+            Die();
+        }
 
         if (healthBar != null)
         {

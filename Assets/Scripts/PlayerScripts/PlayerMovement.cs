@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    [HideInInspector] public float moveSpeedUpgradeModifier = 1f;
     private Vector2 movement;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
@@ -40,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         // rb nesnesinin pozisyonuna değişen movement nesnesindeki değer eklenerek rb hareket ettirilir
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        float finalSpeed = moveSpeed * moveSpeedUpgradeModifier;
+        rb.MovePosition(rb.position + movement * finalSpeed * Time.fixedDeltaTime);
     }
 }

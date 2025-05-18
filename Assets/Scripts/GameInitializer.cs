@@ -10,21 +10,61 @@ public class GameInitializer : MonoBehaviour
     public List<LingeringEffectData> lingeringEffectList;
     public List<EnemySpawnSet> spawnSetList;
     public SpawnerScript spawner;
+
     public PlayerStats playerStats;
+    public CurrencyManager currencyManager;
+
 
     void Start()
     {
         ResetWeaponLevels();
-        InitializeSpawner();
         ResetLingeringEffectLevels();
+        InitializeSpawner();
+        InitializePlayerUpgrades();
+
         playerStats.LoadStats();
+        playerStats.LoadVoidEssenceAmount();
+        if (currencyManager != null)
+        {
+            currencyManager.LoadUpgradeLevels();
+        }
+    }
+
+    public PlayerMovement playerMovement;
+    void InitializePlayerUpgrades()
+    {
+        // health - healthscript start() da düzenleniyor
+
+        // resistance - healthscript takedamage() da düzenleniyor
+
+        // damage - healthscript takedamage() da düzenleniyor
+
+        // moveSpeed
+        if (playerMovement != null)
+            playerMovement.moveSpeedUpgradeModifier = 1f + (playerStats.moveSpeedPercentage / 100);
+
+
+        foreach (WeaponData weaponData in weaponDataList)
+        {
+            if (weaponData != null)
+            {
+                // weaponSpeed
+                weaponData.weaponSpeedModifier = 1f + (playerStats.weaponSpeedPercentage / 100);
+
+                // fire rate
+                weaponData.fireRateModifier = 1f + (playerStats.fireRatePercentage / 100);
+            }
+        }
     }
 
     void ResetWeaponLevels()
     {
         foreach (WeaponData weaponData in weaponDataList)
         {
-            weaponData.weaponLevel = 1;
+            if (weaponData != null)
+            {
+                weaponData.weaponLevel = 1;
+            }
         }
     }
 
@@ -32,7 +72,10 @@ public class GameInitializer : MonoBehaviour
     {
         foreach (LingeringEffectData lingeringEffect in lingeringEffectList)
         {
-            lingeringEffect.effectLevel = 1;
+            if (lingeringEffect != null)
+            {
+                lingeringEffect.effectLevel = 1;
+            }
         }
     }
 
@@ -41,7 +84,7 @@ public class GameInitializer : MonoBehaviour
         if (spawner != null)
         {
             spawner.spawnSetList = spawnSetList;
+            spawner.SetSpawnSet(spawnSetList[0]);
         }
-        spawner.SetSpawnSet(spawnSetList[0]);
     }
 }
