@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPickupPrefab: {fileID: 8096862568277405158}
-  spawnAreaMin: {x: -100, y: -100}
-  spawnAreaMax: {x: 100, y: 100}
+  spawnAreaMin: {x: -90, y: -90}
+  spawnAreaMax: {x: 90, y: 90}
   spawnInterval: 10
   healAmount: 10
