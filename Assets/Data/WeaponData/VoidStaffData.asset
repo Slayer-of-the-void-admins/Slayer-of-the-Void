@@ -15,8 +15,8 @@ MonoBehaviour:
   weaponName: VoidStaff
   flashColor: {r: 1, g: 1, b: 1, a: 1}
   weaponPrefab: {fileID: 6923670273585607469, guid: 5b7cb55b4b571c24c9638083c6662c0e, type: 3}
-  upgradeCardPrefab: {fileID: 5918746556210795602, guid: dbc1a28f8b379024590a320a33f9dc80, type: 3}
-  weaponIconPrefab: {fileID: 1077830196882540247, guid: 064026b08b50ad74b954d4a1f3789c30, type: 3}
+  upgradeCardPrefab: {fileID: 5918746556210795602, guid: cb711e3fb517415479ae8b426923590b, type: 3}
+  weaponIconPrefab: {fileID: 7150981120757650678, guid: b3803abc8dfd00e4e95558cb22d54a62, type: 3}
   targetTag: Enemy
   damageAmount: 10
   stunDuration: 0.125

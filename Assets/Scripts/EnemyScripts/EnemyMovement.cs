@@ -31,7 +31,7 @@ public class EnemyMovement : MonoBehaviour
         transform.position = enemyPos;
 
         // sağa sola bakma
-        if (direction.x > 0) 
+        if (direction.x > 0)
         {
             spriteRenderer.flipX = lookingRight; // sağa döndür
         }

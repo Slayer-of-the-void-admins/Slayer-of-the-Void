@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 29780003034258379}
   - component: {fileID: -733750156972989321}
   - component: {fileID: 7420857136057305289}
+  - component: {fileID: 1433365603512487778}
   m_Layer: 0
   m_Name: void-ghost
   m_TagString: Enemy
@@ -248,3 +249,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1433365603512487778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4776187908627978567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 914d5c82e8c7b364daf0650b1a76cb04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathParticle: {fileID: 4268761304600640619, guid: 24375ec132f39c54bb1f9356d9061d68, type: 3}

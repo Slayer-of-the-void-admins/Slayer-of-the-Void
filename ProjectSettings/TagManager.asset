@@ -13,7 +13,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Map Layer
   - Water
   - UI
   - 
@@ -43,7 +43,10 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: background
+  - name: map stuff
+    uniqueID: 2149280965
+    locked: 0
+  - name: ground
     uniqueID: 3463781633
     locked: 0
   - name: lingeringEffects
@@ -54,4 +57,10 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: enemies
+    uniqueID: 3021397399
+    locked: 0
+  - name: weapons
+    uniqueID: 233378891
     locked: 0

@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 6269359133664767991}
   - component: {fileID: 3955459821732888420}
   - component: {fileID: 4570123618220208766}
+  - component: {fileID: 5013742381359435597}
   m_Layer: 0
   m_Name: Voidling
   m_TagString: Enemy
@@ -323,3 +324,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5013742381359435597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4272564062402885164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 914d5c82e8c7b364daf0650b1a76cb04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathParticle: {fileID: 4268761304600640619, guid: 9b8b12acbfe30c94fbeb407f9b47c204, type: 3}
