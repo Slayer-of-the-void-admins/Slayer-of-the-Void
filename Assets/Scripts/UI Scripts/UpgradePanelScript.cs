@@ -109,13 +109,17 @@ public class UpgradePanelScript : MonoBehaviour
             {
                 newWeapon.AddComponent<StraightProjectile>();
             }
-            else if (weaponData.weaponName == "LightningSword" || weaponData.weaponName == "VoidStaff" || weaponData.weaponName == "VoidAxe")
+            else if (weaponData.weaponName == "LightningSword" || weaponData.weaponName == "VoidAxe")
             {
                 newWeapon.AddComponent<OrbitingWeapon>();
             }
             else if (weaponData.weaponName == "VenomFlask")
             {
                 newWeapon.AddComponent<RandomCurvedProjectile>();
+            }
+            else if (weaponData.weaponName == "VoidStaff")
+            {
+                newWeapon.AddComponent<FloatingWeaponScript>();
             }
         }
     }

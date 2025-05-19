@@ -18,8 +18,14 @@ MonoBehaviour:
   upgradeCardPrefab: {fileID: 5918746556210795602, guid: cb711e3fb517415479ae8b426923590b, type: 3}
   weaponIconPrefab: {fileID: 7150981120757650678, guid: b3803abc8dfd00e4e95558cb22d54a62, type: 3}
   targetTag: Enemy
-  damageAmount: 10
+  damageAmount: 100
   stunDuration: 0.125
+  isFloatingWeapon: 1
+  cooldownTimer: 3
+  floatingWeaponTimer: 0
+  isOrbittingWeapon: 0
+  rotationSpeed: 2
+  orbitDistance: 5
   isProjectile: 0
   fireRate: 1
   projectileSpeed: 20
@@ -27,8 +33,6 @@ MonoBehaviour:
   isRandomAimingProjectile: 0
   minAimRange: 3
   maxAimRange: 12
-  rotationSpeed: 2
-  orbitDistance: 5
   weaponMaxLevel: 5
   weaponLevel: 1
   damageMultiplier: 1.2

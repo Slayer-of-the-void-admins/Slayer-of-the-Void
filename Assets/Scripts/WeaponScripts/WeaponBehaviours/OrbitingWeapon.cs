@@ -7,11 +7,17 @@ public class OrbitingWeapon : MonoBehaviour, IWeaponBehaivour
     private WeaponData weaponData;
     private Transform playerTransform;
     private GameObject orbitingWeapon;
+
     public void Initialize(WeaponData weaponData, Transform playerTransform)
     {
         this.weaponData = weaponData;
         this.playerTransform = playerTransform;
         Shoot();
+    }
+
+    void Shoot()
+    {
+        orbitingWeapon = Instantiate(weaponData.weaponPrefab, playerTransform.position, Quaternion.identity);
     }
 
     public void UpdateBehaivour()
@@ -23,13 +29,8 @@ public class OrbitingWeapon : MonoBehaviour, IWeaponBehaivour
 
         // silah sürekli oyuncunun tersi yönüne baksın
         orbitingWeapon.transform.rotation = Quaternion.LookRotation(Vector3.back, orbitingWeapon.transform.position - playerTransform.position);
-
         BuffDamage();
-    }
 
-    void Shoot()
-    {
-        orbitingWeapon = Instantiate(weaponData.weaponPrefab, playerTransform.position, Quaternion.identity);
     }
 
     void BuffDamage()
@@ -41,3 +42,4 @@ public class OrbitingWeapon : MonoBehaviour, IWeaponBehaivour
         }
     }
 }
+

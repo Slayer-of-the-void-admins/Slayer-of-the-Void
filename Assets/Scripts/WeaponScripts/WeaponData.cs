@@ -14,6 +14,18 @@ public class WeaponData : ScriptableObject
     public string targetTag = "Enemy";
     public float damageAmount = 10f;
     public float stunDuration = 0.2f;
+    
+    public bool isFloatingWeapon = true;
+    [ShowIf("isFloatingWeapon")]
+    public float cooldownTimer = 10f;
+    [ShowIf("isFloatingWeapon")]
+    public float floatingWeaponTimer = 0f;
+
+    public bool isOrbittingWeapon = false;
+    [ShowIf("isOrbittingWeapon")]
+    public float rotationSpeed = 3f;
+    [ShowIf("isOrbittingWeapon")]
+    public float orbitDistance = 3.5f;
 
 
     public bool isProjectile = true;
@@ -33,11 +45,6 @@ public class WeaponData : ScriptableObject
     [ShowIf("isRandomAimingProjectile")]
     public float maxAimRange = 12f;
     
-
-    [HideIf("isProjectile")]
-    public float rotationSpeed = 3f;
-    [HideIf("isProjectile")]
-    public float orbitDistance = 3.5f;
 
 
     public int weaponMaxLevel = 5;

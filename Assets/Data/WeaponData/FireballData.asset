@@ -20,6 +20,8 @@ MonoBehaviour:
   targetTag: Enemy
   damageAmount: 20
   stunDuration: 0.125
+  isFloatingWeapon: 0
+  cooldownTimer: 0
   isProjectile: 1
   fireRate: 0.35
   projectileSpeed: 10
