@@ -25,17 +25,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712652686550182350}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.4422886, w: 0.89687276}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.35, y: 1.35, z: 1.35}
+  m_LocalScale: {x: 3.3, y: 3.3, z: 3.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 921641172721476421}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -52.5}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 121.82}
-  m_SizeDelta: {x: 180, y: 180}
+  m_AnchoredPosition: {x: 0, y: 92.9}
+  m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4411292367993438777
 CanvasRenderer:
@@ -65,9 +65,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b1ff7efa86c71b64eab67d83c8b07001, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f9eb81cfc1062104793db3897bb17a89, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -140,8 +140,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Puts a lingering effect on the ground that hurts enemies slowly but for
-    a long duration
+  m_text: 'Hurts enemies around the player. Deals high damage but rotates slowly
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a36e3f4c277cba44d9eb107b9a3b95fb, type: 2}
   m_sharedMaterial: {fileID: -2506720073113760926, guid: a36e3f4c277cba44d9eb107b9a3b95fb, type: 2}
@@ -169,7 +170,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 33.3
-  m_fontSizeBase: 18
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
@@ -275,9 +276,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'VENOM FLASK
-
-'
+  m_text: VOID AXE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a36e3f4c277cba44d9eb107b9a3b95fb, type: 2}
   m_sharedMaterial: {fileID: -2506720073113760926, guid: a36e3f4c277cba44d9eb107b9a3b95fb, type: 2}
@@ -305,9 +304,9 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 50
-  m_fontSizeBase: 36
+  m_fontSizeBase: 50
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -359,7 +358,7 @@ GameObject:
   - component: {fileID: 4506439892617097643}
   - component: {fileID: 3614528354665637230}
   m_Layer: 5
-  m_Name: Upgrade Card - VenomFlask
+  m_Name: Upgrade Card - VoidAxe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

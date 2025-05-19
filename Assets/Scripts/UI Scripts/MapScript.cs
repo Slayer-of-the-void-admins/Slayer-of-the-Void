@@ -6,7 +6,6 @@ using UnityEngine.SocialPlatforms;
 public class MapScript : MonoBehaviour
 {
     public GameObject mapPanel;
-    public GameObject playerMarker;
     public RectTransform mapArea;
 
     // Update is called once per frame
@@ -28,13 +27,11 @@ public class MapScript : MonoBehaviour
     public void OpenMap()
     {
         mapPanel.SetActive(true);
-        playerMarker.SetActive(true);
         Time.timeScale = 0f;
     }
 
     public void CloseMap()
     {
-        playerMarker.SetActive(false);
         mapPanel.SetActive(false);
         Time.timeScale = 1f;
     }

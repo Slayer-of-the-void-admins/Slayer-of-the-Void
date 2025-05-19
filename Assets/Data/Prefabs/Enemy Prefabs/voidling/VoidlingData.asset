@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a76132dcf6bf5640a9f66fa670ab745, type: 3}
-  m_Name: Enemy2Data
+  m_Name: VoidlingData
   m_EditorClassIdentifier: 
-  enemyName: Enemy2
-  enemyPrefab: {fileID: 4776187908627978567, guid: e7ede6b00e1cc0e45a105156b8e7b126, type: 3}
-  moveSpeed: 3
-  maxHealth: 40
-  xpAmount: 20
-  damageAmount: 25
+  enemyName: Voidling
+  enemyPrefab: {fileID: 4272564062402885164, guid: 5531287fef62e664cb611f80c48d57d1, type: 3}
+  moveSpeed: 5
+  maxHealth: 10
+  xpAmount: 10
+  damageAmount: 10
   targetTag: Player
-  spawnRate: 4
