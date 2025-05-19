@@ -13,6 +13,7 @@ public class UpgradePanelScript : MonoBehaviour
     public Transform upgradePanelTransform;
     public WeaponData[] weaponDatas;
     public ItemBagScript itemBagScript;
+    public PlayerExp playerExp;
 
     void Start()
     {
@@ -52,7 +53,15 @@ public class UpgradePanelScript : MonoBehaviour
         List<int> usedRolls = new List<int>();
         for (int i = 1; i <= 4;)
         {
+            // değer döndür
             int roll = Random.Range(0, weaponDatas.Count());
+
+            // check for void staff and retry if first
+            if (playerExp.level == 1 && weaponDatas[roll].weaponName == "VoidStaff")
+            {
+                continue;
+            }
+
             if (usedRolls.Contains(roll))
             {
                 continue;

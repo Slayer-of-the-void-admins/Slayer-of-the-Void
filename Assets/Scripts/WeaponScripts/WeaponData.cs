@@ -14,7 +14,7 @@ public class WeaponData : ScriptableObject
     public string targetTag = "Enemy";
     public float damageAmount = 10f;
     public float stunDuration = 0.2f;
-    
+
     public bool isFloatingWeapon = true;
     [ShowIf("isFloatingWeapon")]
     public float cooldownTimer = 10f;
@@ -44,7 +44,7 @@ public class WeaponData : ScriptableObject
     public float minAimRange = 3f;
     [ShowIf("isRandomAimingProjectile")]
     public float maxAimRange = 12f;
-    
+
 
 
     public int weaponMaxLevel = 5;
@@ -67,6 +67,12 @@ public class WeaponData : ScriptableObject
         return fireRate * Mathf.Pow(fireRateMultiplier, weaponLevel - 1) * fireRateModifier;
     }
 
+
+    public bool isProjectileOrOrbittingProjectile()
+    {
+        return isProjectile || isOrbittingWeapon;
+    }
+    [ShowIf("isProjectileOrOrbittingProjectile")]
     public float speedMultiplier = 1.2f;
     [HideInInspector] public float weaponSpeedModifier = 1f;
     public float GetSpeed()
@@ -79,5 +85,12 @@ public class WeaponData : ScriptableObject
         {
             return rotationSpeed * Mathf.Pow(speedMultiplier, weaponLevel - 1) * weaponSpeedModifier;
         }
+    }
+
+    [ShowIf("isFloatingWeapon")]
+    public float cooldownMultiplier = 1.2f;
+    public float GetCooldownTimer()
+    {
+        return cooldownTimer / Mathf.Pow(cooldownMultiplier, weaponLevel - 1);
     }
 }

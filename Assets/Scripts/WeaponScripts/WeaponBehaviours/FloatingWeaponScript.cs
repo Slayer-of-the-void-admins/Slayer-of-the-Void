@@ -24,11 +24,11 @@ public class FloatingWeaponScript : MonoBehaviour, IWeaponBehaivour
 
     public void ShowFloatingWeapon()
     {
-        Vector3 spawnPosition = playerTransform.position + new Vector3(0, 5f, 0); // oyuncunun üstü
+        Vector3 spawnPosition = playerTransform.position + new Vector3(0, 5f, 0);
         floatingWeapon = Instantiate(weaponData.weaponPrefab, spawnPosition, Quaternion.identity);
         floatingWeapon.transform.SetParent(playerTransform);
         isFloatingWeaponActive = true;
-        floatingWeaponTimer = weaponData.floatingWeaponTimer;
+        floatingWeaponTimer = 0f;
     }
 
     public void UpdateBehaivour()
@@ -36,19 +36,19 @@ public class FloatingWeaponScript : MonoBehaviour, IWeaponBehaivour
         if (isFloatingWeaponActive)
         {
             floatingWeaponTimer += Time.deltaTime;
-            if (floatingWeaponTimer >= 3f)
+            if (floatingWeaponTimer >= weaponData.floatingWeaponTimer)
             {
                 DestroyVisibleEnemies();
                 Destroy(floatingWeapon);
                 isFloatingWeaponActive = false;
                 isInCooldown = true;
-                cooldownTimer = weaponData.cooldownTimer;
+                cooldownTimer = 0f;
             }
         }
         else if (isInCooldown)
         {
             cooldownTimer += Time.deltaTime;
-            if (cooldownTimer >= 10f)
+            if (cooldownTimer >= weaponData.GetCooldownTimer())
             {
                 ShowFloatingWeapon();
                 isInCooldown = false;
