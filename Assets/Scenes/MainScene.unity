@@ -3235,6 +3235,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 69dbed8da6af5dc40a656c3327b286d7, type: 2}
   - {fileID: 11400000, guid: 01a316674a7a0a447a44fec1fba08231, type: 2}
   itemBagScript: {fileID: 810594085}
+  playerExp: {fileID: 2131994289}
 --- !u!1 &1413437478
 GameObject:
   m_ObjectHideFlags: 0

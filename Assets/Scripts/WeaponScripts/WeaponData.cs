@@ -16,37 +16,46 @@ public class WeaponData : ScriptableObject
     public float stunDuration = 0.2f;
 
     public bool isFloatingWeapon = true;
-    [ShowIf("isFloatingWeapon")]
-    public float cooldownTimer = 10f;
-    [ShowIf("isFloatingWeapon")]
-    public float floatingWeaponTimer = 0f;
+    [ShowIf("isFloatingWeapon")] public float cooldownTimer = 10f;
+    [ShowIf("isFloatingWeapon")] public float floatingWeaponTimer = 0f;
 
     public bool isOrbittingWeapon = false;
-    [ShowIf("isOrbittingWeapon")]
-    public float rotationSpeed = 3f;
-    [ShowIf("isOrbittingWeapon")]
-    public float orbitDistance = 3.5f;
+    [ShowIf("isOrbittingWeapon")] public float rotationSpeed = 3f;
+    [ShowIf("isOrbittingWeapon")] public float orbitDistance = 3.5f;
 
 
     public bool isProjectile = true;
-    [ShowIf("isProjectile")]
-    public float fireRate = 1f; // saniyede ... kadar atış sıklığı
-    [ShowIf("isProjectile")]
-    public float projectileSpeed = 20f;
-    [ShowIf("isProjectile")]
-    public bool destroySelfOnCollision = false;
+    [ShowIf("isProjectile")] public float fireRate = 1f; // saniyede ... kadar atış sıklığı
+    [ShowIf("isProjectile")] public float projectileSpeed = 20f;
+    [ShowIf("isProjectile")] public bool destroySelfOnCollision = false;
 
 
-    [ShowIf("isProjectile")]
-    public bool isRandomAimingProjectile = false;
+    [ShowIf("isProjectile")] public bool isRandomAimingProjectile = false;
 
-    [ShowIf("isRandomAimingProjectile")]
-    public float minAimRange = 3f;
-    [ShowIf("isRandomAimingProjectile")]
-    public float maxAimRange = 12f;
+    [ShowIf("isRandomAimingProjectile")] public float minAimRange = 3f;
+    [ShowIf("isRandomAimingProjectile")] public float maxAimRange = 12f;
 
 
 
+    [Header("Explosion Settings")]
+    public bool hasExplosion = false;
+    [ShowIf("hasExplosion")] public GameObject explosionObject;
+    [ShowIf("hasExplosion")] public float explosionDuration = 0.3f;
+    [ShowIf("hasExplosion")] public float explosionDurationMultiplier = 1.1f;
+    public float GetExplosionDuration()
+    {
+        return explosionDuration * Mathf.Pow(explosionDurationMultiplier, weaponLevel - 1);
+    }
+    [ShowIf("hasExplosion")] public float explosionDamage = 10f;
+    [ShowIf("hasExplosion")] public float explosionDamageMultiplier = 1.2f;
+    public float GetExplosionDamage()
+    {
+        return explosionDamage * Mathf.Pow(explosionDamageMultiplier, weaponLevel - 1);
+    }
+
+
+
+    [Header("Level Settings")]
     public int weaponMaxLevel = 5;
     public int weaponLevel = 1;
     public bool isMaxLevel => weaponLevel >= weaponMaxLevel;
@@ -59,8 +68,7 @@ public class WeaponData : ScriptableObject
     }
 
 
-    [ShowIf("isProjectile")]
-    public float fireRateMultiplier = 1.2f;
+    [ShowIf("isProjectile")] public float fireRateMultiplier = 1.2f;
     [HideInInspector] public float fireRateModifier = 1f;
     public float GetFireRate()
     {
@@ -72,8 +80,7 @@ public class WeaponData : ScriptableObject
     {
         return isProjectile || isOrbittingWeapon;
     }
-    [ShowIf("isProjectileOrOrbittingProjectile")]
-    public float speedMultiplier = 1.2f;
+    [ShowIf("isProjectileOrOrbittingProjectile")] public float speedMultiplier = 1.2f;
     [HideInInspector] public float weaponSpeedModifier = 1f;
     public float GetSpeed()
     {
@@ -87,8 +94,7 @@ public class WeaponData : ScriptableObject
         }
     }
 
-    [ShowIf("isFloatingWeapon")]
-    public float cooldownMultiplier = 1.2f;
+    [ShowIf("isFloatingWeapon")] public float cooldownMultiplier = 1.2f;
     public float GetCooldownTimer()
     {
         return cooldownTimer / Mathf.Pow(cooldownMultiplier, weaponLevel - 1);
