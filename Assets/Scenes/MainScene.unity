@@ -721,6 +721,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   player: {fileID: 2131994285}
   spawnDistance: 30
 --- !u!4 &221904550
@@ -1002,12 +1003,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 01a316674a7a0a447a44fec1fba08231, type: 2}
   lingeringEffectList:
   - {fileID: 11400000, guid: 7c32ca8a00f0ef94e95cc72d2d388dd2, type: 2}
-  - {fileID: 11400000, guid: baf64a1ac9ebbf540b6e543b106486d3, type: 2}
   spawnSetList:
   - {fileID: 11400000, guid: 579f624acb77f8a43a896e7b03fda48c, type: 2}
   - {fileID: 11400000, guid: 28f0532ea57232f479d94d8f412ee753, type: 2}
   - {fileID: 11400000, guid: b726d2ed1b8054e45a4c06351916d186, type: 2}
   - {fileID: 11400000, guid: c0b53a4af7b32a740bd1e90ac05aa946, type: 2}
+  - {fileID: 11400000, guid: df567b847a9cd614f87fbb5d2f544740, type: 2}
+  - {fileID: 11400000, guid: 2014df0276cf1794fa311f4befc9f7e8, type: 2}
+  - {fileID: 11400000, guid: 40f657d9fd56a7445b65d08cf0399fe9, type: 2}
+  - {fileID: 11400000, guid: 5efeca227dc01e249ac7fafd476f6f29, type: 2}
+  - {fileID: 11400000, guid: e4ede91f12ed8804bbb5c66214ee0264, type: 2}
   spawner: {fileID: 221904549}
   playerStats: {fileID: 11400000, guid: 6738e8d0ca38f8b4f895c08943a5cd6c, type: 2}
   currencyManager: {fileID: 0}

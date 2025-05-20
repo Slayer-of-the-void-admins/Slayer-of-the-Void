@@ -17,5 +17,5 @@ MonoBehaviour:
   moveSpeed: 3
   maxHealth: 40
   xpAmount: 20
-  damageAmount: 25
+  damageAmount: 20
   targetTag: Player

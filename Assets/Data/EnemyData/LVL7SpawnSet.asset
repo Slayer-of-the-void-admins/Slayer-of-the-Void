@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca68d820d2069b24097b71f85b0958e2, type: 3}
   m_Name: LVL7SpawnSet
   m_EditorClassIdentifier: 
-  globalSpawnRate: 2
+  globalSpawnRate: 2.5
   enemiesToSpawn:
   - enemyData: {fileID: 11400000, guid: bf4ccdf05897b7949878a065ee05a569, type: 2}
     spawnChance: 0.6
