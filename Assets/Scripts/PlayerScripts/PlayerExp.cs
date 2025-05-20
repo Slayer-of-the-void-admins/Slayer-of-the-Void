@@ -29,7 +29,7 @@ public class PlayerExp : MonoBehaviour
     {
         level++;
         currentXP = currentXP - xpToNextLevel;
-        xpToNextLevel = Mathf.RoundToInt(xpToNextLevel * 1.5f);
+        xpToNextLevel = Mathf.RoundToInt(xpToNextLevel * 1.25f);
 
         ExpBar.value = currentXP;
         ExpBar.maxValue = xpToNextLevel;

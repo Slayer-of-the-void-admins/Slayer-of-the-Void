@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 394510147831609883}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 0}
-  m_LocalScale: {x: 2.72, y: 1.3268304, z: 0.6634152}
+  m_LocalPosition: {x: -0.17, y: -3.45, z: 0}
+  m_LocalScale: {x: 3.1199996, y: 1.5219524, z: 0.7609762}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5499824171548272429}
@@ -95,15 +95,15 @@ GameObject:
   - component: {fileID: 5499824171548272429}
   - component: {fileID: 6456038845760379914}
   - component: {fileID: 4560300385595227457}
-  - component: {fileID: 1323798868095074394}
+  - component: {fileID: 1692864703768007800}
   - component: {fileID: 6024462315344387913}
   - component: {fileID: 7035921961683059022}
   - component: {fileID: 29780003034258379}
   - component: {fileID: -733750156972989321}
-  - component: {fileID: 8669068390710549626}
   - component: {fileID: 4014683175989976046}
+  - component: {fileID: 918101613633543902}
   m_Layer: 0
-  m_Name: Grimefigure
+  m_Name: DreadVermin
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,8 +118,8 @@ Transform:
   m_GameObject: {fileID: 4776187908627978567}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.75, y: -0.24061988, z: 0}
-  m_LocalScale: {x: 1.73, y: 1.73, z: 3.46}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8947273117739384229}
@@ -166,7 +166,7 @@ SpriteRenderer:
   m_SortingLayerID: -1273569897
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1541703143, guid: 0dc2b52ee58466549bd51f1df0fc4a8d, type: 3}
+  m_Sprite: {fileID: 160548803, guid: f03e0a0e1ff33354b9def81894b0cbe3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -204,7 +204,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &1323798868095074394
+--- !u!70 &1692864703768007800
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -236,8 +236,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.005097748, y: -0.05607302}
-  m_Size: {x: 2.1004412, y: 3.2070756}
+  m_Offset: {x: 0.054748695, y: -0.117318474}
+  m_Size: {x: 3.9886627, y: 6.4409537}
   m_Direction: 0
 --- !u!114 &6024462315344387913
 MonoBehaviour:
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  enemyData: {fileID: 11400000, guid: dcdb9b59084f9d848ae35e44d435e6d7, type: 2}
+  enemyData: {fileID: 11400000, guid: bf4ccdf05897b7949878a065ee05a569, type: 2}
   isStunned: 0
 --- !u!114 &7035921961683059022
 MonoBehaviour:
@@ -270,7 +270,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 0}
   isPlayer: 0
   healthBar: {fileID: 0}
-  enemyData: {fileID: 11400000, guid: dcdb9b59084f9d848ae35e44d435e6d7, type: 2}
+  enemyData: {fileID: 11400000, guid: bf4ccdf05897b7949878a065ee05a569, type: 2}
   playerData: {fileID: 11400000, guid: 6738e8d0ca38f8b4f895c08943a5cd6c, type: 2}
   healthLabel: {fileID: 0}
 --- !u!114 &29780003034258379
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ab47060ab8498e4e8c18b810c685e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: dcdb9b59084f9d848ae35e44d435e6d7, type: 2}
+  enemyData: {fileID: 11400000, guid: bf4ccdf05897b7949878a065ee05a569, type: 2}
   weaponData: {fileID: 0}
   targetTag: Player
   damageAmount: 10
@@ -303,27 +303,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: 6f4aaada514f99a48a925ce6071afbf5, type: 2}
   flashDuration: 0.125
---- !u!95 &8669068390710549626
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4776187908627978567}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9ce4d4f219a7709468c90acc1951b6ab, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &4014683175989976046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,4 +315,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 914d5c82e8c7b364daf0650b1a76cb04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathParticle: {fileID: 4268761304600640619, guid: b7d6981184efb394b9211f2917b656ff, type: 3}
+  deathParticle: {fileID: 4268761304600640619, guid: f124f2cc6c81c56448b796aa53b30e05, type: 3}
+--- !u!95 &918101613633543902
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4776187908627978567}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c4da9872526d83345a107843561e32d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

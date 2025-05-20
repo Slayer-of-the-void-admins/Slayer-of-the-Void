@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewWeaponData", menuName = "WeaponData")]
 public class WeaponData : ScriptableObject
 {
+    [Header("Main Settings")]
     public string weaponName;
     public Color flashColor = Color.white;
     public GameObject weaponPrefab;
@@ -15,15 +16,20 @@ public class WeaponData : ScriptableObject
     public float damageAmount = 10f;
     public float stunDuration = 0.2f;
 
+
+    [Header("Floating Weapon Settings")]
     public bool isFloatingWeapon = true;
     [ShowIf("isFloatingWeapon")] public float cooldownTimer = 10f;
     [ShowIf("isFloatingWeapon")] public float floatingWeaponTimer = 0f;
 
+
+    [Header("Orbitting Weapon Settings")]
     public bool isOrbittingWeapon = false;
     [ShowIf("isOrbittingWeapon")] public float rotationSpeed = 3f;
     [ShowIf("isOrbittingWeapon")] public float orbitDistance = 3.5f;
 
 
+    [Header("Projectile Weapon Settings")]
     public bool isProjectile = true;
     [ShowIf("isProjectile")] public float fireRate = 1f; // saniyede ... kadar atış sıklığı
     [ShowIf("isProjectile")] public float projectileSpeed = 20f;
@@ -53,6 +59,9 @@ public class WeaponData : ScriptableObject
         return explosionDamage * Mathf.Pow(explosionDamageMultiplier, weaponLevel - 1);
     }
 
+
+    [Header("Lingering Effect Settings")]
+    public bool hasLingeringEffect = false;
 
 
     [Header("Level Settings")]

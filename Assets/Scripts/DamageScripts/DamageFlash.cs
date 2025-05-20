@@ -17,7 +17,14 @@ public class DamageFlash : MonoBehaviour
         originalMaterial = spriteRenderer.material;
 
         // flaş metaryelini kopyası ile değiştir
-        flashMaterial = new Material(flashMaterial);
+        if (flashMaterial != null)
+        {
+            flashMaterial = new Material(flashMaterial);
+        }
+        else
+        {
+            Debug.LogError("flashMaterial is not assigned!", this);
+        }
     }
 
     public void Flash(Color color)

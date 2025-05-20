@@ -19,7 +19,7 @@ MonoBehaviour:
   weaponIconPrefab: {fileID: 1077830196882540247, guid: 62656c4cd3cb10e42b1c0e07823210a2, type: 3}
   targetTag: Enemy
   damageAmount: 15
-  stunDuration: 0.125
+  stunDuration: 0.25
   isFloatingWeapon: 0
   cooldownTimer: 0
   floatingWeaponTimer: 0
@@ -33,10 +33,18 @@ MonoBehaviour:
   isRandomAimingProjectile: 0
   minAimRange: 3
   maxAimRange: 12
+  hasExplosion: 0
+  explosionObject: {fileID: 0}
+  explosionDuration: 0.3
+  explosionDurationMultiplier: 1.1
+  explosionDamage: 10
+  explosionDamageMultiplier: 1.2
+  hasLingeringEffect: 0
   weaponMaxLevel: 5
-  weaponLevel: 1
+  weaponLevel: 3
   damageMultiplier: 1.1
   fireRateMultiplier: 1.2
   fireRateModifier: 1
   speedMultiplier: 1.15
   weaponSpeedModifier: 1
+  cooldownMultiplier: 1.2

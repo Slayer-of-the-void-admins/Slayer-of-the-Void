@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: FireballData
   m_EditorClassIdentifier: 
   weaponName: Fireball
-  flashColor: {r: 1, g: 0.34117648, b: 0, a: 1}
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
   weaponPrefab: {fileID: 6923670273585607469, guid: 0b79b93023eb514428eae2b0cd1e0f4d, type: 3}
   upgradeCardPrefab: {fileID: 5918746556210795602, guid: 3f190b2bf14e9a2499b2ea1eb66ff726, type: 3}
   weaponIconPrefab: {fileID: 7150981120757650678, guid: 5631c9716579ccf48ab0ca07766d682c, type: 3}
   targetTag: Enemy
-  damageAmount: 20
-  stunDuration: 0.125
+  damageAmount: 10
+  stunDuration: 0.25
   isFloatingWeapon: 0
   cooldownTimer: 0
+  floatingWeaponTimer: 0
+  isOrbittingWeapon: 0
+  rotationSpeed: 3
+  orbitDistance: 3.5
   isProjectile: 1
   fireRate: 0.35
   projectileSpeed: 10
@@ -29,8 +33,13 @@ MonoBehaviour:
   isRandomAimingProjectile: 0
   minAimRange: 3
   maxAimRange: 12
-  rotationSpeed: 3
-  orbitDistance: 3.5
+  hasExplosion: 1
+  explosionObject: {fileID: 6220214336661041886, guid: bb104d96b76594f42b912ac319562925, type: 3}
+  explosionDuration: 0.3
+  explosionDurationMultiplier: 1.1
+  explosionDamage: 10
+  explosionDamageMultiplier: 1.2
+  hasLingeringEffect: 0
   weaponMaxLevel: 5
   weaponLevel: 1
   damageMultiplier: 1.2
@@ -38,3 +47,4 @@ MonoBehaviour:
   fireRateModifier: 1
   speedMultiplier: 1.1
   weaponSpeedModifier: 1
+  cooldownMultiplier: 1.2

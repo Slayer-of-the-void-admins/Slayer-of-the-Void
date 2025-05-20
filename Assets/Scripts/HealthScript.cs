@@ -113,7 +113,12 @@ public class HealthScript : MonoBehaviour
         else // isEnenmy
         {
             Destroy(gameObject);
-            GameObject.FindWithTag("Player").GetComponent<PlayerExp>().GainXP(enemyData.xpAmount);
+            PlayerExp playerExp = GameObject.FindWithTag("Player").GetComponent<PlayerExp>();
+            if (playerExp != null)
+            {
+                playerExp.GainXP(enemyData.xpAmount);
+            }
+            // GameObject.FindWithTag("Player").GetComponent<PlayerExp>().GainXP(enemyData.xpAmount);
         }
     }
 

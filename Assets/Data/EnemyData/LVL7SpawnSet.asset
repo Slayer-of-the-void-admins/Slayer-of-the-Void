@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca68d820d2069b24097b71f85b0958e2, type: 3}
+  m_Name: LVL7SpawnSet
+  m_EditorClassIdentifier: 
+  globalSpawnRate: 2
+  enemiesToSpawn:
+  - enemyData: {fileID: 11400000, guid: bf4ccdf05897b7949878a065ee05a569, type: 2}
+    spawnChance: 0.6
+  - enemyData: {fileID: 11400000, guid: dcdb9b59084f9d848ae35e44d435e6d7, type: 2}
+    spawnChance: 0.25
+  - enemyData: {fileID: 11400000, guid: f6ae827fd3493324181009117b3e439e, type: 2}
+    spawnChance: 0.15
