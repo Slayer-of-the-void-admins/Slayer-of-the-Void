@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: -733750156972989321}
   - component: {fileID: 7420857136057305289}
   - component: {fileID: 1433365603512487778}
+  - component: {fileID: -5013016703800517795}
   m_Layer: 0
   m_Name: void-ghost
   m_TagString: Enemy
@@ -337,3 +338,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathParticle: {fileID: 4268761304600640619, guid: 24375ec132f39c54bb1f9356d9061d68, type: 3}
+--- !u!114 &-5013016703800517795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4776187908627978567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f42dd013d0ec1c3498d363f4de503c16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  essenceChestPrefab: {fileID: 983348676238117519, guid: 6002e71265c30f0409182d843dcb9858, type: 3}
+  enemyData: {fileID: 11400000, guid: f6ae827fd3493324181009117b3e439e, type: 2}

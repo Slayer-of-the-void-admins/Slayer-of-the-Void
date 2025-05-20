@@ -15,10 +15,7 @@ public class RandomCurvedProjectile : MonoBehaviour, IWeaponBehaivour
         InvokeRepeating(nameof(Shoot), 1f, 1f / weaponData.GetFireRate());
     }
 
-    public void UpdateBehaivour()
-    {
-
-    }
+    public void UpdateBehaivour() { }
 
     void Shoot()
     {
@@ -52,6 +49,12 @@ public class RandomCurvedProjectile : MonoBehaviour, IWeaponBehaivour
         }
 
         Destroy(randomCurvedProjectile);
+    }
+    
+    public void ResetInvoke()
+    {
+        CancelInvoke(nameof(Shoot));
+        InvokeRepeating(nameof(Shoot), 1f / weaponData.GetFireRate(), 1f / weaponData.GetFireRate());
     }
 }
 

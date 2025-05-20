@@ -17,6 +17,16 @@ public class WeaponData : ScriptableObject
     public float stunDuration = 0.2f;
 
 
+    [Header("Audio Settings")]
+    public bool playAudioOnShoot = false;
+    [ShowIf("playAudioOnShoot")] public AudioClip weaponShootSound;
+    public bool playAudioOnCollision = false;
+    [ShowIf("playAudioOnCollision")] public AudioClip weaponCollisionSound;
+    public bool playAudioOnDestroy = false;
+    [ShowIf("playAudioOnDestroy")] public AudioClip weaponDestroySound;
+
+
+
     [Header("Floating Weapon Settings")]
     public bool isFloatingWeapon = true;
     [ShowIf("isFloatingWeapon")] public float cooldownTimer = 10f;

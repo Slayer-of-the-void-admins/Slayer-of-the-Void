@@ -15,7 +15,7 @@ public class StraightProjectile : MonoBehaviour, IWeaponBehaivour
         InvokeRepeating(nameof(Shoot), 1f, 1f / weaponData.GetFireRate());
     }
 
-    public void UpdateBehaivour() {}
+    public void UpdateBehaivour() { }
 
     void Shoot()
     {
@@ -34,5 +34,11 @@ public class StraightProjectile : MonoBehaviour, IWeaponBehaivour
         // silah ilerlesin
         Rigidbody2D rb = straightProjectile.GetComponent<Rigidbody2D>();
         rb.velocity = aimDirection * weaponData.GetSpeed();
+    }
+
+    public void ResetInvoke()
+    {
+        CancelInvoke(nameof(Shoot));
+        InvokeRepeating(nameof(Shoot), 1f / weaponData.GetFireRate(), 1f / weaponData.GetFireRate());
     }
 }

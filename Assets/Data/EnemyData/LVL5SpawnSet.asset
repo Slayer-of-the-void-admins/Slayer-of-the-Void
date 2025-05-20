@@ -15,8 +15,8 @@ MonoBehaviour:
   globalSpawnRate: 2
   enemiesToSpawn:
   - enemyData: {fileID: 11400000, guid: bf4ccdf05897b7949878a065ee05a569, type: 2}
-    spawnChance: 0.75
+    spawnChance: 1
   - enemyData: {fileID: 11400000, guid: dcdb9b59084f9d848ae35e44d435e6d7, type: 2}
-    spawnChance: 0.15
+    spawnChance: 0
   - enemyData: {fileID: 11400000, guid: f6ae827fd3493324181009117b3e439e, type: 2}
-    spawnChance: 0.1
+    spawnChance: 0

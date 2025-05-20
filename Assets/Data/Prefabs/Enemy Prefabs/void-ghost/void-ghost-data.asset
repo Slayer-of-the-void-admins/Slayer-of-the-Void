@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: VoidGhost
   enemyPrefab: {fileID: 4776187908627978567, guid: 0a6a0862fe5977d47b865d9e48b9a825, type: 3}
-  moveSpeed: 7.5
+  moveSpeed: 6
   maxHealth: 20
   xpAmount: 15
   damageAmount: 10
   targetTag: Player
+  lootDropChance: 0.2

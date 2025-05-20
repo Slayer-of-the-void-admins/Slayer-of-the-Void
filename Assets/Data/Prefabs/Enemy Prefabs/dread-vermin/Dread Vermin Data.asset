@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: DreadVermin
   enemyPrefab: {fileID: 4776187908627978567, guid: 0e188b436a5cad14da245f5032687ab1, type: 3}
-  moveSpeed: 5
+  moveSpeed: 4
   maxHealth: 15
   xpAmount: 25
   damageAmount: 10
   targetTag: Player
+  lootDropChance: 0.1

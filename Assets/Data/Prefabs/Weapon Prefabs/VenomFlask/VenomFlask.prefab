@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3611996619528276933}
   - component: {fileID: -2093300831628008151}
   - component: {fileID: 3188171368077490297}
+  - component: {fileID: -9044963259184204637}
   m_Layer: 0
   m_Name: VenomFlask
   m_TagString: ProjectileWeapon
@@ -179,4 +180,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lingeringEffectData: {fileID: 11400000, guid: 7c32ca8a00f0ef94e95cc72d2d388dd2, type: 2}
+  weaponData: {fileID: 11400000, guid: b7c4af6d6cd877942b6e21df5c0b40fd, type: 2}
+--- !u!114 &-9044963259184204637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6923670273585607469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee341de6a8c104409030baf7cfee32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPrefab: {fileID: 6361760454918544490, guid: 7492674170f69444eb7e2f7a32e6fce2, type: 3}
   weaponData: {fileID: 11400000, guid: b7c4af6d6cd877942b6e21df5c0b40fd, type: 2}

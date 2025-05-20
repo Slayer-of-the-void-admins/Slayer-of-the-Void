@@ -12,4 +12,5 @@ public class EnemyData : ScriptableObject
     public int xpAmount = 10;
     public float damageAmount = 10f;
     public string targetTag = "Player";
+    public float lootDropChance = 0f;
 }

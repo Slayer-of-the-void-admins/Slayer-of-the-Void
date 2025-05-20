@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Grimefigure
   enemyPrefab: {fileID: 4776187908627978567, guid: e7ede6b00e1cc0e45a105156b8e7b126, type: 3}
-  moveSpeed: 3
+  moveSpeed: 2.5
   maxHealth: 40
   xpAmount: 20
   damageAmount: 20
   targetTag: Player
+  lootDropChance: 0.25

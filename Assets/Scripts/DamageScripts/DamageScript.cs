@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.Scripting.APIUpdating;
 
 public class DamageScript : MonoBehaviour
@@ -46,10 +47,10 @@ public class DamageScript : MonoBehaviour
                     health.TakeDamage(damageAmount);
                 }
                 
-                if (weaponData?.destroySelfOnCollision == true)
-                {
-                    Destroy(gameObject);
-                }
+                // if (weaponData?.destroySelfOnCollision == true)
+                // {
+                //     Destroy(gameObject);
+                // }
             }
 
             // düşmanlar oyuncuya çarpınca hafif geri zıplasın

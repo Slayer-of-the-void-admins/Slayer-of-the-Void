@@ -20,6 +20,12 @@ MonoBehaviour:
   targetTag: Enemy
   damageAmount: 10
   stunDuration: 0.25
+  playAudioOnShoot: 1
+  weaponShootSound: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
+  playAudioOnCollision: 1
+  weaponCollisionSound: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
+  playAudioOnDestroy: 0
+  weaponDestroySound: {fileID: 0}
   isFloatingWeapon: 0
   cooldownTimer: 0
   floatingWeaponTimer: 0
@@ -27,7 +33,7 @@ MonoBehaviour:
   rotationSpeed: 3
   orbitDistance: 3.5
   isProjectile: 1
-  fireRate: 0.35
+  fireRate: 0.5
   projectileSpeed: 10
   destroySelfOnCollision: 1
   isRandomAimingProjectile: 0
@@ -36,12 +42,12 @@ MonoBehaviour:
   hasExplosion: 1
   explosionObject: {fileID: 6220214336661041886, guid: bb104d96b76594f42b912ac319562925, type: 3}
   explosionDuration: 0.3
-  explosionDurationMultiplier: 1.1
+  explosionDurationMultiplier: 1.2
   explosionDamage: 10
   explosionDamageMultiplier: 1.2
   hasLingeringEffect: 0
   weaponMaxLevel: 5
-  weaponLevel: 1
+  weaponLevel: 4
   damageMultiplier: 1.2
   fireRateMultiplier: 1.2
   fireRateModifier: 1

@@ -81,9 +81,9 @@ public class UpgradePanelScript : MonoBehaviour
 
     public void AddWeapon(WeaponData weaponData)
     {
-        // oyuncu silaha zaten sahipse yenisini yerleştirmek yerine silahın seviyesini artır
+        // oyuncu silaha sahip mi kontrol et
         WeaponScript existingWeapon = null;
-        foreach (Transform child in player.transform) // oyuncunun tüm çocuklarını araştır
+        foreach (Transform child in player.transform)
         {
             WeaponScript weaponScript = child.GetComponent<WeaponScript>();
             if (weaponScript != null && weaponScript.weaponData.weaponName == weaponData.weaponName)
@@ -98,7 +98,20 @@ public class UpgradePanelScript : MonoBehaviour
             // silah seviyesini artır
             existingWeapon.weaponData.weaponLevel++;
 
-            itemBagScript.UpdateItemBagIcons(weaponData);
+            // yeni fire ratleri kullanmaları için projectile silahların invoke larını tekrar başlat
+            StraightProjectile straightProjectile = existingWeapon.GetComponent<StraightProjectile>();
+            if (straightProjectile != null)
+            {
+                straightProjectile.ResetInvoke();
+            }
+            RandomCurvedProjectile randomCurvedProjectile = existingWeapon.GetComponent<RandomCurvedProjectile>();
+            if (randomCurvedProjectile != null)
+            {
+                randomCurvedProjectile.ResetInvoke();
+            }
+
+            // item çantası ikon ve yazıları güncelle
+                itemBagScript.UpdateItemBagIcons(weaponData);
         }
         else
         {
@@ -110,6 +123,7 @@ public class UpgradePanelScript : MonoBehaviour
             newWeapon.transform.parent = player.transform;
             newWeapon.transform.localPosition = Vector3.zero;
 
+            // weaponscript i aktar
             WeaponScript ws = newWeapon.AddComponent<WeaponScript>();
             ws.weaponData = weaponData;
 

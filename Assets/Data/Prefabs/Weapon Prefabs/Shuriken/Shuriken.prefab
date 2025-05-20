@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8653363865348713044}
   - component: {fileID: 5082819303311916487}
   - component: {fileID: 4096742812030115236}
+  - component: {fileID: -3955052586503319880}
   m_Layer: 0
   m_Name: Shuriken
   m_TagString: ProjectileWeapon
@@ -187,3 +188,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-3955052586503319880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6765666572512849739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee341de6a8c104409030baf7cfee32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPrefab: {fileID: 6361760454918544490, guid: 7492674170f69444eb7e2f7a32e6fce2, type: 3}
+  weaponData: {fileID: 11400000, guid: 2d252d801ea784940975b8e3119e7d59, type: 2}
+  playAudioOnShoot: 1
+  playAudioOnCollision: 1

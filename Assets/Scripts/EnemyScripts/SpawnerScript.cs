@@ -17,6 +17,7 @@ public class SpawnerScript : MonoBehaviour
         if (spawnSet != null)
         {
             InvokeRepeating(nameof(SpawnEnemy), 1f, 1f / spawnSet.globalSpawnRate);
+            Debug.Log("spawn " + spawnSet.globalSpawnRate + " per second");
         }
     }
 
@@ -57,6 +58,6 @@ public class SpawnerScript : MonoBehaviour
     {
         CancelInvoke(nameof(SpawnEnemy));
         spawnSet = newSet;
-        InvokeRepeating(nameof(SpawnEnemy), 0f, spawnSet.globalSpawnRate);
+        InvokeRepeating(nameof(SpawnEnemy), 0f, 1f / spawnSet.globalSpawnRate);
     }
 }

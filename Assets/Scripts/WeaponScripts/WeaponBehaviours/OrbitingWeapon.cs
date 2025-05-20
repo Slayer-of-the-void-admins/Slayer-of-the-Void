@@ -29,6 +29,7 @@ public class OrbitingWeapon : MonoBehaviour, IWeaponBehaivour
 
         // silah sürekli oyuncunun tersi yönüne baksın
         orbitingWeapon.transform.rotation = Quaternion.LookRotation(Vector3.back, orbitingWeapon.transform.position - playerTransform.position);
+
         BuffDamage();
 
     }

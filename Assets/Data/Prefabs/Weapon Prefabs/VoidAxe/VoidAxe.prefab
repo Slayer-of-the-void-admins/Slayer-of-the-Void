@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5330237486706908548}
   - component: {fileID: 3611996619528276933}
   - component: {fileID: 2985375357791013237}
+  - component: {fileID: 4515981344639667531}
   m_Layer: 0
   m_Name: VoidAxe
   m_TagString: RotatingWeapon
@@ -175,3 +176,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.134369, y: 9.652849}
   m_EdgeRadius: 0
+--- !u!114 &4515981344639667531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6923670273585607469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee341de6a8c104409030baf7cfee32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPrefab: {fileID: 6361760454918544490, guid: 7492674170f69444eb7e2f7a32e6fce2, type: 3}
+  weaponData: {fileID: 11400000, guid: 01a316674a7a0a447a44fec1fba08231, type: 2}

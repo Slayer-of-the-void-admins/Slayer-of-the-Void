@@ -15,10 +15,11 @@ GameObject:
   - component: {fileID: 4270438503108456622}
   - component: {fileID: 7373748126167280708}
   - component: {fileID: -903304061494767560}
+  - component: {fileID: 7541446181324825405}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: ProjectileWeapon
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: 860ae2cbf4ce0ce42843f20f3195994e, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -201,3 +202,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: e3b557b03fb32e347afc0c5801c87626, type: 2}
+--- !u!114 &7541446181324825405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6923670273585607469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee341de6a8c104409030baf7cfee32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPrefab: {fileID: 6361760454918544490, guid: 7492674170f69444eb7e2f7a32e6fce2, type: 3}
+  weaponData: {fileID: 11400000, guid: e3b557b03fb32e347afc0c5801c87626, type: 2}
+  playAudioOnShoot: 1
+  playAudioOnCollision: 1
