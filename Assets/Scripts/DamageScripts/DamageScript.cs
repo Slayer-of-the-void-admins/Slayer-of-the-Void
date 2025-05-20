@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.Scripting.APIUpdating;
 
 public class DamageScript : MonoBehaviour

@@ -17,6 +17,7 @@ public class SpawnerScript : MonoBehaviour
         if (spawnSet != null)
         {
             InvokeRepeating(nameof(SpawnEnemy), 1f, 1f / spawnSet.globalSpawnRate);
+            Debug.Log("spawn " + spawnSet.globalSpawnRate + " per second");
         }
     }
 
@@ -29,7 +30,15 @@ public class SpawnerScript : MonoBehaviour
 
         Vector2 spawnPosition = (Vector2)player.position + UnityEngine.Random.insideUnitCircle.normalized * spawnDistance; // düşmanın doğacağı pozisyonu rastgele seç
         GameObject enemy = Instantiate(chosenEnemy.enemyPrefab, spawnPosition, Quaternion.identity); // düşmanı seçilen pozisyonda çağır
-        enemy.GetComponent<EnemyMovement>().player = player; // çağırılan düşmandaki hareket scriptine oyuncu nesnesini aktar
+
+        if (chosenEnemy.isRangedEnemy)
+        {
+            enemy.GetComponent<RangedEnemyMovement>().player = player; // çağırılan düşmandaki hareket scriptine oyuncu nesnesini aktar
+        }
+        else 
+        {
+            enemy.GetComponent<EnemyMovement>().player = player; // çağırılan düşmandaki hareket scriptine oyuncu nesnesini aktar
+        }
     }
 
     private EnemyData ChooseEnemyType()
@@ -57,6 +66,6 @@ public class SpawnerScript : MonoBehaviour
     {
         CancelInvoke(nameof(SpawnEnemy));
         spawnSet = newSet;
-        InvokeRepeating(nameof(SpawnEnemy), 0f, spawnSet.globalSpawnRate);
+        InvokeRepeating(nameof(SpawnEnemy), 0f, 1f / spawnSet.globalSpawnRate);
     }
 }

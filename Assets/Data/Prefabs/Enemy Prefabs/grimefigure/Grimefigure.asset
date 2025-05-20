@@ -19,3 +19,4 @@ MonoBehaviour:
   xpAmount: 20
   damageAmount: 20
   targetTag: Player
+  lootDropChance: 0.25

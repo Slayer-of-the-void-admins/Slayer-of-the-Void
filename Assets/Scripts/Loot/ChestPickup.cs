@@ -19,8 +19,12 @@ public class ChestPickup : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerStats.LoadVoidEssenceAmount();
-            playerStats.voidEssenceAmount += Mathf.RoundToInt(baseEssenceReward * Mathf.Pow(essenceAmountMultipler, playerExp.level));
+
+            playerStats.voidEssenceAmount += Mathf.RoundToInt(baseEssenceReward * Mathf.Pow(essenceAmountMultipler, playerExp.level - 1));
+            Debug.Log("+" + Mathf.RoundToInt(baseEssenceReward * Mathf.Pow(essenceAmountMultipler, playerExp.level - 1)) + " void essence");
+
             playerStats.SaveVoidEssenceAmount();
+            Destroy(gameObject);
         }
     }
 }
