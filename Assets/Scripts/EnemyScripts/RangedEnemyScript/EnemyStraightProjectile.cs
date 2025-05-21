@@ -39,10 +39,8 @@
                             poisonedPlayer.Initialize(health, enemyWeaponData);
                         }
                     }
-                    else
-                    {
-                        health.TakeDamage(enemyWeaponData.damageAmount);
-                    }
+
+                    health.TakeDamage(enemyWeaponData.damageAmount);   
                 }
 
                 if (enemyWeaponData.destroySelfOnCollision)

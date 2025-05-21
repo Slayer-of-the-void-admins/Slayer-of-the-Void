@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de819c9efc02614daee3c063abe44c4, type: 3}
   m_Name: PoisonousArrow
   m_EditorClassIdentifier: 
-  projectileSpeed: 1
-  weaponName: 
+  projectileSpeed: 10
+  weaponName: Poisonous Arrow
   flashColor: {r: 1, g: 1, b: 1, a: 1}
-  weaponPrefab: {fileID: 0}
+  weaponPrefab: {fileID: 6164672110221338151, guid: 2c562ed2897a32d488b748e63374d57f, type: 3}
   targetTag: Player
   damageAmount: 10
-  destroySelfOnCollision: 0
-  isPoisonedWeapon: 0
+  destroySelfOnCollision: 1
+  isPoisonedWeapon: 1
   duration: 5
   damageInterval: 1
