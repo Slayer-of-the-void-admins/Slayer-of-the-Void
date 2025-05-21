@@ -60,7 +60,9 @@ public class RangedEnemyMovement : MonoBehaviour
 
         if (projectileScript != null)
         {
+
             projectileScript.Initialize(enemyWeaponData, direction);
+
         }
         else
         {

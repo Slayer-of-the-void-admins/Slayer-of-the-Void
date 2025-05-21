@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a76132dcf6bf5640a9f66fa670ab745, type: 3}
-  m_Name: Iskeleton-data
+  m_Name: PoisonousSkeleton
   m_EditorClassIdentifier: 
-  enemyName: Iskeleton
-  enemyPrefab: {fileID: 4776187908627978567, guid: 4334e70c9551ec14e87770946f95c72f, type: 3}
-  moveSpeed: 7.5
-  maxHealth: 20
-  xpAmount: 15
+  enemyName: 
+  enemyPrefab: {fileID: 0}
+  moveSpeed: 2
+  maxHealth: 100
+  xpAmount: 10
   damageAmount: 10
   targetTag: Player
-  lootDropChance: 0.2
-  isRangedEnemy: 1
-  attackRange: 20
-  retreatRange: 10
-  fireCooldown: 3
+  lootDropChance: 0
+  isRangedEnemy: 0
+  attackRange: 10
+  retreatRange: 0
+  fireCooldown: 0
