@@ -14,6 +14,6 @@ public class SettingsScript : MonoBehaviour
 
     public void SetMusic(float value)
     {
-        audioMixer.SetFloat("Music", Mathf.Log10(value) * 20f);
+        audioMixer.SetFloat("Music", Mathf.Log10(value) * 20f); 
     }
 }
