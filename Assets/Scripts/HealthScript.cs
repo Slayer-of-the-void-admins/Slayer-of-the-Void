@@ -36,6 +36,13 @@ public class HealthScript : MonoBehaviour
         if (gameObject.tag == "Player")
         {
             currentHealth -= damage - (damage * playerData.resistancePercentage / 100);
+
+            // geçici oyuncuyu damage flash
+            DamageFlash damageFlash = GetComponent<DamageFlash>();
+            if (damageFlash != null)
+            {
+                damageFlash.Flash(Color.red);
+            }
         }
         else if (gameObject.tag == "Enemy")
         {

@@ -31,7 +31,8 @@ public class CurrencyManager : MonoBehaviour
 {
     public PlayerStats playerStats;
     public BuffsPanelScript buffsPanelScript;
-
+    public AudioSource purchaseSound;
+    public AudioSource purchaseDeniedSound;
     public UpgradeData healthUpgradeData;
     public void HealthUpgradeButtonClicked()
     {
@@ -46,6 +47,12 @@ public class CurrencyManager : MonoBehaviour
 
             buffsPanelScript.UpdateUpgradeTexts();
             buffsPanelScript.UpdateCurrencyAmountText();
+
+            purchaseSound.Play();
+        }
+        else
+        {
+            purchaseDeniedSound.Play();
         }
     }
 
@@ -63,6 +70,12 @@ public class CurrencyManager : MonoBehaviour
 
             buffsPanelScript.UpdateUpgradeTexts();
             buffsPanelScript.UpdateCurrencyAmountText();
+
+            purchaseSound.Play();
+        }
+        else
+        {
+            purchaseDeniedSound.Play();
         }
     }
 
@@ -80,6 +93,12 @@ public class CurrencyManager : MonoBehaviour
 
             buffsPanelScript.UpdateUpgradeTexts();
             buffsPanelScript.UpdateCurrencyAmountText();
+
+            purchaseSound.Play();
+        }
+        else
+        {
+            purchaseDeniedSound.Play();
         }
     }
 
@@ -97,6 +116,12 @@ public class CurrencyManager : MonoBehaviour
 
             buffsPanelScript.UpdateUpgradeTexts();
             buffsPanelScript.UpdateCurrencyAmountText();
+
+            purchaseSound.Play();
+        }
+        else
+        {
+            purchaseDeniedSound.Play();
         }
     }
 
@@ -114,6 +139,12 @@ public class CurrencyManager : MonoBehaviour
 
             buffsPanelScript.UpdateUpgradeTexts();
             buffsPanelScript.UpdateCurrencyAmountText();
+
+            purchaseSound.Play();
+        }
+        else
+        {
+            purchaseDeniedSound.Play();
         }
     }
 
@@ -131,6 +162,12 @@ public class CurrencyManager : MonoBehaviour
 
             buffsPanelScript.UpdateUpgradeTexts();
             buffsPanelScript.UpdateCurrencyAmountText();
+
+            purchaseSound.Play();
+        }
+        else
+        {
+            purchaseDeniedSound.Play();
         }
     }
 
