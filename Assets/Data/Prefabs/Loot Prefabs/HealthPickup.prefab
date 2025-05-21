@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 3366874736173153138}
   - component: {fileID: 1175388705117025974}
   - component: {fileID: 920566874704551857}
+  - component: {fileID: 8816118823745712265}
   m_Layer: 0
   m_Name: HealthPickup
   m_TagString: HealthPickup
@@ -223,3 +224,18 @@ MonoBehaviour:
   spawnAreaMax: {x: 90, y: 90}
   spawnInterval: 10
   healAmount: 10
+--- !u!114 &8816118823745712265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8096862568277405158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42f874a0960834d4f8ae4787fcda5372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPrefab: {fileID: 6361760454918544490, guid: 7492674170f69444eb7e2f7a32e6fce2, type: 3}
+  audioMixerGroup: {fileID: -421025644286380711, guid: 69dacc9f136be634abc5bbec65dfd041, type: 2}
+  lootSound: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}

@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca68d820d2069b24097b71f85b0958e2, type: 3}
   m_Name: LVL3SpawnSet
   m_EditorClassIdentifier: 
-  globalSpawnRate: 3
+  globalSpawnRate: 1.5
   enemiesToSpawn:
   - enemyData: {fileID: 11400000, guid: 355d3bd0a2771e2469b2a280accefe76, type: 2}
-    spawnChance: 0.5
+    spawnChance: 0.6
   - enemyData: {fileID: 11400000, guid: dcdb9b59084f9d848ae35e44d435e6d7, type: 2}
     spawnChance: 0.2
   - enemyData: {fileID: 11400000, guid: f6ae827fd3493324181009117b3e439e, type: 2}
     spawnChance: 0.2
   - enemyData: {fileID: 11400000, guid: 7a9f082cd6949004581d4d50d812fb29, type: 2}
-    spawnChance: 0.1
+    spawnChance: 0
