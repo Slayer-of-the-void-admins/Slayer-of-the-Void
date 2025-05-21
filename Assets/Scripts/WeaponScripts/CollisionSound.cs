@@ -1,15 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class CollisionSound : MonoBehaviour
 {
-    private bool isQuitting = false;
-    private void OnApplicationQuit()
-    {
-        isQuitting = true;
-    }
-
     public GameObject audioPrefab;
     public WeaponData weaponData;
 
@@ -19,8 +14,7 @@ public class CollisionSound : MonoBehaviour
         {
             if (audioPrefab != null && weaponData != null)
             {
-                GameObject sfx = Instantiate(audioPrefab, transform.position, Quaternion.identity);
-                sfx.GetComponent<PlayAudioOnce>().clip = weaponData.weaponShootSound;
+                CreateSoundObject(weaponData, weaponData.weaponShootSound);
             }
         }
     }
@@ -33,8 +27,7 @@ public class CollisionSound : MonoBehaviour
             {
                 if (audioPrefab != null && weaponData != null)
                 {
-                    GameObject sfx = Instantiate(audioPrefab, transform.position, Quaternion.identity);
-                    sfx.GetComponent<PlayAudioOnce>().clip = weaponData.weaponCollisionSound;
+                    CreateSoundObject(weaponData, weaponData.weaponCollisionSound);
                 }
 
                 if (weaponData.destroySelfOnCollision)
@@ -45,6 +38,12 @@ public class CollisionSound : MonoBehaviour
         }
     }
 
+
+    private bool isQuitting = false;
+    private void OnApplicationQuit()
+    {
+        isQuitting = true;
+    }
     void OnDestroy()
     {
         if (!gameObject.scene.isLoaded || isQuitting) return;
@@ -53,9 +52,16 @@ public class CollisionSound : MonoBehaviour
         {
             if (audioPrefab != null && weaponData != null)
             {
-                GameObject sfx = Instantiate(audioPrefab, transform.position, Quaternion.identity);
-                sfx.GetComponent<PlayAudioOnce>().clip = weaponData.weaponDestroySound;
+                CreateSoundObject(weaponData, weaponData.weaponDestroySound);
             }
         }
+    }
+
+    private void CreateSoundObject(WeaponData weaponData, AudioClip weaponSound)
+    {
+        GameObject sfx = Instantiate(audioPrefab, transform.position, Quaternion.identity);
+        var playAudioOnce = sfx.GetComponent<PlayAudioOnce>();
+        playAudioOnce.clip = weaponSound;
+        playAudioOnce.outputMixerGroup = weaponData.audioMixerGroup;
     }
 }

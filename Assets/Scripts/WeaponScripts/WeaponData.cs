@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Audio;
 
 [CreateAssetMenu(fileName = "NewWeaponData", menuName = "WeaponData")]
 public class WeaponData : ScriptableObject
@@ -18,6 +19,7 @@ public class WeaponData : ScriptableObject
 
 
     [Header("Audio Settings")]
+    public AudioMixerGroup audioMixerGroup;
     public bool playAudioOnShoot = false;
     [ShowIf("playAudioOnShoot")] public AudioClip weaponShootSound;
     public bool playAudioOnCollision = false;
