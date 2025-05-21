@@ -22,7 +22,7 @@ MonoBehaviour:
   stunDuration: 0.25
   audioMixerGroup: {fileID: -421025644286380711, guid: 69dacc9f136be634abc5bbec65dfd041, type: 2}
   playAudioOnShoot: 1
-  weaponShootSound: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
+  weaponShootSound: {fileID: 8300000, guid: c91fcf414acc0344cb03b13996f1bf3b, type: 3}
   playAudioOnCollision: 1
   weaponCollisionSound: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
   playAudioOnDestroy: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   explosionDamageMultiplier: 1.2
   hasLingeringEffect: 0
   weaponMaxLevel: 5
-  weaponLevel: 1
+  weaponLevel: 2
   damageMultiplier: 1.2
   fireRateMultiplier: 1.2
   fireRateModifier: 1

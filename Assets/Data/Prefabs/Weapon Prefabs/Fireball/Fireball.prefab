@@ -216,5 +216,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPrefab: {fileID: 6361760454918544490, guid: 7492674170f69444eb7e2f7a32e6fce2, type: 3}
   weaponData: {fileID: 11400000, guid: e3b557b03fb32e347afc0c5801c87626, type: 2}
-  playAudioOnShoot: 1
-  playAudioOnCollision: 1

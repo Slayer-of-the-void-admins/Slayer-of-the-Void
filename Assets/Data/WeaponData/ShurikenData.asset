@@ -20,6 +20,7 @@ MonoBehaviour:
   targetTag: Enemy
   damageAmount: 10
   stunDuration: 0.125
+  audioMixerGroup: {fileID: -421025644286380711, guid: 69dacc9f136be634abc5bbec65dfd041, type: 2}
   playAudioOnShoot: 1
   weaponShootSound: {fileID: 8300000, guid: f11db4559b3ffff45b62e9327fc5535d, type: 3}
   playAudioOnCollision: 1

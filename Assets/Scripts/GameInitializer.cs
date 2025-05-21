@@ -14,6 +14,7 @@ public class GameInitializer : MonoBehaviour
     public PlayerStats playerStats;
     public CurrencyManager currencyManager;
 
+    public SoundSettings soundSettings;
 
     void Start()
     {
@@ -25,9 +26,10 @@ public class GameInitializer : MonoBehaviour
         playerStats.LoadStats();
         playerStats.LoadVoidEssenceAmount();
         if (currencyManager != null)
-        {
             currencyManager.LoadUpgradeLevels();
-        }
+
+        if (soundSettings != null)
+            soundSettings.LoadSoundPrefs();
     }
 
     public PlayerMovement playerMovement;

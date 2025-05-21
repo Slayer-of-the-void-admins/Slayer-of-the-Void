@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class CollisionSound : MonoBehaviour
+public class WeaponSound : MonoBehaviour
 {
     public GameObject audioPrefab;
     public WeaponData weaponData;
