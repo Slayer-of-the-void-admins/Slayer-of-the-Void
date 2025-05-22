@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator playerAnimator;
 
+    public FixedJoystick joystick;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -20,10 +22,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // yatay = x ekseninde hareket ve dikey = y ekseninde hareket için input alınır
+#if UNITY_ANDROID
+        // Joystick'ten değer al (mobil)
+        movement.x = joystick.Horizontal;
+        movement.y = joystick.Vertical;
+#else
+        // Klavyeden değer al (masaüstü)
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-
+#endif
         // sprite ı yatay harekete göre sağa ve sola döndür
         if (movement.x > 0)
         {

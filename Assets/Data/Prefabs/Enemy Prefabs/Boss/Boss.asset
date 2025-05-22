@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a76132dcf6bf5640a9f66fa670ab745, type: 3}
+  m_Name: Boss
+  m_EditorClassIdentifier: 
+  enemyName: 
+  enemyPrefab: {fileID: 4776187908627978567, guid: aa790a7d5af900a42b869a43c346b049, type: 3}
+  moveSpeed: 2
+  maxHealth: 50
+  xpAmount: 10
+  damageAmount: 10
+  targetTag: Player
+  lootDropChance: 0
+  isRangedEnemy: 0
+  attackRange: 10
+  retreatRange: 0
+  fireCooldown: 0

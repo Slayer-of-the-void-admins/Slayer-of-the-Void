@@ -45,13 +45,13 @@ public class UIScript : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    void PauseGame()
+    public void PauseGame()
     {
         pauseScreen.SetActive(true);
         Time.timeScale = 0f;
     }
     
-    void UnpauseGame()
+    public void UnpauseGame()
     {
         pauseScreen.SetActive(false);
         Time.timeScale = 1f;
