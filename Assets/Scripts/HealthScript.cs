@@ -4,6 +4,7 @@ using System.Reflection.Emit;
 using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class HealthScript : MonoBehaviour
@@ -15,7 +16,9 @@ public class HealthScript : MonoBehaviour
     public EnemyData enemyData;
     public PlayerStats playerData;
     public TextMeshProUGUI healthLabel;
-
+    private AudioSource hurtSound;
+    private float hurtSoundCooldown = 0.125f;
+    private float lastHurtSoundTime = -999f;
     void Start()
     {
         if (enemyData != null && isPlayer == false)
@@ -28,8 +31,11 @@ public class HealthScript : MonoBehaviour
             healthBar.maxValue = playerData.playerHealth;
             healthBar.value = currentHealth;
             healthLabel.text = currentHealth.ToString("f0");
+
+            hurtSound = GetComponent<AudioSource>();
         }
     }
+
 
     public void TakeDamage(float damage)
     {
@@ -43,6 +49,14 @@ public class HealthScript : MonoBehaviour
             {
                 damageFlash.Flash(Color.red);
             }
+
+            // can acıma sesi
+            if (Time.time - lastHurtSoundTime >= hurtSoundCooldown)
+            {
+                hurtSound.Play();
+                lastHurtSoundTime = Time.time;
+            }                
+
         }
         else if (gameObject.tag == "Enemy")
         {
