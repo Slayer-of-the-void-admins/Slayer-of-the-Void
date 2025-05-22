@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55dd78edffd53314480cfd570dc4f3a0, type: 3}
+  m_Name: FrostNovaData
+  m_EditorClassIdentifier: 
+  weaponName: FrostNova
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
+  weaponPrefab: {fileID: 6923670273585607469, guid: 0b79b93023eb514428eae2b0cd1e0f4d, type: 3}
+  upgradeCardPrefab: {fileID: 5918746556210795602, guid: 3f190b2bf14e9a2499b2ea1eb66ff726, type: 3}
+  weaponIconPrefab: {fileID: 7150981120757650678, guid: 5631c9716579ccf48ab0ca07766d682c, type: 3}
+  targetTag: Enemy
+  damageAmount: 1
+  stunDuration: 2
+  audioMixerGroup: {fileID: -421025644286380711, guid: 69dacc9f136be634abc5bbec65dfd041, type: 2}
+  playAudioOnShoot: 1
+  weaponShootSound: {fileID: 8300000, guid: 1d74880bed4586644a16a79a2d9dc8af, type: 3}
+  playAudioOnCollision: 0
+  weaponCollisionSound: {fileID: 0}
+  playAudioOnDestroy: 0
+  weaponDestroySound: {fileID: 0}
+  isFloatingWeapon: 0
+  cooldownTimer: 0
+  floatingWeaponTimer: 0
+  isOrbittingWeapon: 0
+  rotationSpeed: 3
+  orbitDistance: 3.5
+  isProjectile: 0
+  fireRate: 0.5
+  projectileSpeed: 10
+  destroySelfOnCollision: 1
+  isRandomAimingProjectile: 0
+  minAimRange: 3
+  maxAimRange: 12
+  isNovaWeapon: 1
+  spawnInterval: 5
+  spawnIntervalDivisor: 1.2
+  sizeMultiplier: 1.2
+  hasExplosion: 0
+  explosionObject: {fileID: 0}
+  explosionDuration: 0.3
+  explosionDurationMultiplier: 1.2
+  explosionDamage: 10
+  explosionDamageMultiplier: 1.2
+  hasLingeringEffect: 0
+  weaponMaxLevel: 5
+  weaponLevel: 1
+  damageMultiplier: 1.2
+  fireRateMultiplier: 1.2
+  fireRateModifier: 1
+  speedMultiplier: 1.1
+  weaponSpeedModifier: 1
+  cooldownMultiplier: 1.2

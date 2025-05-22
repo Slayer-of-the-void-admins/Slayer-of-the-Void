@@ -109,9 +109,14 @@ public class UpgradePanelScript : MonoBehaviour
             {
                 randomCurvedProjectile.ResetInvoke();
             }
+            NovaWeapon novaWeapon = existingWeapon.GetComponent<NovaWeapon>();
+            if (novaWeapon != null)
+            {
+                novaWeapon.ResetInvoke();
+            }
 
             // item çantası ikon ve yazıları güncelle
-                itemBagScript.UpdateItemBagIcons(weaponData);
+            itemBagScript.UpdateItemBagIcons(weaponData);
         }
         else
         {
@@ -143,6 +148,10 @@ public class UpgradePanelScript : MonoBehaviour
             else if (weaponData.weaponName == "VoidStaff")
             {
                 newWeapon.AddComponent<FloatingWeaponScript>();
+            }
+            else if (weaponData.weaponName == "FrostNova")
+            {
+                newWeapon.AddComponent<NovaWeapon>();
             }
         }
     }

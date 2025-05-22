@@ -49,10 +49,19 @@ public class WeaponData : ScriptableObject
 
 
     [ShowIf("isProjectile")] public bool isRandomAimingProjectile = false;
-
     [ShowIf("isRandomAimingProjectile")] public float minAimRange = 3f;
     [ShowIf("isRandomAimingProjectile")] public float maxAimRange = 12f;
 
+
+    [Header("Nova Weapon Settings")]
+    public bool isNovaWeapon = false;
+    [ShowIf("isNovaWeapon")] public float spawnInterval = 5f;
+    [ShowIf("isNovaWeapon")] public float spawnIntervalDivisor = 1.2f;
+    public float GetSpawnInterval()
+    {
+        return spawnInterval / Mathf.Pow(spawnIntervalDivisor, weaponLevel - 1);
+    }
+    [ShowIf("isNovaWeapon")] public float sizeMultiplier = 1.2f;
 
 
     [Header("Explosion Settings")]
