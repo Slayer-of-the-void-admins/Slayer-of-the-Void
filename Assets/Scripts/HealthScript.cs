@@ -33,7 +33,7 @@ public class HealthScript : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if (gameObject.tag == "Player")
+        if (gameObject.tag == "Player" && gameObject.activeSelf == true)
         {
             currentHealth -= damage - (damage * playerData.resistancePercentage / 100);
 
@@ -120,7 +120,9 @@ public class HealthScript : MonoBehaviour
         else // isEnenmy
         {
             Destroy(gameObject);
-            PlayerExp playerExp = GameObject.FindWithTag("Player").GetComponent<PlayerExp>();
+
+            PlayerExp playerExp = GameObject.FindWithTag("Player")?.GetComponent<PlayerExp>();
+
             if (playerExp != null && enemyData != null)
             {
                 playerExp.GainXP(enemyData.xpAmount);

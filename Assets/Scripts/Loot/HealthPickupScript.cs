@@ -41,7 +41,7 @@ public class HealthPickupScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            HealthScript playerHealth = other.GetComponent<HealthScript>();
+            HealthScript playerHealth = other?.GetComponent<HealthScript>();
             if (playerHealth != null)
             {
                 playerHealth.Heal(healAmount);

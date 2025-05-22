@@ -14,16 +14,15 @@ public class ChestPickup : MonoBehaviour
 
     void Start()
     {
-        playerExp = GameObject.FindWithTag("Player").GetComponent<PlayerExp>();
+        playerExp = GameObject.FindWithTag("Player")?.GetComponent<PlayerExp>();
         voidEssenceCounter = GameObject.FindWithTag("VoidEssenceCounterText").GetComponent<TextMeshProUGUI>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && playerExp != null)
         {
             playerStats.LoadVoidEssenceAmount();
-
 
             int lootedAmount = Mathf.RoundToInt(baseEssenceReward * Mathf.Pow(essenceAmountMultipler, playerExp.level - 1));
             int countedAmount = int.Parse(voidEssenceCounter.text);

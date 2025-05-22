@@ -9,6 +9,7 @@ TagManager:
   - RotatingWeapon
   - LingerArea
   - HealthPickup
+  - VoidEssenceCounterText
   layers:
   - Default
   - TransparentFX
