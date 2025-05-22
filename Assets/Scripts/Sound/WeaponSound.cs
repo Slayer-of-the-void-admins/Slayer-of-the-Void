@@ -8,6 +8,7 @@ public class WeaponSound : MonoBehaviour
     public GameObject audioPrefab;
     public WeaponData weaponData;
 
+
     void Start()
     {
         if (weaponData.playAudioOnShoot)
@@ -19,15 +20,22 @@ public class WeaponSound : MonoBehaviour
         }
     }
 
+    private float collisionSoundCooldown = 0.125f;
+    private float lastCollisionSoundTime = -999f;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (weaponData.playAudioOnCollision)
         {
             if (collision.CompareTag("Enemy"))
             {
-                if (audioPrefab != null && weaponData != null)
+                // ses spamı önle
+                if (Time.time - lastCollisionSoundTime >= collisionSoundCooldown) // son sesten beri geçen zaman .125 den yüksekse içeri gir
                 {
-                    CreateSoundObject(weaponData, weaponData.weaponCollisionSound);
+                    if (audioPrefab != null && weaponData != null)
+                    {
+                        CreateSoundObject(weaponData, weaponData.weaponCollisionSound);
+                    }
+                    lastCollisionSoundTime = Time.time;
                 }
 
                 if (weaponData.destroySelfOnCollision)
