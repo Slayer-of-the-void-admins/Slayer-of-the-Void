@@ -28,12 +28,20 @@ public class RangedEnemyMovement : MonoBehaviour
     {
         if (player == null || isStunned == true)
         {
-            if (enemyAnimator.speed != 0)
-                enemyAnimator.speed = 0;
+            if (enemyAnimator != null)
+            {
+                if (enemyAnimator.speed != 0)
+                    enemyAnimator.speed = 0;
+            }
             return;
         }
-        if (enemyAnimator.speed != 1)
-            enemyAnimator.speed = 1;
+
+        if (enemyAnimator != null)
+        {
+            if (enemyAnimator.speed != 1)
+                enemyAnimator.speed = 1;
+        }
+
 
         float distancePlayer = Vector2.Distance(transform.position, player.position);
         Vector3 direction = (player.position - transform.position).normalized;

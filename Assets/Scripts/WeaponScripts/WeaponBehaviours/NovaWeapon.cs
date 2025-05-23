@@ -26,6 +26,5 @@ public class NovaWeapon : MonoBehaviour, IWeaponBehaivour
     {
         CancelInvoke(nameof(Shoot));
         InvokeRepeating(nameof(Shoot), weaponData.GetSpawnInterval(), weaponData.GetSpawnInterval());
-        Debug.Log("nova interval: " + weaponData.GetSpawnInterval());
     }
 }

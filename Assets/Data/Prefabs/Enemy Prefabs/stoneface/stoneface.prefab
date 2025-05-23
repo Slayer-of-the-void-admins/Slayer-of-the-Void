@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 4014683175989976046}
   - component: {fileID: 1457291568499300292}
   m_Layer: 0
-  m_Name: Boss
+  m_Name: stoneface
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
