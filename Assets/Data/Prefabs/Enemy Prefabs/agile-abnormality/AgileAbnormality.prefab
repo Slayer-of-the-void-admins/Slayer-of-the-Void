@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: -5013016703800517795}
   - component: {fileID: 7827742336018818286}
   m_Layer: 0
-  m_Name: agile-abnormality
+  m_Name: AgileAbnormality
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

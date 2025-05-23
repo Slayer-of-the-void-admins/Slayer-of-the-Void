@@ -56,7 +56,7 @@ public class SpawnerScript : MonoBehaviour
         {
             cumulative += enemy.spawnChance;
             if (roll <= cumulative)
-            {
+            {                
                 return enemy.enemyData;
             }
         }

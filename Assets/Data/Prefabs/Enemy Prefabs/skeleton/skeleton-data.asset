@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a76132dcf6bf5640a9f66fa670ab745, type: 3}
   m_Name: skeleton-data
   m_EditorClassIdentifier: 
-  enemyName: skeleton
+  enemyName: Skeleton
   enemyPrefab: {fileID: 4776187908627978567, guid: 4334e70c9551ec14e87770946f95c72f, type: 3}
   moveSpeed: 3
   maxHealth: 20
   xpAmount: 15
   damageAmount: 10
   targetTag: Player
-  lootDropChance: 0.2
+  lootDropChance: 0.04
   isRangedEnemy: 1
   attackRange: 20
   retreatRange: 15

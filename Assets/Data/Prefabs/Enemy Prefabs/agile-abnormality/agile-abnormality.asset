@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a76132dcf6bf5640a9f66fa670ab745, type: 3}
   m_Name: agile-abnormality
   m_EditorClassIdentifier: 
-  enemyName: agile-abnormality
+  enemyName: AgileAbnormality
   enemyPrefab: {fileID: 4776187908627978567, guid: d0f6e28bb9613ff4cbc79d427e869e34, type: 3}
   moveSpeed: 6
   maxHealth: 30

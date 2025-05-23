@@ -12,6 +12,7 @@ TagManager:
   - VoidEssenceCounterText
   - AimJoystick
   - NovaWeapon
+  - ChestPickup
   layers:
   - Default
   - TransparentFX

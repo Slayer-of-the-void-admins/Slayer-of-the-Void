@@ -15,6 +15,5 @@ MonoBehaviour:
   globalSpawnRate: 1
   enemiesToSpawn:
   - enemyData: {fileID: 11400000, guid: 355d3bd0a2771e2469b2a280accefe76, type: 2}
-    spawnChance: 0
-  - enemyData: {fileID: 11400000, guid: aaa4ae9ea5d90fa41ae345d0dc4c5f69, type: 2}
     spawnChance: 1
+  maxHealthPickup: 5

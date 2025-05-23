@@ -7,6 +7,8 @@ public class UpgradeData
 {
     public int level = 0;
     public int maxLevel = 5;
+    public bool isMaxLevel => level >= maxLevel;
+    
     public float upgradeAmount = 5f;
     public int baseCost = 100;
     public float costMultiplier = 1.5f;

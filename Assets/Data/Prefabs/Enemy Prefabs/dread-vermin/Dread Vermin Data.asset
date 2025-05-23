@@ -19,7 +19,7 @@ MonoBehaviour:
   xpAmount: 25
   damageAmount: 10
   targetTag: Player
-  lootDropChance: 0.1
+  lootDropChance: 0.08
   isRangedEnemy: 0
   attackRange: 10
   retreatRange: 0
