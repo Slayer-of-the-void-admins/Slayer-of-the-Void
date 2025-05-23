@@ -15,4 +15,6 @@ public class EnemySpawnSet : ScriptableObject // spawnSet ler çağırılacak d�
         [Range(0f, 1f)]
         public float spawnChance;
     }
+
+    public int maxHealthPickup = 5;
 }

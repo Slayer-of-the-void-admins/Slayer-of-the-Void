@@ -7,6 +7,7 @@ public class ChestSpawner : MonoBehaviour
     bool isQuitting = false;
     public GameObject essenceChestPrefab;
     public EnemyData enemyData;
+    public int maxChestCount = 20;
 
     private void OnApplicationQuit()
     {
@@ -15,7 +16,8 @@ public class ChestSpawner : MonoBehaviour
 
     void OnDestroy()
     {
-        if (isQuitting || !gameObject.scene.isLoaded) return;
+        int currentChestCount = GameObject.FindGameObjectsWithTag("ChestPickup").Length;
+        if (isQuitting || !gameObject.scene.isLoaded || currentChestCount >= maxChestCount) return;
 
         float roll = Random.Range(0f, 1f);
         if (roll <= enemyData.lootDropChance)

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3675190094825450487}
   m_Layer: 0
   m_Name: Loot Chest
-  m_TagString: Untagged
+  m_TagString: ChestPickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseEssenceReward: 10
-  essenceAmountMultipler: 1.5
+  essenceAmountMultipler: 1.25
   playerExp: {fileID: 0}
   playerStats: {fileID: 11400000, guid: 6738e8d0ca38f8b4f895c08943a5cd6c, type: 2}
   voidEssenceCounter: {fileID: 0}

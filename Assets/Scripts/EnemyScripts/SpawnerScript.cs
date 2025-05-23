@@ -10,6 +10,7 @@ public class SpawnerScript : MonoBehaviour
     public List<EnemySpawnSet> spawnSetList;
     public Transform player;
     public float spawnDistance = 20f;
+    public HealthPickupScript healthPickupScript;
 
     void Start()
     {
@@ -66,6 +67,7 @@ public class SpawnerScript : MonoBehaviour
     {
         CancelInvoke(nameof(SpawnEnemy));
         spawnSet = newSet;
+        healthPickupScript.maxPickupCount = spawnSet.maxHealthPickup;
         InvokeRepeating(nameof(SpawnEnemy), 0f, 1f / spawnSet.globalSpawnRate);
     }
 }

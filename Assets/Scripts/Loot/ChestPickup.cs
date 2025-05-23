@@ -7,7 +7,7 @@ using UnityEngine;
 public class ChestPickup : MonoBehaviour
 {
     public int baseEssenceReward = 10;
-    public float essenceAmountMultipler = 1.5f;
+    public float essenceAmountMultipler = 1.25f;
     [HideInInspector] public PlayerExp playerExp;
     public PlayerStats playerStats;
     [HideInInspector] public TextMeshProUGUI voidEssenceCounter;

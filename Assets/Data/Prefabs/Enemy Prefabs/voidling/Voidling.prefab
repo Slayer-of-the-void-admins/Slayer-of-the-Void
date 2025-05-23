@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6386884216117159295}
   - component: {fileID: 5164074712522496869}
   m_Layer: 0
-  m_Name: Player Shadow
+  m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -303,7 +303,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: 6f4aaada514f99a48a925ce6071afbf5, type: 2}
-  flashDuration: 0.125
 --- !u!95 &4570123618220208766
 Animator:
   serializedVersion: 5

@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   globalSpawnRate: 2.1
   enemiesToSpawn:
-  - enemyData: {fileID: 11400000, guid: bf4ccdf05897b7949878a065ee05a569, type: 2}
-    spawnChance: 0.75
+  - enemyData: {fileID: 11400000, guid: aaa4ae9ea5d90fa41ae345d0dc4c5f69, type: 2}
+    spawnChance: 0.6
   - enemyData: {fileID: 11400000, guid: dcdb9b59084f9d848ae35e44d435e6d7, type: 2}
-    spawnChance: 0.15
+    spawnChance: 0.125
   - enemyData: {fileID: 11400000, guid: f6ae827fd3493324181009117b3e439e, type: 2}
-    spawnChance: 0.1
+    spawnChance: 0.125
   - enemyData: {fileID: 11400000, guid: 7a9f082cd6949004581d4d50d812fb29, type: 2}
-    spawnChance: 0.5
-  - enemyData: {fileID: 11400000, guid: c07f1c045ea9d644584255a28b695f46, type: 2}
     spawnChance: 0.1
+  - enemyData: {fileID: 11400000, guid: c07f1c045ea9d644584255a28b695f46, type: 2}
+    spawnChance: 0.05

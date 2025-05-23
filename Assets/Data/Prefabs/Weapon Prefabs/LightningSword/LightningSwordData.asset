@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: LightningSword
   flashColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.125
   weaponPrefab: {fileID: 6923670273585607469, guid: a4354f3df83287243967ddefad403307, type: 3}
   upgradeCardPrefab: {fileID: 5918746556210795602, guid: dbc1a28f8b379024590a320a33f9dc80, type: 3}
   weaponIconPrefab: {fileID: 1077830196882540247, guid: 064026b08b50ad74b954d4a1f3789c30, type: 3}
   targetTag: Enemy
   damageAmount: 10
   stunDuration: 0.125
+  hasLifeDuration: 0
+  lifeDuration: 2
   audioMixerGroup: {fileID: -421025644286380711, guid: 69dacc9f136be634abc5bbec65dfd041, type: 2}
   playAudioOnShoot: 0
   weaponShootSound: {fileID: 0}
@@ -40,6 +43,9 @@ MonoBehaviour:
   isRandomAimingProjectile: 0
   minAimRange: 3
   maxAimRange: 12
+  isNovaWeapon: 0
+  spawnInterval: 5
+  spawnIntervalDivisor: 1.2
   hasExplosion: 0
   explosionObject: {fileID: 0}
   explosionDuration: 0.3
@@ -48,10 +54,11 @@ MonoBehaviour:
   explosionDamageMultiplier: 1.2
   hasLingeringEffect: 0
   weaponMaxLevel: 5
-  weaponLevel: 1
-  damageMultiplier: 1.1
+  weaponLevel: 6
+  damageMultiplier: 1.2
+  sizeMultiplier: 1
   fireRateMultiplier: 1.2
   fireRateModifier: 1
-  speedMultiplier: 1.15
+  speedMultiplier: 1.2
   weaponSpeedModifier: 1
   cooldownMultiplier: 1.2

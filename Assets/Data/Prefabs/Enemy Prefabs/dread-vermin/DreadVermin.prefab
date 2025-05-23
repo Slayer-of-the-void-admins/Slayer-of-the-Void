@@ -119,8 +119,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1.5}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1.15, y: 1, z: 2}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8947273117739384229}
   m_Father: {fileID: 0}
@@ -302,7 +302,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: 6f4aaada514f99a48a925ce6071afbf5, type: 2}
-  flashDuration: 0.125
 --- !u!114 &4014683175989976046
 MonoBehaviour:
   m_ObjectHideFlags: 0

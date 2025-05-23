@@ -14,6 +14,10 @@ public class HealthPickupScript : MonoBehaviour
 
     public int healAmount = 20;
 
+    // public SpawnerScript spawnerScript;
+
+    public int maxPickupCount = 5;
+
     void Start()
     {
         InvokeRepeating(nameof(SpawnHealthPickups), 10f, spawnInterval);
@@ -22,7 +26,9 @@ public class HealthPickupScript : MonoBehaviour
     public void SpawnHealthPickups()
     {
         int currentPickupCount = GameObject.FindGameObjectsWithTag("HealthPickup").Length;
-        if (currentPickupCount >= 5)
+        // maxPickupCount = spawnerScript.spawnSet.maxHealthPickup;
+
+        if (currentPickupCount >= maxPickupCount)
         {
             return;
         }

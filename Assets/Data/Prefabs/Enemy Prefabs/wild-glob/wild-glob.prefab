@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6386884216117159295}
   - component: {fileID: 5164074712522496869}
   m_Layer: 0
-  m_Name: Player Shadow
+  m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 6620810419855563462}
   - component: {fileID: 2583217605093766491}
   - component: {fileID: 6307557633114765929}
-  - component: {fileID: 6269359133664767991}
+  - component: {fileID: 6672480886624791434}
   - component: {fileID: 3955459821732888420}
   - component: {fileID: 5013742381359435597}
   - component: {fileID: -4998792274677170527}
@@ -255,8 +255,8 @@ MonoBehaviour:
   weaponData: {fileID: 0}
   targetTag: Player
   damageAmount: 5
---- !u!70 &6269359133664767991
-CapsuleCollider2D:
+--- !u!58 &6672480886624791434
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -287,9 +287,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.005268151, y: 0}
-  m_Size: {x: 1.9051634, y: 3.65}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.7990392
 --- !u!114 &3955459821732888420
 MonoBehaviour:
   m_ObjectHideFlags: 0
