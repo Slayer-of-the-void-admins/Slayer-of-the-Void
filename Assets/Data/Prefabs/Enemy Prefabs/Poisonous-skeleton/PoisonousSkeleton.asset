@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a76132dcf6bf5640a9f66fa670ab745, type: 3}
   m_Name: PoisonousSkeleton
   m_EditorClassIdentifier: 
-  enemyName: 
+  enemyName: PoisonousSkeleton
   enemyPrefab: {fileID: 4776187908627978567, guid: bdc9e612539b4ab4cb47986394227f9f, type: 3}
-  moveSpeed: 2
-  maxHealth: 100
-  xpAmount: 10
-  damageAmount: 10
+  moveSpeed: 3
+  maxHealth: 20
+  xpAmount: 25
+  damageAmount: 5
   targetTag: Player
   lootDropChance: 0
   isRangedEnemy: 1
-  attackRange: 15
-  retreatRange: 10
-  fireCooldown: 2
+  attackRange: 20
+  retreatRange: 15
+  fireCooldown: 4

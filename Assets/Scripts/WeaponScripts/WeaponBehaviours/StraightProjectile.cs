@@ -13,7 +13,7 @@ public class StraightProjectile : MonoBehaviour, IWeaponBehaivour
     {
         this.weaponData = weaponData;
         this.playerTransform = playerTransform;
-        fixedJoystick = GameObject.FindWithTag("AimJoystick").GetComponent<FixedJoystick>();
+        fixedJoystick = GameObject.FindWithTag("AimJoystick")?.GetComponent<FixedJoystick>();
         InvokeRepeating(nameof(Shoot), 1f, 1f / weaponData.GetFireRate());
     }
 

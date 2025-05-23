@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 3036061735235604910}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.01, y: -1.72, z: 0}
-  m_LocalScale: {x: 2.372864, y: 0.94936377, z: 0.72927004}
+  m_LocalPosition: {x: 0, y: -1.86, z: 0}
+  m_LocalScale: {x: 2.2, y: 1.0731733, z: 0.53658664}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5499824171548272429}
@@ -96,15 +96,15 @@ GameObject:
   - component: {fileID: 6456038845760379914}
   - component: {fileID: 4560300385595227457}
   - component: {fileID: 6080079506837357631}
+  - component: {fileID: 6024462315344387913}
   - component: {fileID: 7035921961683059022}
   - component: {fileID: 29780003034258379}
   - component: {fileID: -733750156972989321}
   - component: {fileID: 1433365603512487778}
   - component: {fileID: -5013016703800517795}
-  - component: {fileID: 8931893148193706516}
-  - component: {fileID: 1536458363035069639}
+  - component: {fileID: 7827742336018818286}
   m_Layer: 0
-  m_Name: PoisonousSkeleton
+  m_Name: agile-abnormality
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,8 +119,8 @@ Transform:
   m_GameObject: {fileID: 4776187908627978567}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.7549, y: -0.2699, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2160304, z: 2.392583}
+  m_LocalPosition: {x: 6.75, y: -0.24061988, z: 0}
+  m_LocalScale: {x: 1.75, y: 1.75, z: 3.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9102340888248003627}
@@ -167,12 +167,12 @@ SpriteRenderer:
   m_SortingLayerID: -1273569897
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -123276165, guid: b139a20197ca82941a7b80ade9815f6c, type: 3}
+  m_Sprite: {fileID: -1352544392, guid: 665a2b90be635744d84f19dd8184a770, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.8, y: 3.75}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -237,9 +237,24 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09504397, y: 0.011528113}
-  m_Size: {x: 2.2420247, y: 3.7689028}
+  m_Offset: {x: -0.04933249, y: -0.040195204}
+  m_Size: {x: 1.8874874, y: 2.9031293}
   m_Direction: 0
+--- !u!114 &6024462315344387913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4776187908627978567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02f9b93a2e76b348badaa70bcae08dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  enemyData: {fileID: 11400000, guid: 106052f66013608488eb7a29c53b7bb0, type: 2}
+  isStunned: 0
 --- !u!114 &7035921961683059022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,7 +271,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 0}
   isPlayer: 0
   healthBar: {fileID: 0}
-  enemyData: {fileID: 11400000, guid: c07f1c045ea9d644584255a28b695f46, type: 2}
+  enemyData: {fileID: 11400000, guid: 106052f66013608488eb7a29c53b7bb0, type: 2}
   playerData: {fileID: 11400000, guid: 6738e8d0ca38f8b4f895c08943a5cd6c, type: 2}
   healthLabel: {fileID: 0}
 --- !u!114 &29780003034258379
@@ -271,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ab47060ab8498e4e8c18b810c685e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: c07f1c045ea9d644584255a28b695f46, type: 2}
+  enemyData: {fileID: 11400000, guid: 106052f66013608488eb7a29c53b7bb0, type: 2}
   weaponData: {fileID: 0}
   targetTag: Player
   damageAmount: 10
@@ -314,25 +329,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   essenceChestPrefab: {fileID: 983348676238117519, guid: 6002e71265c30f0409182d843dcb9858, type: 3}
-  enemyData: {fileID: 11400000, guid: c07f1c045ea9d644584255a28b695f46, type: 2}
---- !u!114 &8931893148193706516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4776187908627978567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 032ff204a98d49d45969bd5adb16aa80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  enemyData: {fileID: 11400000, guid: c07f1c045ea9d644584255a28b695f46, type: 2}
-  enemyWeaponData: {fileID: 11400000, guid: bf404203d97994b4ca33b23f05205252, type: 2}
-  isStunned: 0
-  firePoint: {fileID: 5499824171548272429}
---- !u!95 &1536458363035069639
+  enemyData: {fileID: 11400000, guid: 106052f66013608488eb7a29c53b7bb0, type: 2}
+--- !u!95 &7827742336018818286
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -342,7 +340,7 @@ Animator:
   m_GameObject: {fileID: 4776187908627978567}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bdcd1d1bba71607428abddafd9fc2f6f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 59a9294b454c5b6438906b9981f61128, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

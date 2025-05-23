@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de819c9efc02614daee3c063abe44c4, type: 3}
   m_Name: Arrow
   m_EditorClassIdentifier: 
-  projectileSpeed: 10
+  projectileSpeed: 7.5
   weaponName: Arrow
   flashColor: {r: 1, g: 1, b: 1, a: 1}
   weaponPrefab: {fileID: 6164672110221338151, guid: 9ef564f48ae743248828a1b2b1af8f80, type: 3}

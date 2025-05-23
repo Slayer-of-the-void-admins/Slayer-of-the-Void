@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a76132dcf6bf5640a9f66fa670ab745, type: 3}
-  m_Name: Iskeleton-data
+  m_Name: skeleton-data
   m_EditorClassIdentifier: 
-  enemyName: Iskeleton
+  enemyName: skeleton
   enemyPrefab: {fileID: 4776187908627978567, guid: 4334e70c9551ec14e87770946f95c72f, type: 3}
-  moveSpeed: 7.5
+  moveSpeed: 3
   maxHealth: 20
   xpAmount: 15
   damageAmount: 10
@@ -22,5 +22,5 @@ MonoBehaviour:
   lootDropChance: 0.2
   isRangedEnemy: 1
   attackRange: 20
-  retreatRange: 10
-  fireCooldown: 3
+  retreatRange: 15
+  fireCooldown: 4

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FrostNovaData
   m_EditorClassIdentifier: 
   weaponName: FrostNova
-  flashColor: {r: 1, g: 1, b: 1, a: 1}
+  flashColor: {r: 0.70980394, g: 0.9686275, b: 1, a: 1}
   flashDuration: 2
   weaponPrefab: {fileID: 6121447244309517453, guid: e67a61a83e3f88d4d8734aadd5e11c38, type: 3}
   upgradeCardPrefab: {fileID: 5918746556210795602, guid: cb81bfd19d048e842acb54ce82a4599c, type: 3}
@@ -25,9 +25,9 @@ MonoBehaviour:
   lifeDuration: 2
   audioMixerGroup: {fileID: -421025644286380711, guid: 69dacc9f136be634abc5bbec65dfd041, type: 2}
   playAudioOnShoot: 1
-  weaponShootSound: {fileID: 8300000, guid: 1d74880bed4586644a16a79a2d9dc8af, type: 3}
-  playAudioOnCollision: 0
-  weaponCollisionSound: {fileID: 0}
+  weaponShootSound: {fileID: 8300000, guid: 1eb7cbaf61d23a64bbd36c0a38b5cb0c, type: 3}
+  playAudioOnCollision: 1
+  weaponCollisionSound: {fileID: 8300000, guid: 1d74880bed4586644a16a79a2d9dc8af, type: 3}
   playAudioOnDestroy: 0
   weaponDestroySound: {fileID: 0}
   isFloatingWeapon: 0
@@ -39,13 +39,13 @@ MonoBehaviour:
   isProjectile: 0
   fireRate: 0.5
   projectileSpeed: 10
-  destroySelfOnCollision: 1
+  destroySelfOnCollision: 0
   isRandomAimingProjectile: 0
   minAimRange: 3
   maxAimRange: 12
   isNovaWeapon: 1
   spawnInterval: 5
-  spawnIntervalDivisor: 1.2
+  spawnIntervalDivisor: 1
   hasExplosion: 0
   explosionObject: {fileID: 0}
   explosionDuration: 0.3
@@ -54,8 +54,8 @@ MonoBehaviour:
   explosionDamageMultiplier: 1.2
   hasLingeringEffect: 0
   weaponMaxLevel: 5
-  weaponLevel: 1
-  damageMultiplier: 1.2
+  weaponLevel: 8
+  damageMultiplier: 1
   sizeMultiplier: 1.2
   fireRateMultiplier: 1.2
   fireRateModifier: 1
