@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 76f509f5c61f88149b55104040924d89
+guid: b139a20197ca82941a7b80ade9815f6c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -93,17 +93,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: poisonousSkeleton1_0
+      name: Poisonous Skeleton-Photoroom_0
       rect:
         serializedVersion: 2
         x: 17
-        y: 403
-        width: 376
-        height: 417
+        y: 417
+        width: 280
+        height: 375
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b75058d0298dedd4eb7b25bda4fcf61d
-      internalID: 1587809473
+      spriteID: 2a427c5dbc58155488f0a667a4eddcf9
+      internalID: -123276165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: poisonousSkeleton1_1
+      name: Poisonous Skeleton-Photoroom_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 6
-        width: 376
-        height: 395
+        x: 6
+        y: 13
+        width: 294
+        height: 377
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aca1985253d9dcd47bb93e2597389b26
-      internalID: -19905163
+      spriteID: fe12fcef5e06a6849a3ee8a32c9a65c6
+      internalID: -985013831
       vertices: []
       indices: 
       edges: []
@@ -149,8 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      poisonousSkeleton1_0: 1587809473
-      poisonousSkeleton1_1: -19905163
+      Poisonous Skeleton-Photoroom_0: -123276165
+      Poisonous Skeleton-Photoroom_1: -985013831
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

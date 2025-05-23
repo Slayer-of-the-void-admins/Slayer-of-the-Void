@@ -76,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c4aa3dd2bb6e23d458be2466fea77257, type: 3}
-  m_Color: {r: 0.081125006, g: 0.86415094, b: 0.07663221, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 01e1432ddf512d7408c8daeca002f262, type: 3}
+  m_Color: {r: 0.16639659, g: 0.645283, b: 0.008522572, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.24, y: 10.24}
+  m_Size: {x: 15.36, y: 10.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -123,8 +123,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.24, y: 10.24}
-    newSize: {x: 10.24, y: 10.24}
+    oldSize: {x: 15.36, y: 10.24}
+    newSize: {x: 15.36, y: 10.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -171,5 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ddf04cfe7971441a7505cf57070584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyWeaponData: {fileID: 11400000, guid: 873286fd25e6eae40bf343ced58dd196, type: 2}
+  enemyWeaponData: {fileID: 11400000, guid: bf404203d97994b4ca33b23f05205252, type: 2}
   rb: {fileID: 3532724131381199998}

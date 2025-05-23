@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d9acfde812e980d46a2085ffccf15e67
+guid: b726a389c0e39e04287bfae41d3401c5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -93,17 +93,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boss-Photoroom 1_0
+      name: Poisonous Skeleton-Photoroom3_0
       rect:
         serializedVersion: 2
-        x: 77
-        y: 474
-        width: 311
-        height: 354
+        x: 11
+        y: 404
+        width: 278
+        height: 377
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1861b150c232a644ebcb8295fd372793
-      internalID: -100190168
+      spriteID: ba417af804049004fa32d3f2d1e8ec9d
+      internalID: -848750335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss-Photoroom 1_1
+      name: Poisonous Skeleton-Photoroom3_1
       rect:
         serializedVersion: 2
-        x: 447
-        y: 475
-        width: 318
-        height: 353
+        x: 17
+        y: 1
+        width: 258
+        height: 375
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,92 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7f6238f275825348a0487e8a476ac16
-      internalID: -448252548
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss-Photoroom 1_2
-      rect:
-        serializedVersion: 2
-        x: 836
-        y: 460
-        width: 295
-        height: 368
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7eeff66311953004dad7f17f69f22094
-      internalID: -586387627
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss-Photoroom 1_3
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 55
-        width: 295
-        height: 350
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2086817f8c63dc3418936944bcad31d3
-      internalID: 986343268
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss-Photoroom 1_4
-      rect:
-        serializedVersion: 2
-        x: 441
-        y: 58
-        width: 323
-        height: 345
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a16f2e6eb31bd046945473848d97a02
-      internalID: 709077601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss-Photoroom 1_5
-      rect:
-        serializedVersion: 2
-        x: 827
-        y: 57
-        width: 307
-        height: 346
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 993b66a6ac267d4498dcf8134365c3d5
-      internalID: -275228938
+      spriteID: 709a14370721e2242b57c02012449877
+      internalID: 1675643480
       vertices: []
       indices: 
       edges: []
@@ -233,12 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      boss-Photoroom 1_0: -100190168
-      boss-Photoroom 1_1: -448252548
-      boss-Photoroom 1_2: -586387627
-      boss-Photoroom 1_3: 986343268
-      boss-Photoroom 1_4: 709077601
-      boss-Photoroom 1_5: -275228938
+      Poisonous Skeleton-Photoroom3_0: -848750335
+      Poisonous Skeleton-Photoroom3_1: 1675643480
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

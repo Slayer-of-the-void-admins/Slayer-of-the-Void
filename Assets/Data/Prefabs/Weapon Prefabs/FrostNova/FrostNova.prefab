@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7864099725491097837}
   - component: {fileID: 6009888919241929641}
   - component: {fileID: -8339861500423915081}
-  - component: {fileID: 1344182202671104278}
+  - component: {fileID: 2033604720558555041}
   m_Layer: 0
   m_Name: FrostNova
   m_TagString: ProjectileWeapon
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 4ad0845f8561e97488fbf696d3440c4e, type: 2}
---- !u!95 &1344182202671104278
+--- !u!95 &2033604720558555041
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0

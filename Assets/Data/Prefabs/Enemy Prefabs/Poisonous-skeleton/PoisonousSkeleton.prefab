@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3036061735235604910}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.19, y: -1.92, z: 0}
+  m_LocalPosition: {x: -0.01, y: -1.72, z: 0}
   m_LocalScale: {x: 2.372864, y: 0.94936377, z: 0.72927004}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -102,8 +102,9 @@ GameObject:
   - component: {fileID: 1433365603512487778}
   - component: {fileID: -5013016703800517795}
   - component: {fileID: 8931893148193706516}
+  - component: {fileID: 2686788880111140492}
   m_Layer: 0
-  m_Name: Iskeleton
+  m_Name: PoisonousSkeleton
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,7 +120,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.7549, y: -0.2699, z: 0}
-  m_LocalScale: {x: 0.8526351, y: 0.864025, z: 1.7}
+  m_LocalScale: {x: 1.2, y: 1.2160304, z: 2.392583}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9102340888248003627}
@@ -166,12 +167,12 @@ SpriteRenderer:
   m_SortingLayerID: -1273569897
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1587809473, guid: 76f509f5c61f88149b55104040924d89, type: 3}
+  m_Sprite: {fileID: -123276165, guid: b139a20197ca82941a7b80ade9815f6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.8, y: 3.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -236,8 +237,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09572309, y: -0.044815257}
-  m_Size: {x: 3.3514695, y: 4.452387}
+  m_Offset: {x: -0.0048716073, y: -0.13167536}
+  m_Size: {x: 2.8233516, y: 4.0553107}
   m_Direction: 0
 --- !u!114 &7035921961683059022
 MonoBehaviour:
@@ -287,7 +288,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: 6f4aaada514f99a48a925ce6071afbf5, type: 2}
-  flashDuration: 0.125
 --- !u!114 &1433365603512487778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,3 +332,24 @@ MonoBehaviour:
   enemyWeaponData: {fileID: 11400000, guid: bf404203d97994b4ca33b23f05205252, type: 2}
   isStunned: 0
   firePoint: {fileID: 5499824171548272429}
+--- !u!95 &2686788880111140492
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4776187908627978567}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc191ef7ae7093048bcfbbc65f4bc46c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
