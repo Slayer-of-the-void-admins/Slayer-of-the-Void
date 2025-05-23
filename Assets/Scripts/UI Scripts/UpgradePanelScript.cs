@@ -14,6 +14,7 @@ public class UpgradePanelScript : MonoBehaviour
     public WeaponData[] weaponDatas;
     public ItemBagScript itemBagScript;
     public PlayerExp playerExp;
+    public bool isUpgradePanelActive = false;
 
     void Start()
     {
@@ -24,6 +25,7 @@ public class UpgradePanelScript : MonoBehaviour
     {
         Time.timeScale = 0f;
         upgradePanel.SetActive(true);
+        isUpgradePanelActive = true;
         FillUpgradePanel();
     }
 
@@ -38,6 +40,7 @@ public class UpgradePanelScript : MonoBehaviour
         upgradePanel.SetActive(false);
         ClearUpgradePanel();
         Time.timeScale = 1f;
+        isUpgradePanelActive = false;
     }
 
     void ClearUpgradePanel()
@@ -132,7 +135,7 @@ public class UpgradePanelScript : MonoBehaviour
             WeaponScript ws = newWeapon.AddComponent<WeaponScript>();
             ws.weaponData = weaponData;
 
-            // doğru behaivour dosyasını bileşen olarak silaha ekle
+            // doğru behaivour dosyasını bileşen olarak ekle
             if (weaponData.weaponName == "Shuriken" || weaponData.weaponName == "Fireball")
             {
                 newWeapon.AddComponent<StraightProjectile>();

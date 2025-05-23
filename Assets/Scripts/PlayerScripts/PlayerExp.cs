@@ -14,37 +14,65 @@ public class PlayerExp : MonoBehaviour
     public Slider ExpBar;
     public SpawnerScript spawnerScript;
     public UpgradePanelScript upgradePanelScript;
+    private Queue<int> levelUpQueue = new Queue<int>();
+    private bool isProcessingLevelUp = false;
+
+    void Start()
+    {
+        StartCoroutine(ProcessLevelUpQueue());
+    }
 
     public void GainXP(int xpAmount)
     {
         currentXP += xpAmount;
         ExpBar.value = currentXP;
-        if (currentXP >= xpToNextLevel)
+        while (currentXP >= xpToNextLevel)
         {
-            LevelUp();
+            levelUpQueue.Enqueue(1); // Add a level-up to the queue
+            currentXP -= xpToNextLevel;
+            xpToNextLevel = Mathf.RoundToInt(xpToNextLevel * 1.25f);
+            ExpBar.maxValue = xpToNextLevel;
         }
     }
 
     private void LevelUp()
     {
         level++;
-        currentXP = currentXP - xpToNextLevel;
-        xpToNextLevel = Mathf.RoundToInt(xpToNextLevel * 1.25f);
-
-        ExpBar.value = currentXP;
-        ExpBar.maxValue = xpToNextLevel;
-        
         expLabel.text = level.ToString();
 
         try
         {
-        spawnerScript.SetSpawnSet(spawnerScript.spawnSetList[level-1]); // oyuncu level atladığı zaman spawnSet değiştir
+            spawnerScript.SetSpawnSet(spawnerScript.spawnSetList[level - 1]); // oyuncu level atladığı zaman spawnSet değiştir
         }
         catch (Exception e)
         {
             Debug.Log("spawnSet for the reached level doesn't exist | Exception: " + e.Message);
         }
+    }
 
-        upgradePanelScript.ShowUpgradePanel();
+    private IEnumerator ProcessLevelUpQueue()
+    {
+        while (true)
+        {
+            if (levelUpQueue.Count > 0 && !isProcessingLevelUp)
+            {
+                isProcessingLevelUp = true;
+                LevelUp();
+
+                // Wait for the upgrade panel to close
+                while (upgradePanelScript.upgradePanel.activeSelf || upgradePanelScript.isUpgradePanelActive)
+                {
+                    yield return null;
+                }
+
+                upgradePanelScript.ShowUpgradePanel();
+                levelUpQueue.Dequeue(); // Remove the processed level-up from the queue
+                isProcessingLevelUp = false;
+            }
+            else
+            {
+                yield return null; // Wait for the next frame
+            }
+        }
     }
 }
