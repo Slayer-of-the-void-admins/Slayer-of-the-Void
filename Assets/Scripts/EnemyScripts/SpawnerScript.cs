@@ -22,6 +22,8 @@ public class SpawnerScript : MonoBehaviour
         }
     }
 
+    public Vector2 spawnAreaMin = new Vector2(-100, -100);
+    public Vector2 spawnAreaMax = new Vector2(100, 100);
     void SpawnEnemy()
     {
         if (player == null || spawnSet == null) return;
@@ -30,6 +32,9 @@ public class SpawnerScript : MonoBehaviour
         if (chosenEnemy == null) return;
 
         Vector2 spawnPosition = (Vector2)player.position + UnityEngine.Random.insideUnitCircle.normalized * spawnDistance; // düşmanın doğacağı pozisyonu rastgele seç
+        spawnPosition.x = Mathf.Clamp(spawnPosition.x, spawnAreaMin.x, spawnAreaMax.x);
+        spawnPosition.y = Mathf.Clamp(spawnPosition.y, spawnAreaMin.y, spawnAreaMax.y);
+
         GameObject enemy = Instantiate(chosenEnemy.enemyPrefab, spawnPosition, Quaternion.identity); // düşmanı seçilen pozisyonda çağır
 
         if (chosenEnemy.isRangedEnemy)
