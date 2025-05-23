@@ -22,12 +22,15 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
+        // stun süresinde animasyon ve hareket mantığı çalışmasın
         if (player == null || isStunned == true)
         {
-            enemyAnimator.speed = 0;
+            if (enemyAnimator.speed != 0)
+                enemyAnimator.speed = 0;
             return;
         }
-        enemyAnimator.speed = 1;
+        if (enemyAnimator.speed != 1)
+            enemyAnimator.speed = 1;
 
         // oyuncu ve düşman pozisyonlarını değişkene aktar
         Vector3 playerPos = player.position;
