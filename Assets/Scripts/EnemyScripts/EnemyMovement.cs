@@ -11,16 +11,23 @@ public class EnemyMovement : MonoBehaviour
     public bool isStunned = false;
     private SpriteRenderer spriteRenderer;
     bool lookingRight;
+    private Animator enemyAnimator;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         lookingRight = spriteRenderer.flipX;
+        enemyAnimator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        if (player == null || isStunned == true) return;
+        if (player == null || isStunned == true)
+        {
+            enemyAnimator.speed = 0;
+            return;
+        }
+        enemyAnimator.speed = 1;
 
         // oyuncu ve düşman pozisyonlarını değişkene aktar
         Vector3 playerPos = player.position;
@@ -41,16 +48,34 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    private Coroutine stunCoroutine;
+    private float stunEndTime = 0f;
+
     public void Stun(float stunDuration)
     {
-        if (isStunned == true) return;
-        StartCoroutine(StunCoroutine(stunDuration));
+        float newEndTime = Time.time + stunDuration;
+        if (newEndTime > stunEndTime)
+        {
+            stunEndTime = newEndTime;
+
+            if (stunCoroutine != null)
+            {
+                StopCoroutine(stunCoroutine);
+            }
+            stunCoroutine = StartCoroutine(StunCoroutine());
+        }
     }
 
-    private IEnumerator StunCoroutine(float stunDuration)
+    private IEnumerator StunCoroutine()
     {
         isStunned = true;
-        yield return new WaitForSeconds(stunDuration);
+
+        while (Time.time < stunEndTime)
+        {
+            yield return null;
+        }
+
         isStunned = false;
+        stunCoroutine = null;
     }
 }

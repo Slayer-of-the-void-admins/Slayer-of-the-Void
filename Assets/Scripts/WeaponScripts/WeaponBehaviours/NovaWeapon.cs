@@ -7,7 +7,6 @@ public class NovaWeapon : MonoBehaviour, IWeaponBehaivour
     private WeaponData weaponData;
     private Transform playerTransform;
     private GameObject novaWeapon;
-    private float novaDuration;
     public void Initialize(WeaponData weaponData, Transform playerTransform)
     {
         this.weaponData = weaponData;
