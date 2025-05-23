@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a76132dcf6bf5640a9f66fa670ab745, type: 3}
   m_Name: voidling-data
   m_EditorClassIdentifier: 
+  currentAmount: 0
   enemyName: Voidling
   enemyPrefab: {fileID: 4272564062402885164, guid: 5531287fef62e664cb611f80c48d57d1, type: 3}
   moveSpeed: 4
