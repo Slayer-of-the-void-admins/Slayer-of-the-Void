@@ -67,7 +67,9 @@ public class FloatingWeaponScript : MonoBehaviour, IWeaponBehaivour
 
             if (isVisible)
             {
-                Destroy(enemy);
+                // Destroy(enemy);
+                HealthScript enemyHealth = enemy.GetComponent<HealthScript>();
+                enemyHealth.TakeDamage(enemyHealth.currentHealth);
             }
         }
     }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a76132dcf6bf5640a9f66fa670ab745, type: 3}
-  m_Name: PoisonousSkeleton
+  m_Name: poisonous-skeleton-data
   m_EditorClassIdentifier: 
   enemyName: PoisonousSkeleton
   enemyPrefab: {fileID: 4776187908627978567, guid: bdc9e612539b4ab4cb47986394227f9f, type: 3}

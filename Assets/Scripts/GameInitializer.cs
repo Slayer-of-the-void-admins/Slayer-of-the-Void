@@ -9,6 +9,7 @@ public class GameInitializer : MonoBehaviour
     public List<WeaponData> weaponDataList;
     public List<LingeringEffectData> lingeringEffectList;
     public List<EnemySpawnSet> spawnSetList;
+    public List<EnemyData> enemyDataList;
     public SpawnerScript spawner;
 
     public PlayerStats playerStats;
@@ -22,6 +23,7 @@ public class GameInitializer : MonoBehaviour
         ResetLingeringEffectLevels();
         InitializeSpawner();
         InitializePlayerUpgrades();
+        ResetEnemyCurrentAmounts();
 
         playerStats.LoadStats();
         playerStats.LoadVoidEssenceAmount();
@@ -87,6 +89,17 @@ public class GameInitializer : MonoBehaviour
         {
             spawner.spawnSetList = spawnSetList;
             spawner.SetSpawnSet(spawnSetList[0]);
+        }
+    }
+
+    void ResetEnemyCurrentAmounts()
+    {
+        foreach (EnemyData enemyData in enemyDataList)
+        {
+            if (enemyData != null)
+            {
+                enemyData.currentAmount = 0;
+            }
         }
     }
 }

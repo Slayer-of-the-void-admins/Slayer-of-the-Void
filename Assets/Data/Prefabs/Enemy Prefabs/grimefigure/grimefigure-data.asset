@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a76132dcf6bf5640a9f66fa670ab745, type: 3}
-  m_Name: Grimefigure
+  m_Name: grimefigure-data
   m_EditorClassIdentifier: 
   enemyName: Grimefigure
   enemyPrefab: {fileID: 4776187908627978567, guid: e7ede6b00e1cc0e45a105156b8e7b126, type: 3}

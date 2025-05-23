@@ -133,15 +133,18 @@ public class HealthScript : MonoBehaviour
         }
         else // isEnenmy
         {
+            // düşman currentAmount azalt
+            enemyData.currentAmount--;
+
+            // düşmanı yok et
             Destroy(gameObject);
 
+            // seviye kazandır
             PlayerExp playerExp = GameObject.FindWithTag("Player")?.GetComponent<PlayerExp>();
-
             if (playerExp != null && enemyData != null)
             {
                 playerExp.GainXP(enemyData.xpAmount);
             }
-            // GameObject.FindWithTag("Player").GetComponent<PlayerExp>().GainXP(enemyData.xpAmount);
         }
     }
 

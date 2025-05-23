@@ -56,7 +56,13 @@ public class SpawnerScript : MonoBehaviour
         {
             cumulative += enemy.spawnChance;
             if (roll <= cumulative)
-            {                
+            {
+                int maxOfTheEnemy = Mathf.RoundToInt(enemy.spawnChance * 300);
+                if (enemy.enemyData.currentAmount >= maxOfTheEnemy)
+                {
+                    continue;
+                }
+                enemy.enemyData.currentAmount++;
                 return enemy.enemyData;
             }
         }

@@ -6,6 +6,8 @@ using NaughtyAttributes;
 [CreateAssetMenu(fileName = "NewEnemyData", menuName = "EnemyData")]
 public class EnemyData : ScriptableObject
 {
+    public int currentAmount = 0;
+
     public string enemyName;
     public GameObject enemyPrefab;
     public float moveSpeed = 2f;
