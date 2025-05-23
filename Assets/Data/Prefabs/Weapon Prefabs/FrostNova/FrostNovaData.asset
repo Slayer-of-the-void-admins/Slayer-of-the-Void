@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: FrostNova
   flashColor: {r: 1, g: 1, b: 1, a: 1}
-  weaponPrefab: {fileID: 6923670273585607469, guid: 0b79b93023eb514428eae2b0cd1e0f4d, type: 3}
-  upgradeCardPrefab: {fileID: 5918746556210795602, guid: 3f190b2bf14e9a2499b2ea1eb66ff726, type: 3}
-  weaponIconPrefab: {fileID: 7150981120757650678, guid: 5631c9716579ccf48ab0ca07766d682c, type: 3}
+  flashDuration: 2
+  weaponPrefab: {fileID: 6121447244309517453, guid: e67a61a83e3f88d4d8734aadd5e11c38, type: 3}
+  upgradeCardPrefab: {fileID: 5918746556210795602, guid: cb81bfd19d048e842acb54ce82a4599c, type: 3}
+  weaponIconPrefab: {fileID: 7150981120757650678, guid: f5848b7139b310d438da443b2122b48b, type: 3}
   targetTag: Enemy
   damageAmount: 1
   stunDuration: 2
+  hasLifeDuration: 1
+  lifeDuration: 2
   audioMixerGroup: {fileID: -421025644286380711, guid: 69dacc9f136be634abc5bbec65dfd041, type: 2}
   playAudioOnShoot: 1
   weaponShootSound: {fileID: 8300000, guid: 1d74880bed4586644a16a79a2d9dc8af, type: 3}
@@ -43,7 +46,6 @@ MonoBehaviour:
   isNovaWeapon: 1
   spawnInterval: 5
   spawnIntervalDivisor: 1.2
-  sizeMultiplier: 1.2
   hasExplosion: 0
   explosionObject: {fileID: 0}
   explosionDuration: 0.3
@@ -54,6 +56,7 @@ MonoBehaviour:
   weaponMaxLevel: 5
   weaponLevel: 1
   damageMultiplier: 1.2
+  sizeMultiplier: 1.2
   fireRateMultiplier: 1.2
   fireRateModifier: 1
   speedMultiplier: 1.1
