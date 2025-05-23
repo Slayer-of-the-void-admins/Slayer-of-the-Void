@@ -8,6 +8,7 @@ public class LingeringEffectData : ScriptableObject
 {
     public string effectName;
     public Color flashColor = Color.white;
+    public float flashDuration = 0.125f;
     public WeaponData weaponData;
     public GameObject effectPrefab;
     public float damageAmount = 5f;

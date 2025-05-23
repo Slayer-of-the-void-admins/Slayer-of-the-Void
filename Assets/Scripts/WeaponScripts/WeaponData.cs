@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
@@ -10,12 +11,15 @@ public class WeaponData : ScriptableObject
     [Header("Main Settings")]
     public string weaponName;
     public Color flashColor = Color.white;
+    public float flashDuration = 0.125f;
     public GameObject weaponPrefab;
     public GameObject upgradeCardPrefab;
     public GameObject weaponIconPrefab;
     public string targetTag = "Enemy";
     public float damageAmount = 10f;
     public float stunDuration = 0.2f;
+    public bool hasLifeDuration = false;
+    [ShowIf("hasLifeDuration")] public float lifeDuration = 2f;
 
 
     [Header("Audio Settings")]
@@ -61,7 +65,6 @@ public class WeaponData : ScriptableObject
     {
         return spawnInterval / Mathf.Pow(spawnIntervalDivisor, weaponLevel - 1);
     }
-    [ShowIf("isNovaWeapon")] public float sizeMultiplier = 1.2f;
 
 
     [Header("Explosion Settings")]
@@ -96,6 +99,15 @@ public class WeaponData : ScriptableObject
     {   // damageMultiplier ın weaponLevel - 1. kuvveti ile çarp
         return damageAmount * Mathf.Pow(damageMultiplier, weaponLevel - 1);
     }
+
+    public float sizeMultiplier = 1f;
+    private Vector3 scale;
+    public Vector3 GetSize()
+    {
+        scale = weaponPrefab.transform.localScale;
+        return scale * MathF.Pow(sizeMultiplier, weaponLevel - 1);
+    }
+
 
 
     [ShowIf("isProjectile")] public float fireRateMultiplier = 1.2f;

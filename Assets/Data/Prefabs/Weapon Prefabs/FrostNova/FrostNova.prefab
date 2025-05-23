@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 306773783434190129}
   - component: {fileID: 7864099725491097837}
   - component: {fileID: 6009888919241929641}
+  - component: {fileID: -8339861500423915081}
+  - component: {fileID: 1344182202671104278}
   m_Layer: 0
   m_Name: FrostNova
   m_TagString: ProjectileWeapon
@@ -180,3 +182,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPrefab: {fileID: 6361760454918544490, guid: 7492674170f69444eb7e2f7a32e6fce2, type: 3}
   weaponData: {fileID: 11400000, guid: 4ad0845f8561e97488fbf696d3440c4e, type: 2}
+--- !u!114 &-8339861500423915081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6121447244309517453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fd6f5d258b2154fb67452501d3ebb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: 4ad0845f8561e97488fbf696d3440c4e, type: 2}
+--- !u!95 &1344182202671104278
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6121447244309517453}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef5aab1b52588d547a8df0882d44d662, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

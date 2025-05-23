@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamageFlash : MonoBehaviour
 {
     public Material flashMaterial;
-    public float flashDuration;
+    // public float flashDuration;
 
     private SpriteRenderer spriteRenderer;
     private Material originalMaterial;
@@ -27,17 +27,17 @@ public class DamageFlash : MonoBehaviour
         }
     }
 
-    public void Flash(Color color)
+    public void Flash(Color color, float flashDuration)
     {
         if (flashCoroutine != null)
         {
             StopCoroutine(flashCoroutine);
         }
 
-        flashCoroutine = StartCoroutine(FlashCoroutine(color));
+        flashCoroutine = StartCoroutine(FlashCoroutine(color, flashDuration));
     }
 
-    private IEnumerator FlashCoroutine(Color color)
+    private IEnumerator FlashCoroutine(Color color, float flashDuration)
     {
         spriteRenderer.material = flashMaterial; // flaş materyaline geç
 

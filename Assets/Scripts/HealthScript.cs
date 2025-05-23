@@ -47,7 +47,7 @@ public class HealthScript : MonoBehaviour
             DamageFlash damageFlash = GetComponent<DamageFlash>();
             if (damageFlash != null)
             {
-                damageFlash.Flash(Color.red);
+                damageFlash.Flash(Color.red, .125f);
             }
 
             // can acıma sesi
@@ -94,7 +94,7 @@ public class HealthScript : MonoBehaviour
         DamageFlash damageFlash = GetComponent<DamageFlash>();
         if (damageFlash != null)
         {
-            damageFlash.Flash(weaponData.flashColor);
+            damageFlash.Flash(weaponData.flashColor, weaponData.flashDuration);
         }
 
         EnemyMovement enemyMovement = GetComponent<EnemyMovement>();
@@ -111,7 +111,7 @@ public class HealthScript : MonoBehaviour
         DamageFlash damageFlash = GetComponent<DamageFlash>();
         if (damageFlash != null)
         {
-            damageFlash.Flash(lingeringEffectData.flashColor);
+            damageFlash.Flash(lingeringEffectData.flashColor, lingeringEffectData.flashDuration);
         }
 
         EnemyMovement enemyMovement = GetComponent<EnemyMovement>();
