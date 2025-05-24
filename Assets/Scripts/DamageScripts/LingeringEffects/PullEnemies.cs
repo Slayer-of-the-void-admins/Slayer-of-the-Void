@@ -33,38 +33,23 @@ public class PullEnemies : MonoBehaviour
 
     }
     
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // halkaya girenleri sabitle
-        if (collision.CompareTag("Enemy"))
-        {
-            EnemyMovement enemyMovement = collision.GetComponent<EnemyMovement>();
-            if (enemyMovement != null)
-            {
-                enemyMovement.enabled = false;
-                pulledEnemies.Add(enemyMovement);
-            }
-        }
-    }
+    // private void OnTriggerEnter2D(Collider2D collision)
+    // {
+    //     // halkaya girenleri sabitle
+    //     if (collision.CompareTag("Enemy"))
+    //     {
+    //         EnemyMovement enemyMovement = collision.GetComponent<EnemyMovement>();
+    //         if (enemyMovement != null)
+    //         {
+    //             enemyMovement.enabled = false;
+    //             pulledEnemies.Add(enemyMovement);
+    //         }
+    //     }
+    // }
 
     private IEnumerator BlackholeRoutine()
     {
         float timer = 0f;
-
-        // halkaya girenleri stunla
-        // Collider2D[] initialColliders = Physics2D.OverlapCircleAll(transform.position, pullRadius);
-        // foreach (Collider2D initialCol in initialColliders)
-        // {
-        //     if (initialCol.CompareTag("Enemy"))
-        //     {
-        //         EnemyMovement enemyMovement = initialCol.GetComponent<EnemyMovement>();
-        //         if (enemyMovement != null)
-        //         {
-        //             enemyMovement.isStunned = true;
-        //             pulledEnemies.Add(enemyMovement);
-        //         }
-        //     }
-        // }
 
         // halkaladakileri bir süre boyunca merkeze çek
         while (timer < duration)
@@ -74,6 +59,13 @@ public class PullEnemies : MonoBehaviour
             {
                 if (col.CompareTag("Enemy"))
                 {
+                    EnemyMovement enemyMovement = col.GetComponent<EnemyMovement>();
+                    if (enemyMovement != null && !pulledEnemies.Contains(enemyMovement))
+                    {
+                        enemyMovement.enabled = false;
+                        pulledEnemies.Add(enemyMovement);
+                    }
+
                     Rigidbody2D rb = col.GetComponent<Rigidbody2D>();
                     if (rb != null)
                     {
@@ -88,15 +80,18 @@ public class PullEnemies : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
+        // kara deliği yok et
+        Destroy(gameObject);
+    }
+
+    void OnDestroy()
+    {
         // Kara deliğin etkisi bittikten sonra düşman hareketlerini tekrar aç
         foreach (var movement in pulledEnemies)
         {
             if (movement != null)
                 movement.enabled = true;
         }
-
-        // kara deliği yok et
-        Destroy(gameObject);
     }
 
     private void OnDrawGizmosSelected()
