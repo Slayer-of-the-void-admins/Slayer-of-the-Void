@@ -16,7 +16,8 @@ public class WeaponData : ScriptableObject
     public GameObject weaponPrefab;
     public GameObject upgradeCardPrefab;
     public GameObject weaponIconPrefab;
-    public string targetTag = "Enemy";
+    // public string targetTag = "Enemy";
+    public List<string> targetTags = new List<string>() { "Enemy", "EnemyProjectile" };
     public float damageAmount = 10f;
     public float stunDuration = 0.2f;
 
@@ -38,8 +39,6 @@ public class WeaponData : ScriptableObject
         // }
         return amountOfCollisionBeforeDestroy = defaultAmountOfCollisionPerDestroy + addAmountOfCollisionBeforeDestroyPerLevel * (weaponLevel - 1);
     }
-
-    public bool amountOfCollisionMaxed => amountOfCollisionBeforeDestroy >= defaultAmountOfCollisionPerDestroy + addAmountOfCollisionBeforeDestroyPerLevel * (weaponLevel - 1);
 
 
     [Header("Audio Settings")]

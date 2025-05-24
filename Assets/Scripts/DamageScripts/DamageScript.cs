@@ -19,7 +19,7 @@ public class DamageScript : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         if (weaponData != null)
         {
-            targetTag = weaponData.targetTag; // "Enemy"
+            targetTag = weaponData.targetTags[0]; // "Enemy"
             damageAmount = weaponData.GetDamage();
             // oyuncu hasar multiplierını çarp
         }

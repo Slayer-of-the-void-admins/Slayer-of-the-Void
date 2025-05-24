@@ -65,6 +65,12 @@ public class UpgradePanelScript : MonoBehaviour
                 continue;
             }
 
+            // check for protection necklace and retry if first
+            if (playerExp.level == 1 && weaponDatas[roll].weaponName == "ProtectionNecklace")
+            {
+                continue;
+            }
+
             if (usedRolls.Contains(roll))
             {
                 continue;
@@ -121,7 +127,7 @@ public class UpgradePanelScript : MonoBehaviour
             ShieldBehaviour shieldBehaviour = existingWeapon.GetComponent<ShieldBehaviour>();
             if (shieldBehaviour != null)
             {
-                // shieldBehaviour.UpdateAmountOfCollisionBeforeDestroy();
+                shieldBehaviour.UpdateAmountOfCollisionBeforeDestroy();
             }
 
             // item çantası ikon ve yazıları güncelle
