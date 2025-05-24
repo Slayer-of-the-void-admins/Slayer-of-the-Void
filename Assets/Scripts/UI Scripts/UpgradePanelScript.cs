@@ -71,6 +71,12 @@ public class UpgradePanelScript : MonoBehaviour
                 continue;
             }
 
+            // check for black hole and retry if first
+            if (playerExp.level == 1 && weaponDatas[roll].weaponName == "BlackHole")
+            {
+                continue;
+            }
+
             if (usedRolls.Contains(roll))
             {
                 continue;
