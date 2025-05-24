@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 306773783434190129}
   - component: {fileID: 7864099725491097837}
   - component: {fileID: 6009888919241929641}
+  - component: {fileID: -233358582107164615}
   m_Layer: 0
   m_Name: ProtectionNecklace
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 0}
-  weaponData: {fileID: 11400000, guid: 4ad0845f8561e97488fbf696d3440c4e, type: 2}
+  weaponData: {fileID: 11400000, guid: d8a713d5ec9b78343b0c4a6c6eb5df97, type: 2}
   targetTag: Enemy
   damageAmount: 10
 --- !u!50 &306773783434190129
@@ -179,4 +180,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioPrefab: {fileID: 6361760454918544490, guid: 7492674170f69444eb7e2f7a32e6fce2, type: 3}
-  weaponData: {fileID: 11400000, guid: 4ad0845f8561e97488fbf696d3440c4e, type: 2}
+  weaponData: {fileID: 11400000, guid: d8a713d5ec9b78343b0c4a6c6eb5df97, type: 2}
+--- !u!114 &-233358582107164615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6121447244309517453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4d0307a74bc74347a8fdb477ee010d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: d8a713d5ec9b78343b0c4a6c6eb5df97, type: 2}

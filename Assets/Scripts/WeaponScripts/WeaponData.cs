@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering.Universal;
 
 [CreateAssetMenu(fileName = "NewWeaponData", menuName = "WeaponData")]
 public class WeaponData : ScriptableObject
@@ -29,15 +30,16 @@ public class WeaponData : ScriptableObject
     [ShowIf("destroySelfOnCollision")] public int addAmountOfCollisionBeforeDestroyPerLevel = 0;
     public int GetAmountOfCollisionBeforeDestroy()
     {
-        amountOfCollisionBeforeDestroy = defaultAmountOfCollisionPerDestroy;
+        // amountOfCollisionBeforeDestroy = defaultAmountOfCollisionPerDestroy;
 
-        for (int i = 1; i < weaponLevel; i++)
-        {
-            amountOfCollisionBeforeDestroy += addAmountOfCollisionBeforeDestroyPerLevel;
-        }
-
-        return amountOfCollisionBeforeDestroy;
+        // for (int i = 1; i < weaponLevel; i++)
+        // {
+        //     amountOfCollisionBeforeDestroy += addAmountOfCollisionBeforeDestroyPerLevel;
+        // }
+        return amountOfCollisionBeforeDestroy = defaultAmountOfCollisionPerDestroy + addAmountOfCollisionBeforeDestroyPerLevel * (weaponLevel - 1);
     }
+
+    public bool amountOfCollisionMaxed => amountOfCollisionBeforeDestroy >= defaultAmountOfCollisionPerDestroy + addAmountOfCollisionBeforeDestroyPerLevel * (weaponLevel - 1);
 
 
     [Header("Audio Settings")]
@@ -82,6 +84,13 @@ public class WeaponData : ScriptableObject
     {
         return spawnInterval / Mathf.Pow(spawnIntervalDivisor, weaponLevel - 1);
     }
+
+
+    [Header("Shield Settings")]
+    public bool isShield = false;
+    [ShowIf("isShield")] public float chargeInterval = 10f;
+    // [ShowIf("isShield")] public int chargeCount = 1;
+    // [ShowIf("isShield")] public float addChargeCountPerLevel = 1;
 
 
     [Header("Explosion Settings")]

@@ -121,7 +121,7 @@ public class UpgradePanelScript : MonoBehaviour
             ShieldBehaviour shieldBehaviour = existingWeapon.GetComponent<ShieldBehaviour>();
             if (shieldBehaviour != null)
             {
-                shieldBehaviour.UpdateAmountOfCollisionBeforeDestroy();
+                // shieldBehaviour.UpdateAmountOfCollisionBeforeDestroy();
             }
 
             // item çantası ikon ve yazıları güncelle
@@ -161,6 +161,10 @@ public class UpgradePanelScript : MonoBehaviour
             else if (weaponData.weaponName == "FrostNova")
             {
                 newWeapon.AddComponent<NovaWeapon>();
+            }
+            else if (weaponData.weaponName == "ProtectionNecklace")
+            {
+                newWeapon.AddComponent<ShieldBehaviour>();
             }
         }
     }

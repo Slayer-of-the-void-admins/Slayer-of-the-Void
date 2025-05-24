@@ -16,10 +16,10 @@ MonoBehaviour:
   flashColor: {r: 1, g: 1, b: 1, a: 1}
   flashDuration: 0.125
   weaponPrefab: {fileID: 6121447244309517453, guid: f3271ea465af05a46a6bd4ff06092839, type: 3}
-  upgradeCardPrefab: {fileID: 5918746556210795602, guid: cb81bfd19d048e842acb54ce82a4599c, type: 3}
-  weaponIconPrefab: {fileID: 7150981120757650678, guid: f5848b7139b310d438da443b2122b48b, type: 3}
+  upgradeCardPrefab: {fileID: 5918746556210795602, guid: edf39059215d1a54c9321a32a6e97b73, type: 3}
+  weaponIconPrefab: {fileID: 7150981120757650678, guid: 23c92c1e0db8ec9478bb605fd9a3eb3a, type: 3}
   targetTag: Enemy
-  damageAmount: 1
+  damageAmount: 0
   stunDuration: 0.125
   hasLifeDuration: 0
   lifeDuration: 2
@@ -46,9 +46,11 @@ MonoBehaviour:
   isRandomAimingProjectile: 0
   minAimRange: 3
   maxAimRange: 12
-  isNovaWeapon: 1
+  isNovaWeapon: 0
   spawnInterval: 5
   spawnIntervalDivisor: 1
+  isShield: 1
+  chargeInterval: 5
   hasExplosion: 0
   explosionObject: {fileID: 0}
   explosionDuration: 0.3
@@ -57,9 +59,9 @@ MonoBehaviour:
   explosionDamageMultiplier: 1.2
   hasLingeringEffect: 0
   weaponMaxLevel: 5
-  weaponLevel: 1
+  weaponLevel: 2
   damageMultiplier: 1
-  sizeMultiplier: 1.2
+  sizeMultiplier: 1
   fireRateMultiplier: 1.2
   fireRateModifier: 1
   speedMultiplier: 1.1
