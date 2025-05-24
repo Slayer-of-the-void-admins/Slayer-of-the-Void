@@ -13,7 +13,7 @@ public class RangedEnemyMovement : MonoBehaviour
     private float lastTimeFire;
     public Transform firePoint;
 
-    bool lookingRight;
+    bool lookingRight = true;
     private Animator enemyAnimator;
 
 
