@@ -26,6 +26,10 @@ public class LingeringDamage : MonoBehaviour
                     poisoned = other.gameObject.AddComponent<Poisoned>();
                     poisoned.Initialize(health, lingeringEffectData);
                 }
+                // else if (lingeringEffectData.effectName == "BlackHoleLinger")
+                // {
+
+                // }
             }
         }
     }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -15,6 +16,14 @@ public class LingeringEffectData : ScriptableObject
     public float damageInterval = 1f;
     public float duration = 5f;
     public float stunDuration = 0.125f;
+
+
+    [Header("Pull Settings")]
+    public bool pullsEnemies = false;
+    [ShowIf("pullsEnemies")] public float pullForce = 10f;
+
+
+    [Header("Level Settings")]
     public int effectLevel = 1;
 
 

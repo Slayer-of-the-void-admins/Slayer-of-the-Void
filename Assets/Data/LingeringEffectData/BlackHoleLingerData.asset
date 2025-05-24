@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42dff228778093644a4fcdd47e00943b, type: 3}
+  m_Name: BlackHoleLingerData
+  m_EditorClassIdentifier: 
+  effectName: BlackHoleLinger
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.125
+  weaponData: {fileID: 11400000, guid: b26dd7da953756b41a0e39dd8c415a01, type: 2}
+  effectPrefab: {fileID: 3363148064426591028, guid: bac9e1544ced0c543ba3fb0ef8d2a1c5, type: 3}
+  damageAmount: 0
+  damageInterval: 99
+  duration: 3
+  stunDuration: 0.5
+  pullsEnemies: 1
+  pullForce: 7.5
+  effectLevel: 4
+  damageMultiplier: 1
+  sizeMultiplier: 1.3

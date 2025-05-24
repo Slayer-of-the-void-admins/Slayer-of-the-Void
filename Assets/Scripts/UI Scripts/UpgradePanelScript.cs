@@ -156,7 +156,7 @@ public class UpgradePanelScript : MonoBehaviour
             {
                 newWeapon.AddComponent<OrbitingWeapon>();
             }
-            else if (weaponData.weaponName == "VenomFlask" && weaponData.weaponName == "BlackHole")
+            else if (weaponData.weaponName == "VenomFlask" || weaponData.weaponName == "BlackHole")
             {
                 newWeapon.AddComponent<RandomCurvedProjectile>();
             }

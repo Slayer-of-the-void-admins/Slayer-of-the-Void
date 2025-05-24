@@ -6,7 +6,6 @@ public class RandomCurvedProjectile : MonoBehaviour, IWeaponBehaivour
 {
     private WeaponData weaponData;
     private Transform playerTransform;
-    private GameObject randomCurvedProjectile;
 
     public void Initialize(WeaponData weaponData, Transform playerTransform)
     {
@@ -27,28 +26,34 @@ public class RandomCurvedProjectile : MonoBehaviour, IWeaponBehaivour
         Vector3 direction = (randomPos - playerTransform.position).normalized;
 
         // silahı çağır
-        randomCurvedProjectile = Instantiate(weaponData.weaponPrefab, playerTransform.position + direction, Quaternion.identity);
+        GameObject projectile = Instantiate(weaponData.weaponPrefab, playerTransform.position + direction, Quaternion.identity);
 
         // silah gidecek yöne baksın
-        randomCurvedProjectile.transform.rotation = Quaternion.LookRotation(Vector3.back, randomCurvedProjectile.transform.position - playerTransform.position);
+        projectile.transform.rotation = Quaternion.LookRotation(Vector3.back, projectile.transform.position - playerTransform.position);
 
-        Rigidbody2D rb = randomCurvedProjectile.GetComponent<Rigidbody2D>();
-        StartCoroutine(MoveAndDestroy(rb, randomPos));
+        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+        StartCoroutine(MoveAndDestroy(rb, randomPos, projectile));
     }
 
-    private IEnumerator MoveAndDestroy(Rigidbody2D rb, Vector2 targetPosition)
+    private IEnumerator MoveAndDestroy(Rigidbody2D rb, Vector2 targetPosition, GameObject projectile)
     {
         float distance = Vector2.Distance(rb.position, targetPosition);
         float speed = weaponData.GetSpeed();
-        while (distance > 0.1f)
+        float timeout = 10f; // Timeout after 5 seconds
+
+        while (distance > 0.2f && rb != null && timeout > 0)
         {
             Vector2 direction = (targetPosition - rb.position).normalized;
             rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
             distance = Vector2.Distance(rb.position, targetPosition);
+            timeout -= Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
         }
 
-        Destroy(randomCurvedProjectile);
+        if (projectile != null)
+        {
+            Destroy(projectile);
+        }
     }
     
     public void ResetInvoke()
