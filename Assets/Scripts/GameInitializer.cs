@@ -24,6 +24,7 @@ public class GameInitializer : MonoBehaviour
         InitializeSpawner();
         InitializePlayerUpgrades();
         ResetEnemyCurrentAmounts();
+        ResetAmountOfCollisionBeforeDestroy();
 
         playerStats.LoadStats();
         playerStats.LoadVoidEssenceAmount();
@@ -99,6 +100,17 @@ public class GameInitializer : MonoBehaviour
             if (enemyData != null)
             {
                 enemyData.currentAmount = 0;
+            }
+        }
+    }
+
+    void ResetAmountOfCollisionBeforeDestroy()
+    {
+        foreach (WeaponData weaponData in weaponDataList)
+        {
+            if (weaponData != null)
+            {
+                weaponData.amountOfCollisionBeforeDestroy = weaponData.defaultAmountOfCollisionPerDestroy;
             }
         }
     }

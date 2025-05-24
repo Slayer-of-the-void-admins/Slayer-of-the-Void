@@ -106,6 +106,7 @@ public class UpgradePanelScript : MonoBehaviour
             if (straightProjectile != null)
             {
                 straightProjectile.ResetInvoke();
+                straightProjectile.UpdateAmountOfCollisionBeforeDestroy();
             }
             RandomCurvedProjectile randomCurvedProjectile = existingWeapon.GetComponent<RandomCurvedProjectile>();
             if (randomCurvedProjectile != null)
@@ -116,6 +117,11 @@ public class UpgradePanelScript : MonoBehaviour
             if (novaWeapon != null)
             {
                 novaWeapon.ResetInvoke();
+            }
+            ShieldBehaviour shieldBehaviour = existingWeapon.GetComponent<ShieldBehaviour>();
+            if (shieldBehaviour != null)
+            {
+                shieldBehaviour.UpdateAmountOfCollisionBeforeDestroy();
             }
 
             // item çantası ikon ve yazıları güncelle

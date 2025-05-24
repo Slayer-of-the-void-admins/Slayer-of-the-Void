@@ -13,6 +13,7 @@ TagManager:
   - AimJoystick
   - NovaWeapon
   - ChestPickup
+  - PlayerShield
   layers:
   - Default
   - TransparentFX
@@ -64,6 +65,9 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: shield
+    uniqueID: 1042579649
     locked: 0
   - name: enemies
     uniqueID: 3021397399

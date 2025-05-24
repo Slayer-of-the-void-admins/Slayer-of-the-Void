@@ -38,10 +38,10 @@ public class WeaponSound : MonoBehaviour
                     lastCollisionSoundTime = Time.time;
                 }
 
-                if (weaponData.destroySelfOnCollision)
-                {
-                    Destroy(gameObject);
-                }
+                // if (weaponData.destroySelfOnCollision)
+                // {
+                //     Destroy(gameObject);
+                // }
             }
         }
     }

@@ -18,8 +18,26 @@ public class WeaponData : ScriptableObject
     public string targetTag = "Enemy";
     public float damageAmount = 10f;
     public float stunDuration = 0.2f;
+
+
+    [Header("Self Destroy Settings")]
     public bool hasLifeDuration = false;
     [ShowIf("hasLifeDuration")] public float lifeDuration = 2f;
+    public bool destroySelfOnCollision = false;
+    [ShowIf("destroySelfOnCollision")] public int defaultAmountOfCollisionPerDestroy = 1;
+    [ShowIf("destroySelfOnCollision")] public int amountOfCollisionBeforeDestroy = 1;
+    [ShowIf("destroySelfOnCollision")] public int addAmountOfCollisionBeforeDestroyPerLevel = 0;
+    public int GetAmountOfCollisionBeforeDestroy()
+    {
+        amountOfCollisionBeforeDestroy = defaultAmountOfCollisionPerDestroy;
+
+        for (int i = 1; i < weaponLevel; i++)
+        {
+            amountOfCollisionBeforeDestroy += addAmountOfCollisionBeforeDestroyPerLevel;
+        }
+
+        return amountOfCollisionBeforeDestroy;
+    }
 
 
     [Header("Audio Settings")]
@@ -49,7 +67,6 @@ public class WeaponData : ScriptableObject
     public bool isProjectile = true;
     [ShowIf("isProjectile")] public float fireRate = 1f; // saniyede ... kadar atış sıklığı
     [ShowIf("isProjectile")] public float projectileSpeed = 20f;
-    [ShowIf("isProjectile")] public bool destroySelfOnCollision = false;
 
 
     [ShowIf("isProjectile")] public bool isRandomAimingProjectile = false;

@@ -45,8 +45,6 @@ public class StraightProjectile : MonoBehaviour, IWeaponBehaivour
         aimDirection = (mousePos - playerPos).normalized;
 #endif
 
-
-
         // silahı çağır
         straightProjectile = Instantiate(weaponData.weaponPrefab, playerPos + aimDirection, Quaternion.identity);
 
@@ -62,5 +60,10 @@ public class StraightProjectile : MonoBehaviour, IWeaponBehaivour
     {
         CancelInvoke(nameof(Shoot));
         InvokeRepeating(nameof(Shoot), 1f / weaponData.GetFireRate(), 1f / weaponData.GetFireRate());
+    }
+
+    public void UpdateAmountOfCollisionBeforeDestroy()
+    {
+        weaponData.amountOfCollisionBeforeDestroy = weaponData.GetAmountOfCollisionBeforeDestroy();
     }
 }
