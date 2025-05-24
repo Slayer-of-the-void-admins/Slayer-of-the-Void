@@ -1380,6 +1380,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 01a316674a7a0a447a44fec1fba08231, type: 2}
   - {fileID: 11400000, guid: 4ad0845f8561e97488fbf696d3440c4e, type: 2}
   - {fileID: 11400000, guid: d8a713d5ec9b78343b0c4a6c6eb5df97, type: 2}
+  - {fileID: 11400000, guid: ecfd5f8aa7828fa459400fb5d81c807f, type: 2}
   lingeringEffectList:
   - {fileID: 11400000, guid: 7c32ca8a00f0ef94e95cc72d2d388dd2, type: 2}
   spawnSetList:
@@ -5324,6 +5325,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 01a316674a7a0a447a44fec1fba08231, type: 2}
   - {fileID: 11400000, guid: 4ad0845f8561e97488fbf696d3440c4e, type: 2}
   - {fileID: 11400000, guid: d8a713d5ec9b78343b0c4a6c6eb5df97, type: 2}
+  - {fileID: 11400000, guid: ecfd5f8aa7828fa459400fb5d81c807f, type: 2}
   itemBagScript: {fileID: 810594085}
   playerExp: {fileID: 2131994289}
   isUpgradePanelActive: 0
