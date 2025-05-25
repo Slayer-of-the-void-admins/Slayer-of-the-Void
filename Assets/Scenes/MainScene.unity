@@ -1404,6 +1404,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b624ebeec44f26b48b33ac4b032da0a8, type: 2}
   - {fileID: 11400000, guid: c8ea948b7c4dded49b0b63d215a09cf2, type: 2}
   - {fileID: 11400000, guid: 9cef0c5e2215a4d4794a17cca2e5f2e5, type: 2}
+  - {fileID: 11400000, guid: 69227a70768785b4b840858a3d935b07, type: 2}
+  - {fileID: 11400000, guid: 38463cf32882b3a419905a83d980cb24, type: 2}
+  - {fileID: 11400000, guid: cb876ce8600b88045ac193de1f8cc30f, type: 2}
+  - {fileID: 11400000, guid: eb6f55243bb46da4597d6330ebae0886, type: 2}
+  - {fileID: 11400000, guid: 9e5dbd6b4afdd434db88a1dd83923ee0, type: 2}
   enemyDataList:
   - {fileID: 11400000, guid: 355d3bd0a2771e2469b2a280accefe76, type: 2}
   - {fileID: 11400000, guid: dcdb9b59084f9d848ae35e44d435e6d7, type: 2}

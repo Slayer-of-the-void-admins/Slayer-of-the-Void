@@ -15,6 +15,7 @@ public class RangedEnemyMovement : MonoBehaviour
 
     bool lookingRight;
     private Animator enemyAnimator;
+    private bool isMoving = true;
 
 
     void Start()
@@ -48,10 +49,12 @@ public class RangedEnemyMovement : MonoBehaviour
 
         if (distancePlayer < enemyData.retreatRange)
         {
+            isMoving = true;
             transform.position -= direction * enemyData.moveSpeed * Time.deltaTime;
         }
         else if (distancePlayer <= enemyData.attackRange)
         {
+            isMoving = false;
             if (Time.time - lastTimeFire > enemyData.fireCooldown)
             {
                 FireProjectile(direction);
@@ -60,6 +63,7 @@ public class RangedEnemyMovement : MonoBehaviour
         }
         else
         {
+            isMoving = true;
             transform.position += direction * enemyData.moveSpeed * Time.deltaTime;
         }
 
@@ -71,6 +75,9 @@ public class RangedEnemyMovement : MonoBehaviour
         {
             spriteRenderer.flipX = !lookingRight;
         }
+
+        // enemy animatörünün parametresini düşman hareketi ile doldur
+        enemyAnimator.SetBool("isMoving", isMoving);
     }
 
     void FireProjectile(Vector3 direction)

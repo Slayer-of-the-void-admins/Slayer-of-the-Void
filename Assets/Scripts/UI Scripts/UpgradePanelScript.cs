@@ -62,19 +62,16 @@ public class UpgradePanelScript : MonoBehaviour
         // eğer silah max lvl ise o silahı getirme
         if (ownedWeaponNames.Count >= 5)
         {
-            filteredWeaponDatas = weaponDatas
-                .Where(wd => ownedWeaponNames.Contains(wd.weaponName))
-                .ToArray();
+            filteredWeaponDatas = weaponDatas.Where(wd => ownedWeaponNames.Contains(wd.weaponName)).ToArray();
 
-            filteredWeaponDatas = filteredWeaponDatas
-                .Where(wd => wd.weaponLevel < 5)
-                .ToArray();
+            filteredWeaponDatas = filteredWeaponDatas.Where(wd => wd.weaponLevel < 5).ToArray();
         }
         else
         {
             mainDatas = weaponDatas.Where(weaponData => weaponData.weaponLevel < 5).ToArray();
             filteredWeaponDatas = mainDatas;
         }
+
         int upgradeCardCounter = 4;
 
         // silah sayısı 3'e düşerse upgradeCardPanelde 3 kart gözüksün
@@ -96,23 +93,28 @@ public class UpgradePanelScript : MonoBehaviour
             // değer döndür
             int roll = Random.Range(0, filteredWeaponDatas.Length);
 
-            // check for void staff and retry if first
-            if (playerExp.level == 1 && weaponDatas[roll].weaponName == "VoidStaff")
+            if (playerExp.level == 1 && !weaponDatas[roll].ShowOnLevelOne)
             {
                 continue;
             }
 
-            // check for protection necklace and retry if first
-            if (playerExp.level == 1 && weaponDatas[roll].weaponName == "ProtectionRing")
-            {
-                continue;
-            }
+            // // check for void staff and retry if first
+            // if (playerExp.level == 1 && weaponDatas[roll].weaponName == "VoidStaff")
+            // {
+            //     continue;
+            // }
 
-            // check for black hole and retry if first
-            if (playerExp.level == 1 && weaponDatas[roll].weaponName == "BlackHole")
-            {
-                continue;
-            }
+            // // check for protection necklace and retry if first
+            // if (playerExp.level == 1 && weaponDatas[roll].weaponName == "ProtectionRing")
+            // {
+            //     continue;
+            // }
+
+            // // check for black hole and retry if first
+            // if (playerExp.level == 1 && weaponDatas[roll].weaponName == "BlackHole")
+            // {
+            //     continue;
+            // }
 
             if (usedRolls.Contains(roll))
             {

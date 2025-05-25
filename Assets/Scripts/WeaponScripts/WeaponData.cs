@@ -15,6 +15,7 @@ public class WeaponData : ScriptableObject
     public float flashDuration = 0.125f;
     public GameObject weaponPrefab;
     public GameObject upgradeCardPrefab;
+    public bool ShowOnLevelOne = true;
     public GameObject weaponIconPrefab;
     // public string targetTag = "Enemy";
     public List<string> targetTags = new List<string>() { "Enemy", "EnemyProjectile" };

@@ -17,6 +17,7 @@ MonoBehaviour:
   flashDuration: 0.125
   weaponPrefab: {fileID: 6923670273585607469, guid: c442569333106274b93ae9edb9403478, type: 3}
   upgradeCardPrefab: {fileID: 5918746556210795602, guid: 8f6c06167f57fc5449e0934cca651676, type: 3}
+  ShowOnLevelOne: 0
   weaponIconPrefab: {fileID: 6531676357194214497, guid: 6113a8bda32bcb147b0b5218030e965e, type: 3}
   targetTags:
   - Enemy
