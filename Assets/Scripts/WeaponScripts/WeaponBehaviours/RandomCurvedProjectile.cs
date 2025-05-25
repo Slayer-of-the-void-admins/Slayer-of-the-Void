@@ -41,7 +41,7 @@ public class RandomCurvedProjectile : MonoBehaviour, IWeaponBehaivour
         float speed = weaponData.GetSpeed();
         float timeout = 10f; // Timeout after 5 seconds
 
-        while (distance > 0.2f && rb != null && timeout > 0)
+        while (distance > 0.5f && rb != null && timeout > 0)
         {
             Vector2 direction = (targetPosition - rb.position).normalized;
             rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
