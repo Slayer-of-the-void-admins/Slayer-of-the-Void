@@ -18,11 +18,17 @@ MonoBehaviour:
   weaponPrefab: {fileID: 6923670273585607469, guid: 0b79b93023eb514428eae2b0cd1e0f4d, type: 3}
   upgradeCardPrefab: {fileID: 5918746556210795602, guid: 3f190b2bf14e9a2499b2ea1eb66ff726, type: 3}
   weaponIconPrefab: {fileID: 7150981120757650678, guid: 5631c9716579ccf48ab0ca07766d682c, type: 3}
-  targetTag: Enemy
-  damageAmount: 10
+  targetTags:
+  - Enemy
+  - EnemyProjectile
+  damageAmount: 1
   stunDuration: 0.25
   hasLifeDuration: 0
   lifeDuration: 2
+  destroySelfOnCollision: 1
+  defaultAmountOfCollisionPerDestroy: 1
+  amountOfCollisionBeforeDestroy: 1
+  addAmountOfCollisionBeforeDestroyPerLevel: 0
   audioMixerGroup: {fileID: -421025644286380711, guid: 69dacc9f136be634abc5bbec65dfd041, type: 2}
   playAudioOnShoot: 1
   weaponShootSound: {fileID: 8300000, guid: c91fcf414acc0344cb03b13996f1bf3b, type: 3}
@@ -39,26 +45,27 @@ MonoBehaviour:
   isProjectile: 1
   fireRate: 0.5
   projectileSpeed: 10
-  destroySelfOnCollision: 1
   isRandomAimingProjectile: 0
   minAimRange: 3
   maxAimRange: 12
   isNovaWeapon: 0
   spawnInterval: 5
   spawnIntervalDivisor: 1.2
+  isShield: 0
+  chargeInterval: 10
   hasExplosion: 1
   explosionObject: {fileID: 6220214336661041886, guid: bb104d96b76594f42b912ac319562925, type: 3}
   explosionDuration: 0.3
   explosionDurationMultiplier: 1.2
-  explosionDamage: 10
+  explosionDamage: 20
   explosionDamageMultiplier: 1.2
   hasLingeringEffect: 0
   weaponMaxLevel: 5
-  weaponLevel: 1
-  damageMultiplier: 1.2
+  weaponLevel: 4
+  damageMultiplier: 1
   sizeMultiplier: 1
   fireRateMultiplier: 1.2
   fireRateModifier: 1
-  speedMultiplier: 1.1
+  speedMultiplier: 1.2
   weaponSpeedModifier: 1
   cooldownMultiplier: 1.2

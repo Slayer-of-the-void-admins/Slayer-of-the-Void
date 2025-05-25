@@ -165,7 +165,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1273569897
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -1102510367, guid: 37a03d0163eab994ea6198ca14ac8879, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -288,7 +288,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: 6f4aaada514f99a48a925ce6071afbf5, type: 2}
-  flashDuration: 0.125
 --- !u!114 &1433365603512487778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,6 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   essenceChestPrefab: {fileID: 983348676238117519, guid: 6002e71265c30f0409182d843dcb9858, type: 3}
   enemyData: {fileID: 11400000, guid: 7a9f082cd6949004581d4d50d812fb29, type: 2}
+  maxChestCount: 20
 --- !u!95 &773843936279191564
 Animator:
   serializedVersion: 5

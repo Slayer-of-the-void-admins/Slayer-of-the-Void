@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   globalSpawnRate: 1
   enemiesToSpawn:
-  - enemyData: {fileID: 11400000, guid: ef6f7f86b13954446abdb42962fbbf36, type: 2}
+  - enemyData: {fileID: 11400000, guid: 355d3bd0a2771e2469b2a280accefe76, type: 2}
     spawnChance: 1
   maxHealthPickup: 5

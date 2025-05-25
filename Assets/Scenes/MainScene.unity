@@ -1394,6 +1394,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5efeca227dc01e249ac7fafd476f6f29, type: 2}
   - {fileID: 11400000, guid: e4ede91f12ed8804bbb5c66214ee0264, type: 2}
   - {fileID: 11400000, guid: 1da088f7a6ea73a48b09cf61bf74a8af, type: 2}
+  - {fileID: 11400000, guid: 0b9cbed760c7cbe4eb08e536d3328907, type: 2}
+  - {fileID: 11400000, guid: af7342d6ab54972408e8c46698d8742e, type: 2}
+  - {fileID: 11400000, guid: 57c1ef66c7292d443a013c313954bf74, type: 2}
+  - {fileID: 11400000, guid: 1654726bd2fc74142ac6b834df346311, type: 2}
+  - {fileID: 11400000, guid: f8ce59c36541f2a45a3446f917d4e78a, type: 2}
+  - {fileID: 11400000, guid: 2eb9f68d77da4694f8e8b556babbf32f, type: 2}
+  - {fileID: 11400000, guid: 41b52f97af87dfa48be5ec7b0edf9424, type: 2}
+  - {fileID: 11400000, guid: b624ebeec44f26b48b33ac4b032da0a8, type: 2}
+  - {fileID: 11400000, guid: c8ea948b7c4dded49b0b63d215a09cf2, type: 2}
+  - {fileID: 11400000, guid: 9cef0c5e2215a4d4794a17cca2e5f2e5, type: 2}
   enemyDataList:
   - {fileID: 11400000, guid: 355d3bd0a2771e2469b2a280accefe76, type: 2}
   - {fileID: 11400000, guid: dcdb9b59084f9d848ae35e44d435e6d7, type: 2}
@@ -1405,6 +1415,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 24dfb4b805ec70e45b3ba2f5f16c6d0a, type: 2}
   - {fileID: 11400000, guid: 106052f66013608488eb7a29c53b7bb0, type: 2}
   - {fileID: 11400000, guid: ef6f7f86b13954446abdb42962fbbf36, type: 2}
+  - {fileID: 11400000, guid: e2fddde2c5d63ce49adf418f69811fa2, type: 2}
   spawner: {fileID: 221904549}
   playerStats: {fileID: 11400000, guid: 6738e8d0ca38f8b4f895c08943a5cd6c, type: 2}
   currencyManager: {fileID: 0}

@@ -13,15 +13,15 @@ public class RangedEnemyMovement : MonoBehaviour
     private float lastTimeFire;
     public Transform firePoint;
 
-    bool lookingRight = true;
+    bool lookingRight;
     private Animator enemyAnimator;
 
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        lookingRight = spriteRenderer.flipX;
         enemyAnimator = GetComponent<Animator>();
-
     }
 
     void Update()

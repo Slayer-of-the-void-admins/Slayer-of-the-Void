@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: magic
   m_EditorClassIdentifier: 
   projectileSpeed: 7.5
-  weaponName: Arrow
+  weaponName: Magic
   flashColor: {r: 1, g: 1, b: 1, a: 1}
   weaponPrefab: {fileID: 6164672110221338151, guid: 82184f4b9f213f54188127a90c849b36, type: 3}
   targetTag: Player

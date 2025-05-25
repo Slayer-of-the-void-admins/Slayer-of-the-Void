@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentAmount: 0
   enemyName: ShadowEyeTroll
-  enemyPrefab: {fileID: 4776187908627978567, guid: 0e188b436a5cad14da245f5032687ab1, type: 3}
+  enemyPrefab: {fileID: 4776187908627978567, guid: 7fc1c055686312b48b6f7b0bf7ecf157, type: 3}
   moveSpeed: 5
-  maxHealth: 40
-  xpAmount: 25
-  damageAmount: 10
+  maxHealth: 30
+  xpAmount: 35
+  damageAmount: 15
   targetTag: Player
-  lootDropChance: 0.08
+  lootDropChance: 0.07
   isRangedEnemy: 0
   attackRange: 10
   retreatRange: 0

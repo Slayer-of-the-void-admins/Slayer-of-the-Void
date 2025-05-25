@@ -6,7 +6,7 @@ public class ShieldBehaviour : MonoBehaviour, IWeaponBehaivour
 {
     private WeaponData weaponData;
     private Transform playerTransform;
-    private GameObject shield;
+    public GameObject shield;
     private float timer;
     private DestroySelf destroySelf;
 
@@ -49,13 +49,14 @@ public class ShieldBehaviour : MonoBehaviour, IWeaponBehaivour
         }
     }
 
-    void SummonShield()
+    public void SummonShield()
     {
         shield = Instantiate(weaponData.weaponPrefab, playerTransform.position, Quaternion.identity);
         destroySelf = shield.GetComponent<DestroySelf>();
+        destroySelf.amountOfCollisionBeforeDestroy = weaponData.defaultAmountOfCollisionPerDestroy;
     }
 
-    void ChargeShield()
+    public void ChargeShield()
     {
         if (destroySelf.amountOfCollisionBeforeDestroy < weaponData.GetAmountOfCollisionBeforeDestroy())
         {

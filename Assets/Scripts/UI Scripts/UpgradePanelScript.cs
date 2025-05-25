@@ -177,6 +177,14 @@ public class UpgradePanelScript : MonoBehaviour
             if (shieldBehaviour != null)
             {
                 shieldBehaviour.UpdateAmountOfCollisionBeforeDestroy();
+                if (shieldBehaviour.shield != null)
+                {
+                    shieldBehaviour.ChargeShield();
+                }
+                else
+                {
+                    shieldBehaviour.SummonShield();
+                }
             }
 
             // item çantası ikon ve yazıları güncelle

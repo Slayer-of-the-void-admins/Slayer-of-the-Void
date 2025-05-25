@@ -30,6 +30,7 @@ public class PlayerExp : MonoBehaviour
         {
             levelUpQueue.Enqueue(1); // Add a level-up to the queue
             currentXP -= xpToNextLevel;
+            ExpBar.value = currentXP;
             xpToNextLevel = Mathf.RoundToInt(xpToNextLevel * 1.25f);
             ExpBar.maxValue = xpToNextLevel;
         }

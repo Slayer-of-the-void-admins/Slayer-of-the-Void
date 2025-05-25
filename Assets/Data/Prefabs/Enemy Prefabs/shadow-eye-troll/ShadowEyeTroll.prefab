@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 394510147831609883}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.17, y: -3.45, z: 0}
-  m_LocalScale: {x: 3.1199996, y: 1.5219524, z: 0.7609762}
+  m_LocalPosition: {x: -0.13, y: -1.5, z: 0}
+  m_LocalScale: {x: 2.12, y: 1.034147, z: 0.5170735}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5499824171548272429}
@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 29780003034258379}
   - component: {fileID: -733750156972989321}
   - component: {fileID: 4014683175989976046}
+  - component: {fileID: 6493026192181633703}
   m_Layer: 0
   m_Name: ShadowEyeTroll
   m_TagString: Enemy
@@ -118,8 +119,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.15, y: 1, z: 2}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.87, y: 1.87, z: 1.87}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8947273117739384229}
   m_Father: {fileID: 0}
@@ -165,9 +166,9 @@ SpriteRenderer:
   m_SortingLayerID: -1273569897
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 160548803, guid: f03e0a0e1ff33354b9def81894b0cbe3, type: 3}
+  m_Sprite: {fileID: -2146628489, guid: de21914855df1b644aa998d8734cdd08, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -235,8 +236,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.054748695, y: -0.117318474}
-  m_Size: {x: 3.9886627, y: 6.4409537}
+  m_Offset: {x: -0.08086329, y: -0.0010666363}
+  m_Size: {x: 1.8730755, y: 3.0251303}
   m_Direction: 0
 --- !u!114 &6024462315344387913
 MonoBehaviour:
@@ -314,3 +315,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathParticle: {fileID: 4268761304600640619, guid: f124f2cc6c81c56448b796aa53b30e05, type: 3}
+--- !u!95 &6493026192181633703
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4776187908627978567}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a1d170c22d59c9a49bff37562f98c67c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

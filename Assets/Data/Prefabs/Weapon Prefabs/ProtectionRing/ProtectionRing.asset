@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55dd78edffd53314480cfd570dc4f3a0, type: 3}
   m_Name: ProtectionRing
   m_EditorClassIdentifier: 
-  weaponName: ProtectionNecklace
+  weaponName: ProtectionRing
   flashColor: {r: 1, g: 1, b: 1, a: 1}
   flashDuration: 0.125
   weaponPrefab: {fileID: 6121447244309517453, guid: f3271ea465af05a46a6bd4ff06092839, type: 3}
@@ -27,7 +27,7 @@ MonoBehaviour:
   lifeDuration: 2
   destroySelfOnCollision: 1
   defaultAmountOfCollisionPerDestroy: 1
-  amountOfCollisionBeforeDestroy: 3
+  amountOfCollisionBeforeDestroy: 1
   addAmountOfCollisionBeforeDestroyPerLevel: 1
   audioMixerGroup: {fileID: -421025644286380711, guid: 69dacc9f136be634abc5bbec65dfd041, type: 2}
   playAudioOnShoot: 1
@@ -61,7 +61,7 @@ MonoBehaviour:
   explosionDamageMultiplier: 1.2
   hasLingeringEffect: 0
   weaponMaxLevel: 5
-  weaponLevel: 3
+  weaponLevel: 1
   damageMultiplier: 1
   sizeMultiplier: 1
   fireRateMultiplier: 1.2

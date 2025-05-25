@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a76132dcf6bf5640a9f66fa670ab745, type: 3}
   m_Name: void-witch-data
   m_EditorClassIdentifier: 
-  currentAmount: 17
-  enemyName: Skeleton
+  currentAmount: 1
+  enemyName: VoidWitch
   enemyPrefab: {fileID: 4776187908627978567, guid: c7a956288b9b5a449b8bedf991cc9032, type: 3}
   moveSpeed: 3
   maxHealth: 20

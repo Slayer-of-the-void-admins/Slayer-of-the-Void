@@ -61,10 +61,10 @@ MonoBehaviour:
   explosionDamageMultiplier: 1.2
   hasLingeringEffect: 1
   weaponMaxLevel: 5
-  weaponLevel: 2
+  weaponLevel: 1
   damageMultiplier: 1
   sizeMultiplier: 1
-  fireRateMultiplier: 1
+  fireRateMultiplier: 1.1
   fireRateModifier: 1
   speedMultiplier: 1
   weaponSpeedModifier: 1
