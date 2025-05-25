@@ -30,12 +30,12 @@ MonoBehaviour:
   amountOfCollisionBeforeDestroy: 1
   addAmountOfCollisionBeforeDestroyPerLevel: 0
   audioMixerGroup: {fileID: -421025644286380711, guid: 69dacc9f136be634abc5bbec65dfd041, type: 2}
-  playAudioOnShoot: 0
-  weaponShootSound: {fileID: 0}
+  playAudioOnShoot: 1
+  weaponShootSound: {fileID: 8300000, guid: 4e349dc959014a845b9aa317d1c2b7f0, type: 3}
   playAudioOnCollision: 0
   weaponCollisionSound: {fileID: 0}
-  playAudioOnDestroy: 0
-  weaponDestroySound: {fileID: 0}
+  playAudioOnDestroy: 1
+  weaponDestroySound: {fileID: 8300000, guid: c91fcf414acc0344cb03b13996f1bf3b, type: 3}
   isFloatingWeapon: 0
   cooldownTimer: 0
   floatingWeaponTimer: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
   explosionDamageMultiplier: 1.2
   hasLingeringEffect: 1
   weaponMaxLevel: 5
-  weaponLevel: 4
+  weaponLevel: 2
   damageMultiplier: 1
   sizeMultiplier: 1
   fireRateMultiplier: 1
