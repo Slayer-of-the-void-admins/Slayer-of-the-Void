@@ -65,8 +65,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hurts enemies from range. Deals high damage but has low fire rate and projectile
-    speed
+  m_text: Hurts enemies from range. Deals high area damage but has low fire rate
+    and projectile speed
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a36e3f4c277cba44d9eb107b9a3b95fb, type: 2}
   m_sharedMaterial: {fileID: -2506720073113760926, guid: a36e3f4c277cba44d9eb107b9a3b95fb, type: 2}
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.3
+  m_fontSize: 31.9
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1

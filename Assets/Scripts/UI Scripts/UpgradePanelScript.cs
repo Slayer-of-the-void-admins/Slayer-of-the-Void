@@ -66,7 +66,7 @@ public class UpgradePanelScript : MonoBehaviour
             }
 
             // check for protection necklace and retry if first
-            if (playerExp.level == 1 && weaponDatas[roll].weaponName == "ProtectionNecklace")
+            if (playerExp.level == 1 && weaponDatas[roll].weaponName == "ProtectionRing")
             {
                 continue;
             }
@@ -174,7 +174,7 @@ public class UpgradePanelScript : MonoBehaviour
             {
                 newWeapon.AddComponent<NovaWeapon>();
             }
-            else if (weaponData.weaponName == "ProtectionNecklace")
+            else if (weaponData.weaponName == "ProtectionRing")
             {
                 newWeapon.AddComponent<ShieldBehaviour>();
             }

@@ -140,7 +140,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pulls the enemies inside to its center and deals damage to the enemies.
+  m_text: 'Pulls the enemies to center
+
+    Every level increases its radius'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a36e3f4c277cba44d9eb107b9a3b95fb, type: 2}
   m_sharedMaterial: {fileID: -2506720073113760926, guid: a36e3f4c277cba44d9eb107b9a3b95fb, type: 2}
