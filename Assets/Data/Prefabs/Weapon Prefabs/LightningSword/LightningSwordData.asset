@@ -17,6 +17,7 @@ MonoBehaviour:
   flashDuration: 0.125
   weaponPrefab: {fileID: 6923670273585607469, guid: a4354f3df83287243967ddefad403307, type: 3}
   upgradeCardPrefab: {fileID: 5918746556210795602, guid: dbc1a28f8b379024590a320a33f9dc80, type: 3}
+  ShowOnLevelOne: 1
   weaponIconPrefab: {fileID: 1077830196882540247, guid: 064026b08b50ad74b954d4a1f3789c30, type: 3}
   targetTags:
   - Enemy
@@ -41,7 +42,7 @@ MonoBehaviour:
   floatingWeaponTimer: 0
   isOrbittingWeapon: 1
   rotationSpeed: 3
-  orbitDistance: 4
+  orbitDistance: 4.5
   isProjectile: 0
   fireRate: 1
   projectileSpeed: 20
@@ -61,11 +62,11 @@ MonoBehaviour:
   explosionDamageMultiplier: 1.2
   hasLingeringEffect: 0
   weaponMaxLevel: 5
-  weaponLevel: 1
+  weaponLevel: 5
   damageMultiplier: 1.2
   sizeMultiplier: 1
   fireRateMultiplier: 1.2
-  fireRateModifier: 1
+  fireRateModifier: 1.05
   speedMultiplier: 1.2
-  weaponSpeedModifier: 1
+  weaponSpeedModifier: 1.2
   cooldownMultiplier: 1.2
