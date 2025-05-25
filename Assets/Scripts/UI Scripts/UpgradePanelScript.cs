@@ -16,6 +16,8 @@ public class UpgradePanelScript : MonoBehaviour
     public PlayerExp playerExp;
     public bool isUpgradePanelActive = false;
 
+    private List<string> ownedWeaponNames = new List<string>();
+
     void Start()
     {
         StartCoroutine(ShowUpgradePanelDelayed());
@@ -53,11 +55,44 @@ public class UpgradePanelScript : MonoBehaviour
     
     void FillUpgradePanel()
     {
+        WeaponData[] filteredWeaponDatas;
+        
+        // silah sayısı 5'e eşit ya da büyükse sadece aynı silahları getir değilse tüm silahları getir
+        // eğer silah max lvl ise o silahı getirme
+        if (ownedWeaponNames.Count >= 5)
+        {
+            filteredWeaponDatas = weaponDatas
+                .Where(wd => ownedWeaponNames.Contains(wd.weaponName))
+                .ToArray();
+
+            filteredWeaponDatas = filteredWeaponDatas
+                .Where(wd => wd.weaponLevel < 5)
+                .ToArray();
+        }
+        else
+        {
+            filteredWeaponDatas = weaponDatas;
+        }
+        int upgradeCardCounter = 4;
+
+        // silah sayısı 3'e düşerse upgradeCardPanelde 3 kart gözüksün
+        if (filteredWeaponDatas.Length <= 4)
+        {
+            upgradeCardCounter = filteredWeaponDatas.Length;
+        }
+        
+        // tüm silahlar max level olduysa ekranı gösterme
+        if (filteredWeaponDatas.Length == 0)
+        {
+            HideUpgradePanel();
+            return;
+        }
+
         List<int> usedRolls = new List<int>();
-        for (int i = 1; i <= 4;)
+        for (int i = 1; i <= upgradeCardCounter;)
         {
             // değer döndür
-            int roll = Random.Range(0, weaponDatas.Count());
+            int roll = Random.Range(0, filteredWeaponDatas.Length);
 
             // check for void staff and retry if first
             if (playerExp.level == 1 && weaponDatas[roll].weaponName == "VoidStaff")
@@ -85,7 +120,7 @@ public class UpgradePanelScript : MonoBehaviour
             usedRolls.Add(roll);
             i++;
 
-            WeaponData weaponData = weaponDatas[roll];
+            WeaponData weaponData = filteredWeaponDatas[roll];
 
             GameObject upgradeCard = Instantiate(weaponData.upgradeCardPrefab, upgradePanelTransform);
             Button upgradeCardButton = upgradeCard.GetComponent<Button>();
@@ -105,6 +140,14 @@ public class UpgradePanelScript : MonoBehaviour
             {
                 existingWeapon = weaponScript;
                 break;
+            }
+        }
+        // silah sayısı 5 değil ise o silahın adını listeye ekle
+        if (!ownedWeaponNames.Contains(weaponData.weaponName))
+        {
+            if (ownedWeaponNames.Count < 5)
+            {
+                ownedWeaponNames.Add(weaponData.weaponName);
             }
         }
 
