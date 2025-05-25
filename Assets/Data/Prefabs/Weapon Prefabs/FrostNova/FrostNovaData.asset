@@ -50,7 +50,7 @@ MonoBehaviour:
   minAimRange: 3
   maxAimRange: 12
   isNovaWeapon: 1
-  spawnInterval: 5
+  spawnInterval: 7.5
   spawnIntervalDivisor: 1
   isShield: 0
   chargeInterval: 10
@@ -62,7 +62,7 @@ MonoBehaviour:
   explosionDamageMultiplier: 1.2
   hasLingeringEffect: 0
   weaponMaxLevel: 5
-  weaponLevel: 1
+  weaponLevel: 5
   damageMultiplier: 1
   sizeMultiplier: 1.2
   fireRateMultiplier: 1.2

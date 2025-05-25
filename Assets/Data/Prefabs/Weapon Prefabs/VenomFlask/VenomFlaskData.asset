@@ -14,12 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: VenomFlask
   flashColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.125
   weaponPrefab: {fileID: 6923670273585607469, guid: 0c193569bc65c774aa6d333ea78503ce, type: 3}
   upgradeCardPrefab: {fileID: 5918746556210795602, guid: de2be879b78501e4a888ab8e27966870, type: 3}
+  ShowOnLevelOne: 1
   weaponIconPrefab: {fileID: 6531676357194214497, guid: 386c01e897e9dca43a8d55d9a5637141, type: 3}
-  targetTag: Enemy
+  targetTags:
+  - Enemy
+  - EnemyProjectile
   damageAmount: 0
   stunDuration: 0
+  hasLifeDuration: 0
+  lifeDuration: 2
+  destroySelfOnCollision: 0
+  defaultAmountOfCollisionPerDestroy: 1
+  amountOfCollisionBeforeDestroy: 1
+  addAmountOfCollisionBeforeDestroyPerLevel: 0
   audioMixerGroup: {fileID: -421025644286380711, guid: 69dacc9f136be634abc5bbec65dfd041, type: 2}
   playAudioOnShoot: 1
   weaponShootSound: {fileID: 8300000, guid: c458b6714dab015479d507b21fd2cead, type: 3}
@@ -36,10 +46,14 @@ MonoBehaviour:
   isProjectile: 1
   fireRate: 0.35
   projectileSpeed: 10
-  destroySelfOnCollision: 0
   isRandomAimingProjectile: 1
   minAimRange: 5
   maxAimRange: 15
+  isNovaWeapon: 0
+  spawnInterval: 5
+  spawnIntervalDivisor: 1.2
+  isShield: 0
+  chargeInterval: 10
   hasExplosion: 0
   explosionObject: {fileID: 0}
   explosionDuration: 0.3
@@ -48,9 +62,10 @@ MonoBehaviour:
   explosionDamageMultiplier: 1.2
   hasLingeringEffect: 1
   weaponMaxLevel: 5
-  weaponLevel: 1
+  weaponLevel: 3
   damageMultiplier: 1
-  fireRateMultiplier: 1.2
+  sizeMultiplier: 1
+  fireRateMultiplier: 1.1
   fireRateModifier: 1
   speedMultiplier: 1
   weaponSpeedModifier: 1

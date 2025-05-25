@@ -47,7 +47,7 @@ MonoBehaviour:
   fireRate: 0.2
   projectileSpeed: 20
   isRandomAimingProjectile: 1
-  minAimRange: 8
+  minAimRange: 10
   maxAimRange: 20
   isNovaWeapon: 0
   spawnInterval: 5

@@ -53,7 +53,7 @@ MonoBehaviour:
   spawnInterval: 5
   spawnIntervalDivisor: 1
   isShield: 1
-  chargeInterval: 7.5
+  chargeInterval: 10
   hasExplosion: 0
   explosionObject: {fileID: 0}
   explosionDuration: 0.3
