@@ -56,6 +56,7 @@ public class UpgradePanelScript : MonoBehaviour
     void FillUpgradePanel()
     {
         WeaponData[] filteredWeaponDatas;
+        WeaponData[] mainDatas;
         
         // silah sayısı 5'e eşit ya da büyükse sadece aynı silahları getir değilse tüm silahları getir
         // eğer silah max lvl ise o silahı getirme
@@ -71,7 +72,8 @@ public class UpgradePanelScript : MonoBehaviour
         }
         else
         {
-            filteredWeaponDatas = weaponDatas;
+            mainDatas = weaponDatas.Where(weaponData => weaponData.weaponLevel < 5).ToArray();
+            filteredWeaponDatas = mainDatas;
         }
         int upgradeCardCounter = 4;
 
