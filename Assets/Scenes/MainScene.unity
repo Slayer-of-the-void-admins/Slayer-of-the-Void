@@ -1404,6 +1404,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bf4ccdf05897b7949878a065ee05a569, type: 2}
   - {fileID: 11400000, guid: 24dfb4b805ec70e45b3ba2f5f16c6d0a, type: 2}
   - {fileID: 11400000, guid: 106052f66013608488eb7a29c53b7bb0, type: 2}
+  - {fileID: 11400000, guid: ef6f7f86b13954446abdb42962fbbf36, type: 2}
   spawner: {fileID: 221904549}
   playerStats: {fileID: 11400000, guid: 6738e8d0ca38f8b4f895c08943a5cd6c, type: 2}
   currencyManager: {fileID: 0}

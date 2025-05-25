@@ -15,7 +15,7 @@ MonoBehaviour:
   projectileSpeed: 7.5
   weaponName: Arrow
   flashColor: {r: 1, g: 1, b: 1, a: 1}
-  weaponPrefab: {fileID: 6164672110221338151, guid: 9ef564f48ae743248828a1b2b1af8f80, type: 3}
+  weaponPrefab: {fileID: 6164672110221338151, guid: 82184f4b9f213f54188127a90c849b36, type: 3}
   targetTag: Player
   damageAmount: 10
   destroySelfOnCollision: 1

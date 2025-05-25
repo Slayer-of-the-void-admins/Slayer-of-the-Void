@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a76132dcf6bf5640a9f66fa670ab745, type: 3}
-  m_Name: void-witch-data
+  m_Name: shadow-eye-troll-data
   m_EditorClassIdentifier: 
-  currentAmount: 17
-  enemyName: Skeleton
-  enemyPrefab: {fileID: 4776187908627978567, guid: c7a956288b9b5a449b8bedf991cc9032, type: 3}
-  moveSpeed: 3
-  maxHealth: 20
-  xpAmount: 15
+  currentAmount: 0
+  enemyName: ShadowEyeTroll
+  enemyPrefab: {fileID: 4776187908627978567, guid: 0e188b436a5cad14da245f5032687ab1, type: 3}
+  moveSpeed: 5
+  maxHealth: 40
+  xpAmount: 25
   damageAmount: 10
   targetTag: Player
-  lootDropChance: 0.04
-  isRangedEnemy: 1
-  attackRange: 20
-  retreatRange: 15
-  fireCooldown: 4
+  lootDropChance: 0.08
+  isRangedEnemy: 0
+  attackRange: 10
+  retreatRange: 0
+  fireCooldown: 0
