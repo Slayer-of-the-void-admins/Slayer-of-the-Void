@@ -1384,6 +1384,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b26dd7da953756b41a0e39dd8c415a01, type: 2}
   lingeringEffectList:
   - {fileID: 11400000, guid: 7c32ca8a00f0ef94e95cc72d2d388dd2, type: 2}
+  - {fileID: 11400000, guid: e3092f19ce4652a46a813c1af1637468, type: 2}
   spawnSetList:
   - {fileID: 11400000, guid: 579f624acb77f8a43a896e7b03fda48c, type: 2}
   - {fileID: 11400000, guid: 28f0532ea57232f479d94d8f412ee753, type: 2}

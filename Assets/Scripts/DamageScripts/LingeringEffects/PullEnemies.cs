@@ -23,7 +23,7 @@ public class PullEnemies : MonoBehaviour
     {
         sizeX = gameObject.transform.localScale.x;
         Debug.Log(sizeX);
-        pullRadius *= sizeX/3;
+        pullRadius *= sizeX/5;
 
         StartCoroutine(BlackholeRoutine());
     }
