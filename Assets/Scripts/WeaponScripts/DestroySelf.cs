@@ -11,7 +11,7 @@ public class DestroySelf : MonoBehaviour
     {
         if (weaponData.weaponName == "ProtectionRing")
         {
-            // shieldbehaviour handles the amount
+            // shieldbehaviour miktarı ayarlıyor
         }
         else
         {
@@ -21,26 +21,13 @@ public class DestroySelf : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (weaponData.weaponName == "ProtectionRing")
+
+        if (weaponData.targetTags.Contains(collision.tag) && weaponData.destroySelfOnCollision == true)
         {
-            if (weaponData.targetTags.Contains(collision.tag) && weaponData.destroySelfOnCollision == true)
+            amountOfCollisionBeforeDestroy--;
+            if (amountOfCollisionBeforeDestroy <= 0)
             {
-                amountOfCollisionBeforeDestroy--;
-                if (amountOfCollisionBeforeDestroy <= 0)
-                {
-                    Destroy(gameObject);
-                }
-            }
-        }
-        else
-        {
-            if (collision.CompareTag(weaponData.targetTags[0]) && weaponData.destroySelfOnCollision == true)
-            {
-                amountOfCollisionBeforeDestroy--;
-                if (amountOfCollisionBeforeDestroy <= 0)
-                {
-                    Destroy(gameObject);
-                }
+                Destroy(gameObject);
             }
         }
     }
