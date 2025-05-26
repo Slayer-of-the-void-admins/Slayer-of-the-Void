@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AndroidSetup : MonoBehaviour
 {
-    public GameObject joysticks;
+    public GameObject mobileStuff;
     void Start()
     {
 #if UNITY_ANDROID
@@ -16,11 +16,11 @@ public class AndroidSetup : MonoBehaviour
 
     public void DisableAndroidStuff()
     {
-        joysticks.SetActive(false);
+        mobileStuff.SetActive(false);
     }
 
     public void EnableAndroidStuff()
     {
-        joysticks.SetActive(true);
+        mobileStuff.SetActive(true);
     }
 }

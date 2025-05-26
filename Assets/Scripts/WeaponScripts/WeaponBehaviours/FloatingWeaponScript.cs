@@ -61,9 +61,7 @@ public class FloatingWeaponScript : MonoBehaviour, IWeaponBehaivour
         foreach (GameObject enemy in enemies)
         {
             Vector3 viewportPos = mainCamera.WorldToViewportPoint(enemy.transform.position);
-            bool isVisible = viewportPos.z > 0 &&
-                             viewportPos.x > 0 && viewportPos.x < 1 &&
-                             viewportPos.y > 0 && viewportPos.y < 1;
+            bool isVisible = viewportPos.z > 0 && viewportPos.x > 0 && viewportPos.x < 1 && viewportPos.y > 0 && viewportPos.y < 1;
 
             if (isVisible)
             {

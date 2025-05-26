@@ -16,6 +16,8 @@ TagManager:
   - PlayerShield
   - EnemyProjectile
   - EnemySpawner
+  - AimMarker
+  - MobileStuff
   layers:
   - Default
   - TransparentFX
@@ -79,4 +81,7 @@ TagManager:
     locked: 0
   - name: weapons
     uniqueID: 233378891
+    locked: 0
+  - name: worldUI
+    uniqueID: 3945784945
     locked: 0
