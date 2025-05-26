@@ -103,6 +103,12 @@ public class HealthScript : MonoBehaviour
             enemyMovement.Stun(weaponData.stunDuration);
         }
 
+        RangedEnemyMovement rangedEnemyMovement = GetComponent<RangedEnemyMovement>();
+        if (rangedEnemyMovement != null)
+        {
+            rangedEnemyMovement.Stun(weaponData.stunDuration);
+        }
+
         TakeDamage(damage);
     }
 
@@ -118,6 +124,12 @@ public class HealthScript : MonoBehaviour
         if (enemyMovement != null)
         {
             enemyMovement.Stun(lingeringEffectData.stunDuration);
+        }
+
+        RangedEnemyMovement rangedEnemyMovement = GetComponent<RangedEnemyMovement>();
+        if (rangedEnemyMovement != null)
+        {
+            rangedEnemyMovement.Stun(lingeringEffectData.stunDuration);
         }
 
         TakeDamage(damage);

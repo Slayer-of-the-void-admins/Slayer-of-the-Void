@@ -27,6 +27,7 @@ public class RangedEnemyMovement : MonoBehaviour
 
     void Update()
     {
+        // stun süresinde updateden çık ve animasyonu durdur
         if (player == null || isStunned == true)
         {
             if (enemyAnimator != null)
@@ -47,6 +48,7 @@ public class RangedEnemyMovement : MonoBehaviour
         float distancePlayer = Vector2.Distance(transform.position, player.position);
         Vector3 direction = (player.position - transform.position).normalized;
 
+        // hareket mantık blok
         if (distancePlayer < enemyData.retreatRange)
         {
             isMoving = true;
@@ -67,6 +69,7 @@ public class RangedEnemyMovement : MonoBehaviour
             transform.position += direction * enemyData.moveSpeed * Time.deltaTime;
         }
 
+        // sağa sala bakma mantığı
         if (direction.x > 0)
         {
             spriteRenderer.flipX = lookingRight;
