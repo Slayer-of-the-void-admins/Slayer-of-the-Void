@@ -853,7 +853,8 @@ MonoBehaviour:
   - {fileID: 0}
   player: {fileID: 2131994285}
   spawnDistance: 40
-  healthPickupScript: {fileID: 403307568}
+  healthSpawner: {fileID: 403307568}
+  healthPickup: {fileID: -6096820323913703007, guid: f6649c85edf606346af449e20e311a9a, type: 3}
   spawnAreaMin: {x: -90, y: -90}
   spawnAreaMax: {x: 90, y: 90}
 --- !u!4 &221904550
@@ -1472,7 +1473,6 @@ MonoBehaviour:
   spawnAreaMin: {x: -90, y: -90}
   spawnAreaMax: {x: 90, y: 90}
   spawnInterval: 10
-  healAmount: 10
   maxPickupCount: 5
 --- !u!4 &403307570
 Transform:
