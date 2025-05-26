@@ -34,17 +34,7 @@ public class SpawnerScript : MonoBehaviour
         if (chosenEnemy == null) return;
 
         // spawn pozisyonu seç
-        Vector2 spawnPosition = (Vector2)player.position + UnityEngine.Random.insideUnitCircle.normalized * spawnDistance;
-
-        // seçilen pozisyon sınırlarını belirle
-        float minX = Mathf.Max(spawnAreaMin.x, player.position.x - spawnDistance);
-        float maxX = Mathf.Min(spawnAreaMax.x, player.position.x + spawnDistance);
-        float minY = Mathf.Max(spawnAreaMin.y, player.position.y - spawnDistance);
-        float maxY = Mathf.Max(spawnAreaMax.y, player.position.y + spawnDistance);
-
-        // belirlenen sınırlar ile pozisyonu seç
-        spawnPosition.x = Mathf.Clamp(spawnPosition.x, minX, maxX);
-        spawnPosition.y = Mathf.Clamp(spawnPosition.y, minY, maxY);
+        Vector2 spawnPosition = GetSpawnPos();
 
         // seçilen pozisyona düşmanı yerleştir
         GameObject enemy = Instantiate(chosenEnemy.enemyPrefab, spawnPosition, Quaternion.identity); // düşmanı seçilen pozisyonda çağır
@@ -59,6 +49,29 @@ public class SpawnerScript : MonoBehaviour
         }
     }
 
+    Vector2 GetSpawnPos()
+    {
+        const int maxAttempts = 10;
+
+        // spawn pozisyonunu seçtikten sonra sınır içinde mi kontrol et
+        for (int i = 0; i < maxAttempts; i++)
+        {
+            Vector2 candidate = (Vector2)player.position + UnityEngine.Random.insideUnitCircle.normalized * spawnDistance;
+
+            if (candidate.x >= spawnAreaMin.x && candidate.x <= spawnAreaMax.x &&
+                candidate.y >= spawnAreaMax.y && candidate.y <= spawnAreaMax.y)
+            {
+                return candidate;
+            }
+        }
+
+        // belirli denemeden sonra bulamazsa 
+        Vector2 fallback = (Vector2)player.position + UnityEngine.Random.insideUnitCircle.normalized * spawnDistance;
+        fallback.x = Mathf.Clamp(fallback.x, spawnAreaMin.x, spawnAreaMax.x);
+        fallback.y = Mathf.Clamp(fallback.y, spawnAreaMin.y, spawnAreaMax.y);
+        return fallback;
+    }
+
     private EnemyData ChooseEnemyType()
     {
         float totalChance = 0f;
@@ -66,7 +79,7 @@ public class SpawnerScript : MonoBehaviour
         {
             totalChance += enemy.spawnChance; // totalChance 100 olacak (her spawnSet toplam spawnChance 100)
         }
-        
+
         float roll = UnityEngine.Random.Range(0f, totalChance); // 0 ile totalChance arasında bir değer döndür
         float cumulative = 0f;
         foreach (var enemy in spawnSet.enemiesToSpawn) // döndürülen değer düşan doğma şansından küçük olduğunda çağır
