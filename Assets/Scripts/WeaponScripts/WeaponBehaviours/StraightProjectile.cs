@@ -14,7 +14,6 @@ public class StraightProjectile : MonoBehaviour, IWeaponBehaivour
     public GameObject aimMarkerPrefab;
     private GameObject aimMarkerInstance;
     private Camera mainCamera;
-    private Vector3 lastValidMarkerPos;
     private Vector3 lastAimOffset = Vector3.right * 15f; // default offset
 
 
@@ -49,7 +48,7 @@ public class StraightProjectile : MonoBehaviour, IWeaponBehaivour
             lastAimDirection = joystickInput.normalized;
             float effectiveMagnitude = Mathf.Clamp01(joystickInput.magnitude);
 
-            lastAimOffset = lastAimDirection * effectiveMagnitude * 30f;
+            lastAimOffset = lastAimDirection * effectiveMagnitude * 50f;
         }
 
         // lastaimoffset ile aim pozisyonunu bul ve markera at
