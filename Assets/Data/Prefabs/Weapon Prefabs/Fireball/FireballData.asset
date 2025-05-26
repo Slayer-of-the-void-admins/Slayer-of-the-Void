@@ -17,10 +17,10 @@ MonoBehaviour:
   flashDuration: 0.25
   weaponPrefab: {fileID: 6923670273585607469, guid: 0b79b93023eb514428eae2b0cd1e0f4d, type: 3}
   upgradeCardPrefab: {fileID: 5918746556210795602, guid: 3f190b2bf14e9a2499b2ea1eb66ff726, type: 3}
+  ShowOnLevelOne: 1
   weaponIconPrefab: {fileID: 7150981120757650678, guid: 5631c9716579ccf48ab0ca07766d682c, type: 3}
   targetTags:
   - Enemy
-  - EnemyProjectile
   damageAmount: 1
   stunDuration: 0.25
   hasLifeDuration: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
   explosionDamageMultiplier: 1.2
   hasLingeringEffect: 0
   weaponMaxLevel: 5
-  weaponLevel: 4
+  weaponLevel: 1
   damageMultiplier: 1
   sizeMultiplier: 1
   fireRateMultiplier: 1.2

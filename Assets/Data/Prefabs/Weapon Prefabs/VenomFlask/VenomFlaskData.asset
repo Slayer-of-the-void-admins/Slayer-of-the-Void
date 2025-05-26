@@ -21,7 +21,6 @@ MonoBehaviour:
   weaponIconPrefab: {fileID: 6531676357194214497, guid: 386c01e897e9dca43a8d55d9a5637141, type: 3}
   targetTags:
   - Enemy
-  - EnemyProjectile
   damageAmount: 0
   stunDuration: 0
   hasLifeDuration: 0
@@ -62,7 +61,7 @@ MonoBehaviour:
   explosionDamageMultiplier: 1.2
   hasLingeringEffect: 1
   weaponMaxLevel: 5
-  weaponLevel: 3
+  weaponLevel: 1
   damageMultiplier: 1
   sizeMultiplier: 1
   fireRateMultiplier: 1.1

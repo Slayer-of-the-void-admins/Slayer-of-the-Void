@@ -23,6 +23,6 @@ MonoBehaviour:
   stunDuration: 0.5
   pullsEnemies: 1
   pullForce: 7.5
-  effectLevel: 4
+  effectLevel: 5
   damageMultiplier: 1
-  sizeMultiplier: 1.3
+  sizeMultiplier: 1.2

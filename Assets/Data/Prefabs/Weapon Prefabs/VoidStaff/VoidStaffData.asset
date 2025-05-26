@@ -21,7 +21,6 @@ MonoBehaviour:
   weaponIconPrefab: {fileID: 7150981120757650678, guid: b3803abc8dfd00e4e95558cb22d54a62, type: 3}
   targetTags:
   - Enemy
-  - EnemyProjectile
   damageAmount: 0
   stunDuration: 0
   hasLifeDuration: 0
