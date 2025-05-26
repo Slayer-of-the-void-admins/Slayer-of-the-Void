@@ -15,6 +15,7 @@ TagManager:
   - ChestPickup
   - PlayerShield
   - EnemyProjectile
+  - EnemySpawner
   layers:
   - Default
   - TransparentFX

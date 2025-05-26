@@ -23,3 +23,5 @@ MonoBehaviour:
   - enemyData: {fileID: 11400000, guid: 7a9f082cd6949004581d4d50d812fb29, type: 2}
     spawnChance: 0.1
   maxHealthPickup: 5
+  healAmount: 10
+  voidEssenceAmount: 15

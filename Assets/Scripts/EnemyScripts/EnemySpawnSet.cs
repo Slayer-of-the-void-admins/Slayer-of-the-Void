@@ -16,5 +16,10 @@ public class EnemySpawnSet : ScriptableObject // spawnSet ler çağırılacak d�
         public float spawnChance;
     }
 
+    [Header("Heal Pickup Settings")]
     public int maxHealthPickup = 5;
+    public int healAmount = 10;
+
+    [Header("Void Essence Pickup Settings")]
+    public int voidEssenceAmount = 10;
 }
