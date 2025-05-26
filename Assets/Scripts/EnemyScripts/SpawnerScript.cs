@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class SpawnerScript : MonoBehaviour
@@ -31,17 +32,27 @@ public class SpawnerScript : MonoBehaviour
         EnemyData chosenEnemy = ChooseEnemyType();
         if (chosenEnemy == null) return;
 
-        Vector2 spawnPosition = (Vector2)player.position + UnityEngine.Random.insideUnitCircle.normalized * spawnDistance; // düşmanın doğacağı pozisyonu rastgele seç
-        spawnPosition.x = Mathf.Clamp(spawnPosition.x, spawnAreaMin.x, spawnAreaMax.x);
-        spawnPosition.y = Mathf.Clamp(spawnPosition.y, spawnAreaMin.y, spawnAreaMax.y);
+        // spawn pozisyonu seç
+        Vector2 spawnPosition = (Vector2)player.position + UnityEngine.Random.insideUnitCircle.normalized * spawnDistance;
 
+        // seçilen pozisyon sınırlarını belirle
+        float minX = Mathf.Max(spawnAreaMin.x, player.position.x - spawnDistance);
+        float maxX = Mathf.Min(spawnAreaMax.x, player.position.x + spawnDistance);
+        float minY = Mathf.Max(spawnAreaMin.y, player.position.y - spawnDistance);
+        float maxY = Mathf.Max(spawnAreaMax.y, player.position.y + spawnDistance);
+
+        // belirlenen sınırlar ile pozisyonu seç
+        spawnPosition.x = Mathf.Clamp(spawnPosition.x, minX, maxX);
+        spawnPosition.y = Mathf.Clamp(spawnPosition.y, minY, maxY);
+
+        // seçilen pozisyona düşmanı yerleştir
         GameObject enemy = Instantiate(chosenEnemy.enemyPrefab, spawnPosition, Quaternion.identity); // düşmanı seçilen pozisyonda çağır
 
         if (chosenEnemy.isRangedEnemy)
         {
             enemy.GetComponent<RangedEnemyMovement>().player = player; // çağırılan düşmandaki hareket scriptine oyuncu nesnesini aktar
         }
-        else 
+        else
         {
             enemy.GetComponent<EnemyMovement>().player = player; // çağırılan düşmandaki hareket scriptine oyuncu nesnesini aktar
         }
@@ -79,6 +90,7 @@ public class SpawnerScript : MonoBehaviour
         CancelInvoke(nameof(SpawnEnemy));
         spawnSet = newSet;
         healthPickupScript.maxPickupCount = spawnSet.maxHealthPickup;
+        // healthPickupScript.healAmount = spawnSet.healAmount;
         InvokeRepeating(nameof(SpawnEnemy), 0f, 1f / spawnSet.globalSpawnRate);
     }
 }
